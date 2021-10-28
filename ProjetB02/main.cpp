@@ -1,8 +1,8 @@
 #include <SFML/Graphics.hpp>
 int main()
 {
-sf::RenderWindow ventana(sf::VideoMode(400, 400), "Funciona!");
-sf::CircleShape circulo(400);
+sf::RenderWindow ventana(sf::VideoMode(800, 800), "Funciona!");
+sf::CircleShape circulo(200);
 circulo.setFillColor(sf::Color::Red);
 while (ventana.isOpen())
 {
