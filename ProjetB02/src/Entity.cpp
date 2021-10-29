@@ -1,8 +1,8 @@
 #include "../include/Entity.h"
 
-Entity::Entity(int speed, int xPosition, int yPosition):speed(speed), xPosition(xPosition), yPosition(yPosition)
+Entity::Entity(int speed, int xPosition, int yPosition, string stringTexture):speed(speed), xPosition(xPosition), yPosition(yPosition)
 {
-    //ctor
+    texture.loadFromFile(stringTexture);
 }
 
 Entity::~Entity()
@@ -17,7 +17,13 @@ Entity::Entity(const Entity& other):speed(other.speed), xPosition(other.xPositio
 
 Entity& Entity::operator=(const Entity& rhs)
 {
-    if (this == &rhs) return *this; // handle self assignment
-    //assignment operator
+    if (this != &rhs)
+    {
+        speed = rhs.speed;
+        xPosition = rhs.xPosition;
+        yPosition = rhs.yPosition;
+        texture = rhs.texture;
+    }
+
     return *this;
 }

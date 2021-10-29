@@ -1,8 +1,8 @@
 #include "../include/Player.h"
 
-Player::Player()
+Player::Player(int speed, int xPosition, int yPosition, string stringTexture):Entity(speed, xPosition, yPosition, stringTexture)
 {
-    //ctor
+
 }
 
 Player::~Player()
@@ -10,14 +10,16 @@ Player::~Player()
     //dtor
 }
 
-Player::Player(const Player& other)
+Player::Player(const Player& other):Entity(other)
 {
     //copy ctor
 }
 
 Player& Player::operator=(const Player& rhs)
 {
-    if (this == &rhs) return *this; // handle self assignment
-    //assignment operator
+    if(this != &rhs)
+    {
+        Entity::operator=(rhs);
+    }
     return *this;
 }
