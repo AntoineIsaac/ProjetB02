@@ -1,4 +1,7 @@
+#include <SFML/Window.hpp>
+#include <SFML/System.hpp>
 #include <SFML/Graphics.hpp>
+#include "include/Player.h"
 
 using namespace sf;
 
@@ -12,6 +15,13 @@ int main()
     //float multiplier = 60.f;
     //float fps;
 
+    //Creation of a player
+    Texture texturePlayer;
+    texturePlayer.loadFromFile("Images/zombie.gif");
+    Sprite spritePlayer(texturePlayer);
+    Player player(1, 0, 0, spritePlayer);
+
+
     while (window.isOpen())
     {
         //dt = clock.restart().asSeconds();
@@ -24,6 +34,7 @@ int main()
                 window.close();
         }
         window.clear();
+        window.draw(player.getSprite());
         window.display();
     }
     return 0;

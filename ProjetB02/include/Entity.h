@@ -13,14 +13,15 @@ class Entity
         int speed;
         int xPosition;
         int yPosition;
-        Texture texture;
-        string stringTexture;
+        Sprite sprite;
 
     public:
-        Entity(int speed = 0, int xPosition = 0, int yPosition = 0, string stringTexture = "");
+        Entity(int speed = 0, int xPosition = 0, int yPosition = 0, Sprite sprite = Sprite());
         virtual ~Entity();
         Entity(const Entity& other);
         Entity& operator=(const Entity& other);
+
+        virtual Sprite getSprite()const=0;
 
 
 };

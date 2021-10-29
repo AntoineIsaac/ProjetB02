@@ -1,6 +1,6 @@
 #include "../include/Player.h"
 
-Player::Player(int speed, int xPosition, int yPosition, string stringTexture):Entity(speed, xPosition, yPosition, stringTexture)
+Player::Player(int speed, int xPosition, int yPosition, Sprite sprite):Entity(speed, xPosition, yPosition, sprite)
 {
 
 }
@@ -22,4 +22,9 @@ Player& Player::operator=(const Player& rhs)
         Entity::operator=(rhs);
     }
     return *this;
+}
+
+Sprite Player::getSprite()const
+{
+    return Entity::getSprite();
 }
