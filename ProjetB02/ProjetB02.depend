@@ -2,3 +2,8 @@
 1635491607 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/main.cpp
 	<SFML/Graphics.hpp>
 
+1635492057 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Entity.cpp
+	"../include/Entity.h"
+
+1635491889 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Entity.h
+
