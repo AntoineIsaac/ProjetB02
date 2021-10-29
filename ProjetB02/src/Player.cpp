@@ -28,3 +28,40 @@ Sprite Player::getSprite()const
 {
     return Entity::getSprite();
 }
+
+int Player::getXPosition()const
+{
+    return Entity::getXPosition();
+}
+
+int Player::getYPosition()const
+{
+    return Entity::getYPosition();
+}
+
+void Player::setXPosition(int x)
+{
+    Entity::setXPosition(x);
+}
+
+void Player::setYPosition(int y)
+{
+    Entity::setYPosition(y);
+}
+
+int Player::getSpeed()const
+{
+    return Entity::getSpeed();
+}
+
+void Player::update(bool left, bool right, bool space)
+{
+    if(left)
+    {
+        getSprite().setPosition(Vector2f(getXPosition() - getSpeed(), getYPosition()));
+    }
+    if(right)
+    {
+        getSprite().setPosition(Vector2f(getXPosition() + getSpeed(), getYPosition()));
+    }
+}

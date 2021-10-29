@@ -21,8 +21,16 @@ class Entity
         Entity(const Entity& other);
         Entity& operator=(const Entity& other);
 
+
+        //Getters and setters
         virtual Sprite getSprite()const=0;
 
+        virtual int getXPosition()const=0;
+        virtual int getYPosition()const=0;
+        virtual void setXPosition(int x)=0;
+        virtual void setYPosition(int y)=0;
+
+        virtual int getSpeed()const=0;
 
 };
 

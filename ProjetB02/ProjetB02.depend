@@ -1,23 +1,25 @@
 # depslib dependency file v1.0
-1635499680 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/main.cpp
+1635519561 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/main.cpp
 	<SFML/Window.hpp>
 	<SFML/System.hpp>
 	<SFML/Graphics.hpp>
 	"include/Player.h"
 	"include/Input.h"
 
-1635499914 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Entity.cpp
+1635519183 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Entity.cpp
 	"../include/Entity.h"
 
-1635499613 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Entity.h
+1635519439 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Entity.h
 	<SFML/Graphics.hpp>
 	<string>
 
-1635499907 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Player.cpp
+1635519806 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Player.cpp
 	"../include/Player.h"
 
-1635499618 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Player.h
+1635519814 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Player.h
 	"Entity.h"
+	<string>
+	<iostream>
 
 1635498736 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Input.h
 	<SFML/Window.hpp>

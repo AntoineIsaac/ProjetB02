@@ -1,6 +1,8 @@
 #ifndef PLAYER_H
 #define PLAYER_H
 #include "Entity.h"
+#include <string>
+#include <iostream>
 
 
 class Player : public Entity
@@ -13,8 +15,17 @@ class Player : public Entity
         Player(const Player& other);
         Player& operator=(const Player& other);
 
-        //Getters
+        //Getters and setters
         Sprite getSprite()const;
+
+        int getXPosition()const;
+        int getYPosition()const;
+        void setXPosition(int x);
+        void setYPosition(int y);
+        int getSpeed()const;
+
+        //Functions
+        void update(bool left, bool right, bool space);
 };
 
 #endif // PLAYER_H

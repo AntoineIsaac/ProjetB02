@@ -6,8 +6,6 @@
 
 using namespace sf;
 
-
-
 int main()
 {
     RenderWindow window(VideoMode(800, 800), "The running dead");
@@ -40,6 +38,7 @@ int main()
             input.InputHandler(event, window);
         }
 
+        player.update(input.GetButton().left, input.GetButton().right, input.GetButton().space);
 
         window.clear();
         window.draw(player.getSprite());

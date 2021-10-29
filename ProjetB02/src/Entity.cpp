@@ -32,3 +32,28 @@ Sprite Entity::getSprite()const
 {
     return sprite;
 }
+
+int Entity::getXPosition()const
+{
+    return xPosition;
+}
+
+int Entity::getYPosition()const
+{
+    return yPosition;
+}
+
+void Entity::setXPosition(int x)
+{
+    this->xPosition = x;
+}
+
+void Entity::setYPosition(int y)
+{
+    this->yPosition = y;
+}
+
+int Entity::getSpeed()const
+{
+    return speed;
+}
