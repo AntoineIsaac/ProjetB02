@@ -7,7 +7,7 @@ Player::Player(int speed, int xPosition, int yPosition, Sprite sprite):Entity(sp
 
 Player::~Player()
 {
-    //dtor
+
 }
 
 Player::Player(const Player& other):Entity(other)

@@ -7,7 +7,7 @@ Entity::Entity(int speed, int xPosition, int yPosition, Sprite sprite):speed(spe
 
 Entity::~Entity()
 {
-    //dtor
+
 }
 
 Entity::Entity(const Entity& other):speed(other.speed), xPosition(other.xPosition), yPosition(other.yPosition), sprite(other.sprite)
