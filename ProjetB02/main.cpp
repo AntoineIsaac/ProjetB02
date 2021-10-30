@@ -18,10 +18,7 @@ int main()
     //float fps;
 
     //Creation of a player
-    Texture texturePlayer;
-    texturePlayer.loadFromFile("Images/zombie.gif");
-    Sprite spritePlayer(texturePlayer);
-    Player player(1, 0, 0, spritePlayer);
+    Player player(1, 0, 0, "Images/zombie.gif");
     player.getSprite().setPosition(500.f, 100.f);
 
     Input input;

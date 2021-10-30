@@ -10,7 +10,7 @@ class Player : public Entity
     private :
 
     public:
-        Player(int speed = 0, int xPosition = 0, int yPosition = 0, Sprite sprite = Sprite());
+        Player(int speed, int xPosition, int yPosition, string textureString);
         virtual ~Player();
         Player(const Player& other);
         Player& operator=(const Player& other);

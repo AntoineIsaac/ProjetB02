@@ -1,6 +1,6 @@
 #include "../include/Player.h"
 
-Player::Player(int speed, int xPosition, int yPosition, Sprite sprite):Entity(speed, xPosition, yPosition, sprite)
+Player::Player(int speed, int xPosition, int yPosition, string textureString):Entity(speed, xPosition, yPosition, textureString)
 {
 
 }

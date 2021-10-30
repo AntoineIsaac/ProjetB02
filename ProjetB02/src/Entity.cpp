@@ -1,8 +1,9 @@
 #include "../include/Entity.h"
 
-Entity::Entity(int speed, int xPosition, int yPosition, Sprite sprite):speed(speed), xPosition(xPosition), yPosition(yPosition), sprite(sprite)
+Entity::Entity(int speed, int xPosition, int yPosition, string textureString):speed(speed), xPosition(xPosition), yPosition(yPosition), textureString(textureString)
 {
-
+    texture.loadFromFile(textureString);
+    sprite.setTexture(texture);
 }
 
 Entity::~Entity()
@@ -10,7 +11,7 @@ Entity::~Entity()
 
 }
 
-Entity::Entity(const Entity& other):speed(other.speed), xPosition(other.xPosition), yPosition(other.yPosition), sprite(other.sprite)
+Entity::Entity(const Entity& other):speed(other.speed), xPosition(other.xPosition), yPosition(other.yPosition), textureString(other.textureString)
 {
     //copy ctor
 }
@@ -22,7 +23,7 @@ Entity& Entity::operator=(const Entity& rhs)
         speed = rhs.speed;
         xPosition = rhs.xPosition;
         yPosition = rhs.yPosition;
-        sprite = rhs.sprite;
+        texture = rhs.texture;
     }
 
     return *this;
@@ -57,3 +58,4 @@ int Entity::getSpeed()const
 {
     return speed;
 }
+

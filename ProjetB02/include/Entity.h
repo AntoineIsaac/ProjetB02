@@ -13,10 +13,12 @@ class Entity
         int speed;
         int xPosition;
         int yPosition;
+        string textureString;
+        Texture texture;
         Sprite sprite;
 
     public:
-        Entity(int speed = 0, int xPosition = 0, int yPosition = 0, Sprite sprite = Sprite());
+        Entity(int speed, int xPosition, int yPosition, string textureString);
         virtual ~Entity();
         Entity(const Entity& other);
         Entity& operator=(const Entity& other);
@@ -24,6 +26,7 @@ class Entity
 
         //Getters and setters
         virtual Sprite getSprite()const=0;
+
 
         virtual int getXPosition()const=0;
         virtual int getYPosition()const=0;
