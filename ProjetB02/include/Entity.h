@@ -10,15 +10,15 @@ using namespace std;
 class Entity
 {
     private:
-        int speed;
-        int xPosition;
-        int yPosition;
+        float speed;
+        float xPosition;
+        float yPosition;
         string textureString;
         Texture texture;
         Sprite sprite;
 
     public:
-        Entity(int speed, int xPosition, int yPosition, string textureString);
+        Entity(float xPosition, float yPosition, string textureString);
         virtual ~Entity();
         Entity(const Entity& other);
         Entity& operator=(const Entity& other);
@@ -28,12 +28,16 @@ class Entity
         virtual Sprite getSprite()const=0;
 
 
-        virtual int getXPosition()const=0;
-        virtual int getYPosition()const=0;
-        virtual void setXPosition(int x)=0;
-        virtual void setYPosition(int y)=0;
+        virtual float getXPosition()const=0;
+        virtual float getYPosition()const=0;
+        virtual void setXPosition(float x)=0;
+        virtual void setYPosition(float y)=0;
 
-        virtual int getSpeed()const=0;
+        virtual void setPosition(float x, float y)=0;
+        virtual void move(float x, float y);
+
+        virtual float getSpeed()const=0;
+        virtual void setSpeed(float speed)=0;
 
 };
 

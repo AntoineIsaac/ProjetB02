@@ -1,8 +1,8 @@
 #include "../include/Player.h"
 
-Player::Player(int speed, int xPosition, int yPosition, string textureString):Entity(speed, xPosition, yPosition, textureString)
+Player::Player(float xPosition, float yPosition, string textureString):Entity(xPosition, yPosition, textureString)
 {
-
+    setSpeed(5.0);
 }
 
 Player::~Player()
@@ -29,39 +29,54 @@ Sprite Player::getSprite()const
     return Entity::getSprite();
 }
 
-int Player::getXPosition()const
+float Player::getXPosition()const
 {
     return Entity::getXPosition();
 }
 
-int Player::getYPosition()const
+float Player::getYPosition()const
 {
     return Entity::getYPosition();
 }
 
-void Player::setXPosition(int x)
+void Player::setXPosition(float x)
 {
     Entity::setXPosition(x);
 }
 
-void Player::setYPosition(int y)
+void Player::setYPosition(float y)
 {
     Entity::setYPosition(y);
 }
 
-int Player::getSpeed()const
+void Player::setPosition(float x, float y)
+{
+    Entity::setPosition(x, y);
+}
+
+void Player::move(float x, float y)
+{
+    Entity::move(x, y);
+}
+
+float Player::getSpeed()const
 {
     return Entity::getSpeed();
 }
 
-void Player::update(bool left, bool right, bool space)
+void Player::setSpeed(float speed)
+{
+    Entity::setSpeed(speed);
+}
+
+void Player::update(bool left, bool right, bool space, float fps)
 {
     if(left)
     {
-        getSprite().setPosition(Vector2f(getXPosition() - getSpeed(), getYPosition()));
+        move((getXPosition() - getSpeed())*fps, 0);
     }
     if(right)
     {
-        getSprite().setPosition(Vector2f(getXPosition() + getSpeed(), getYPosition()));
+        move((getXPosition() + getSpeed())*fps, 0);
     }
 }

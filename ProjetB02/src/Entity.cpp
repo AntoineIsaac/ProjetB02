@@ -1,9 +1,10 @@
 #include "../include/Entity.h"
 
-Entity::Entity(int speed, int xPosition, int yPosition, string textureString):speed(speed), xPosition(xPosition), yPosition(yPosition), textureString(textureString)
+Entity::Entity(float xPosition, float yPosition, string textureString):xPosition(xPosition), yPosition(yPosition), textureString(textureString)
 {
     texture.loadFromFile(textureString);
     sprite.setTexture(texture);
+    sprite.scale(0.5, 0.5);
 }
 
 Entity::~Entity()
@@ -34,28 +35,43 @@ Sprite Entity::getSprite()const
     return sprite;
 }
 
-int Entity::getXPosition()const
+float Entity::getXPosition()const
 {
     return xPosition;
 }
 
-int Entity::getYPosition()const
+float Entity::getYPosition()const
 {
     return yPosition;
 }
 
-void Entity::setXPosition(int x)
+void Entity::setXPosition(float x)
 {
     this->xPosition = x;
 }
 
-void Entity::setYPosition(int y)
+void Entity::setYPosition(float y)
 {
     this->yPosition = y;
 }
 
-int Entity::getSpeed()const
+void Entity::setPosition(float x, float y)
+{
+    sprite.setPosition(x, y);
+}
+
+void Entity::move(float x, float y)
+{
+    sprite.move(x, y);
+}
+
+float Entity::getSpeed()const
 {
     return speed;
+}
+
+void Entity::setSpeed(float speed)
+{
+    this->speed = speed;
 }
 

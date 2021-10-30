@@ -1,19 +1,20 @@
-#ifndef PLAYER_H
-#define PLAYER_H
+#ifndef ZOMBIE_H
+#define ZOMBIE_H
 #include "Entity.h"
 #include <string>
 #include <iostream>
 
 
-class Player : public Entity
+class Zombie : public Entity
 {
-    private :
+    private:
+
 
     public:
-        Player(float xPosition, float yPosition, string textureString);
-        virtual ~Player();
-        Player(const Player& other);
-        Player& operator=(const Player& other);
+        Zombie(float xPosition, float yPosition, string textureString);
+        virtual ~Zombie();
+        Zombie(const Zombie& other);
+        Zombie& operator=(const Zombie& other);
 
         //Getters and setters
         Sprite getSprite()const;
@@ -30,8 +31,6 @@ class Player : public Entity
         float getSpeed()const;
         void setSpeed(float speed);
 
-        //Functions
-        void update(bool left, bool right, bool space, float fps);
 };
 
-#endif // PLAYER_H
+#endif // ZOMBIE_H

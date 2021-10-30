@@ -1,22 +1,23 @@
 # depslib dependency file v1.0
-1635575852 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/main.cpp
+1635584150 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/main.cpp
 	<SFML/Window.hpp>
 	<SFML/System.hpp>
 	<SFML/Graphics.hpp>
 	"include/Player.h"
+	"include/Zombie.h"
 	"include/Input.h"
 
-1635576668 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Entity.cpp
+1635583394 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Entity.cpp
 	"../include/Entity.h"
 
-1635576668 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Entity.h
+1635584183 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Entity.h
 	<SFML/Graphics.hpp>
 	<string>
 
-1635576667 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Player.cpp
+1635584302 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Player.cpp
 	"../include/Player.h"
 
-1635576668 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Player.h
+1635584337 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Player.h
 	"Entity.h"
 	<string>
 	<iostream>
@@ -28,4 +29,12 @@
 
 1635498708 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Input.cpp
 	"../include/Input.h"
+
+1635584309 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Zombie.cpp
+	"../include/Zombie.h"
+
+1635584345 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Zombie.h
+	"Entity.h"
+	<string>
+	<iostream>
 
