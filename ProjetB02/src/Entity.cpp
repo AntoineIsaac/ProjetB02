@@ -12,7 +12,7 @@ Entity::~Entity()
 
 }
 
-Entity::Entity(const Entity& other):speed(other.speed), xPosition(other.xPosition), yPosition(other.yPosition), textureString(other.textureString)
+Entity::Entity(const Entity& other):xPosition(other.xPosition), yPosition(other.yPosition), textureString(other.textureString)
 {
     //copy ctor
 }
@@ -21,7 +21,8 @@ Entity& Entity::operator=(const Entity& rhs)
 {
     if (this != &rhs)
     {
-        speed = rhs.speed;
+        xSpeed = rhs.xSpeed;
+        ySpeed = rhs.ySpeed;
         xPosition = rhs.xPosition;
         yPosition = rhs.yPosition;
         texture = rhs.texture;
@@ -58,20 +59,27 @@ void Entity::setYPosition(float y)
 void Entity::setPosition(float x, float y)
 {
     sprite.setPosition(x, y);
+    setXPosition(x);
+    setYPosition(y);
 }
 
-void Entity::move(float x, float y)
+float Entity::getXSpeed()const
 {
-    sprite.move(x, y);
+    return xSpeed;
 }
 
-float Entity::getSpeed()const
+float Entity::getYSpeed()const
 {
-    return speed;
+    return ySpeed;
 }
 
-void Entity::setSpeed(float speed)
+void Entity::setXSpeed(float xSpeed)
 {
-    this->speed = speed;
+    this->xSpeed = xSpeed;
+}
+
+void Entity::setYSpeed(float ySpeed)
+{
+    this->ySpeed = ySpeed;
 }
 

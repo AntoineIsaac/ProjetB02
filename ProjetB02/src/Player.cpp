@@ -2,7 +2,8 @@
 
 Player::Player(float xPosition, float yPosition, string textureString):Entity(xPosition, yPosition, textureString)
 {
-    setSpeed(5.0);
+    setXSpeed(5.0);
+    setYSpeed(10.0);
 }
 
 Player::~Player()
@@ -54,29 +55,43 @@ void Player::setPosition(float x, float y)
     Entity::setPosition(x, y);
 }
 
-void Player::move(float x, float y)
+float Player::getXSpeed()const
 {
-    Entity::move(x, y);
+    return Entity::getXSpeed();
 }
 
-float Player::getSpeed()const
+float Player::getYSpeed()const
 {
-    return Entity::getSpeed();
+    return Entity::getYSpeed();
 }
 
-void Player::setSpeed(float speed)
+void Player::setXSpeed(float xSpeed)
 {
-    Entity::setSpeed(speed);
+    Entity::setXSpeed(xSpeed);
 }
 
-void Player::update(bool left, bool right, bool space, float fps)
+void Player::setYSpeed(float ySpeed)
+{
+    Entity::setYSpeed(ySpeed);
+}
+
+void Player::update(bool left, bool right, bool space, float fps, float groundHeight)
 {
     if(left)
     {
-        move((getXPosition() - getSpeed())*fps, 0);
+        setPosition(getXPosition() - getXSpeed(), getYPosition());
     }
     if(right)
     {
-        move((getXPosition() + getSpeed())*fps, 0);
+        setPosition(getXPosition() + getXSpeed(), getYPosition());
     }
+    if(space)
+    {
+        setPosition(getXPosition(), getYPosition() - getYSpeed());
+    }
+    if(!space && getYPosition() < groundHeight)
+    {
+        setPosition(getXPosition(), getYPosition() + getYSpeed());
+    }
+
 }

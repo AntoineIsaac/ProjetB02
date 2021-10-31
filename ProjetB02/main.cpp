@@ -22,7 +22,7 @@ int main()
     Player player(0, 0, "Images/zombie.gif");
     player.setPosition(500.f, 100.f);
 
-    Zombie zombie(0, 0, "Images/zombie2.gif");
+    //Zombie zombie(0, 0, "Images/zombie2.gif");
 
     Input input;
 
@@ -38,11 +38,12 @@ int main()
             input.InputHandler(event, window);
         }
 
-        player.update(input.GetButton().left, input.GetButton().right, input.GetButton().space, fps);
+        float groundHeight = 250.0;
+        player.update(input.GetButton().left, input.GetButton().right, input.GetButton().space, fps, groundHeight);
 
         window.clear();
         window.draw(player.getSprite());
-        window.draw(zombie.getSprite());
+        //window.draw(zombie.getSprite());
         window.display();
     }
     return 0;

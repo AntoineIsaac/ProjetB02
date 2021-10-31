@@ -3,6 +3,7 @@
 #include "Entity.h"
 #include <string>
 #include <iostream>
+#include <cmath>
 
 
 class Player : public Entity
@@ -25,13 +26,14 @@ class Player : public Entity
 
         //Redefinition of sprite method
         void setPosition(float x, float y);
-        void move(float x, float y);
 
-        float getSpeed()const;
-        void setSpeed(float speed);
+        float getXSpeed()const;
+        float getYSpeed()const;
+        void setXSpeed(float xSpeed);
+        void setYSpeed(float ySpeed);
 
         //Functions
-        void update(bool left, bool right, bool space, float fps);
+        void update(bool left, bool right, bool space, float fps, float groundHeight);
 };
 
 #endif // PLAYER_H
