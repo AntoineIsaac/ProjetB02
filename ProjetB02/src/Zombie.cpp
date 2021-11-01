@@ -2,7 +2,7 @@
 
 Zombie::Zombie(float xPosition, float yPosition, string textureString):Entity(xPosition, yPosition, textureString)
 {
-    setSpeed(3.0);
+    setXSpeed(3.0);
 }
 
 Zombie::~Zombie()
@@ -54,17 +54,22 @@ void Zombie::setPosition(float x, float y)
     Entity::setPosition(x, y);
 }
 
-void Zombie::move(float x, float y)
+float Zombie::getXSpeed()const
 {
-    Entity::move(x, y);
+    return Entity::getXSpeed();
 }
 
-float Zombie::getSpeed()const
+float Zombie::getYSpeed()const
 {
-    return Entity::getSpeed();
+    return Entity::getYSpeed();
 }
 
-void Zombie::setSpeed(float speed)
+void Zombie::setXSpeed(float xSpeed)
 {
-    Entity::setSpeed(speed);
+    Entity::setXSpeed(xSpeed);
+}
+
+void Zombie::setYSpeed(float ySpeed)
+{
+    Entity::setYSpeed(ySpeed);
 }

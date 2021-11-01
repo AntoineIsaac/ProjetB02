@@ -1,14 +1,10 @@
 #ifndef ZOMBIE_H
 #define ZOMBIE_H
 #include "Entity.h"
-#include <string>
-#include <iostream>
-
 
 class Zombie : public Entity
 {
     private:
-
 
     public:
         Zombie(float xPosition, float yPosition, string textureString);
@@ -26,10 +22,12 @@ class Zombie : public Entity
 
         //Redefinition of sprite method
         void setPosition(float x, float y);
-        void move(float x, float y);
 
-        float getSpeed()const;
-        void setSpeed(float speed);
+        float getXSpeed()const;
+        float getYSpeed()const;
+        void setXSpeed(float xSpeed);
+        void setYSpeed(float ySpeed);
+
 
 };
 

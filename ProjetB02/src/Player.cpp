@@ -79,18 +79,22 @@ void Player::update(bool left, bool right, bool space, float fps, float groundHe
 {
     if(left)
     {
-        setPosition(getXPosition() - getXSpeed(), getYPosition());
+        setXSpeed(-5.0);
+        setPosition(getXPosition() + getXSpeed(), getYPosition());
     }
     if(right)
     {
+        setXSpeed(5.0);
         setPosition(getXPosition() + getXSpeed(), getYPosition());
     }
-    if(space)
+    if(space && getYSpeed() > 0)
     {
-        setPosition(getXPosition(), getYPosition() - getYSpeed());
+        setYSpeed(-10.0);
+        setPosition(getXPosition(), getYPosition() + getYSpeed() - 130.);
     }
     if(!space && getYPosition() < groundHeight)
     {
+        setYSpeed(10.0);
         setPosition(getXPosition(), getYPosition() + getYSpeed());
     }
 
