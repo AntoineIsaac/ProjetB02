@@ -26,23 +26,23 @@ Level& Level::operator=(const Level& rhs)
 vector<Platform*> Level::createLevel1()const
 {
     int level[4][8] = {{1, 1, 1, 1, 1, 0, 2, 0},
-                        {0, 0, 0, 0, 0, 0, 0, 0},
+                        {0, 0, 0, 0, 0, 0, 1, 1},
                         {1, 1, 1, 1, 1, 0, 2, 0},
                         {0, 2, 2, 1, 1, 0, 2, 0}};
     vector<Platform*> platform;
 
 
-    for(int j = 0; j < 8; j++)
+    for(int i = 0; i < 4; i++)
     {
-        for(int i = 0; i<8; i++)
+        for(int j = 0; j<8; j++)
         {
-            if(level[j][i] == 1)
+            if(level[i][j] == 1)
             {
-                platform.push_back(new GrassBlock(75*i, 75*j));
+                platform.push_back(new GrassBlock(75*j, 75*i));
             }
-            else if(level[j][i] == 2)
+            else if(level[i][j] == 2)
             {
-                platform.push_back(new LavaBlock(75*i, 75*j));
+                platform.push_back(new LavaBlock(75*j, 75*i));
             }
         }
     }
