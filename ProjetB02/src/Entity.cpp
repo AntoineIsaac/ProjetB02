@@ -4,7 +4,6 @@ Entity::Entity(float xPosition, float yPosition, string textureString):xPosition
 {
     texture.loadFromFile(textureString);
     sprite.setTexture(texture);
-    sprite.scale(0.5, 0.5);
 }
 
 Entity::~Entity()
@@ -61,6 +60,21 @@ void Entity::setPosition(float x, float y)
     sprite.setPosition(x, y);
     setXPosition(x);
     setYPosition(y);
+}
+
+void Entity::move(float x, float y)
+{
+    sprite.move(x, y);
+}
+
+void Entity::setScale(float x)
+{
+    sprite.scale(x, x);
+}
+
+FloatRect Entity::getLocalBounds()
+{
+    return sprite.getLocalBounds();
 }
 
 float Entity::getXSpeed()const

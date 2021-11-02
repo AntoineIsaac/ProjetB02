@@ -54,6 +54,11 @@ void Zombie::setPosition(float x, float y)
     Entity::setPosition(x, y);
 }
 
+void Zombie::setScale(float x)
+{
+    Entity::setScale(x);
+}
+
 float Zombie::getXSpeed()const
 {
     return Entity::getXSpeed();

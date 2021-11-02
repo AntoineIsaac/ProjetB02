@@ -22,6 +22,7 @@ class Zombie : public Entity
 
         //Redefinition of sprite method
         void setPosition(float x, float y);
+        void setScale(float x);
 
         float getXSpeed()const;
         float getYSpeed()const;

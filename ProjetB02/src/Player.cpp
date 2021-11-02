@@ -2,8 +2,7 @@
 
 Player::Player(float xPosition, float yPosition, string textureString):Entity(xPosition, yPosition, textureString)
 {
-    setXSpeed(5.0);
-    setYSpeed(10.0);
+    setScale(scale);
 }
 
 Player::~Player()
@@ -45,6 +44,11 @@ void Player::setXPosition(float x)
     Entity::setXPosition(x);
 }
 
+void Player::move(float x, float y)
+{
+    Entity::move(x, y);
+}
+
 void Player::setYPosition(float y)
 {
     Entity::setYPosition(y);
@@ -53,6 +57,16 @@ void Player::setYPosition(float y)
 void Player::setPosition(float x, float y)
 {
     Entity::setPosition(x, y);
+}
+
+void Player::setScale(float x)
+{
+    Entity::setScale(x);
+}
+
+FloatRect Player::getLocalBounds()
+{
+    return Entity::getLocalBounds();
 }
 
 float Player::getXSpeed()const
@@ -77,25 +91,73 @@ void Player::setYSpeed(float ySpeed)
 
 void Player::update(bool left, bool right, bool space, float fps, float groundHeight)
 {
+    int newXPosition = getXPosition();
+    int newYPosition = getYPosition();
+
+    setXSpeed(0);
+
     if(left)
     {
-        setXSpeed(-5.0);
-        setPosition(getXPosition() + getXSpeed(), getYPosition());
+        setXSpeed(-5.0 * fps);
     }
     if(right)
     {
-        setXSpeed(5.0);
-        setPosition(getXPosition() + getXSpeed(), getYPosition());
+        setXSpeed(5.0 * fps);
     }
-    if(space && getYSpeed() > 0)
+    if(space)
     {
         setYSpeed(-10.0);
-        setPosition(getXPosition(), getYPosition() + getYSpeed() - 130.);
+        newYPosition += getYSpeed() - 100;
     }
-    if(!space && getYPosition() < groundHeight)
+    if(!space)
     {
         setYSpeed(10.0);
-        setPosition(getXPosition(), getYPosition() + getYSpeed());
+        newYPosition += getYSpeed() * fps;
     }
+
+    newXPosition += getXSpeed() * fps;
+
+    setPosition(newXPosition, newYPosition);
+
+    collision(newXPosition, newYPosition);
+
+
+}
+
+void Player::collision(int &newXPosition, int &newYPosition)
+{
+
+    bool collisionLeft = false, collisionRight = false, collisionTop = false, collisionBottom = false;
+
+    if(getXPosition() + hitBoxWidth[0] < 0)
+    {
+        collisionLeft = true;
+    }
+    if(getXPosition() + hitBoxWidth[1] > 800)
+    {
+        collisionRight = true;
+    }
+    if(getYPosition() + hitBoxHeight[0] < 0)
+    {
+        collisionTop = true;
+    }
+    if(getYPosition() + hitBoxHeight[1] > 400)
+    {
+        collisionBottom = true;
+    }
+
+    if(collisionLeft)
+        newXPosition = 0 - hitBoxWidth[0];
+
+    if(collisionRight)
+        newXPosition = 800 - hitBoxWidth[1];
+
+    if(collisionTop)
+        newYPosition = 0 - hitBoxHeight[0];
+
+    if(collisionBottom)
+        newYPosition = 400 - hitBoxHeight[1];
+
+    setPosition(newXPosition, newYPosition);
 
 }

@@ -9,6 +9,9 @@
 class Player : public Entity
 {
     private :
+        float scale = 0.5;
+        float hitBoxWidth[2] = {80*scale, 280*scale};
+        float hitBoxHeight[2] = {20*scale, 490*scale};
 
     public:
         Player(float xPosition, float yPosition, string textureString);
@@ -26,6 +29,9 @@ class Player : public Entity
 
         //Redefinition of sprite method
         void setPosition(float x, float y);
+        void move(float x, float y);
+        void setScale(float x);
+        FloatRect getLocalBounds();
 
         float getXSpeed()const;
         float getYSpeed()const;
@@ -34,6 +40,7 @@ class Player : public Entity
 
         //Functions
         void update(bool left, bool right, bool space, float fps, float groundHeight);
+        void collision(int &newXPosition, int &newYposition);
 };
 
 #endif // PLAYER_H
