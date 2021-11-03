@@ -121,8 +121,8 @@ void Player::update(bool left, bool right, bool space, float fps, vector<Platfor
     }
     if(!space)
     {
-//        setYSpeed(1.0);
-//        newYPosition += getYSpeed() * fps;
+        setYSpeed(1.0);
+        newYPosition += getYSpeed() * fps;
     }
 
     newXPosition += getXSpeed() * fps;
@@ -139,11 +139,14 @@ void Player::collision(int &newXPosition, int &newYPosition, vector<Platform*> l
 
     for(Platform* platform : level)
     {
+
+
         //If the player touch the platform
         if(getGlobalBoundsHitBox().intersects(platform->getGlobalBounds()))
         {
+
             //Bottom collision
-            if(getYSpeed() > 0)
+            if(getYSpeed() > 0 )
                {
                    newXPosition = getXPosition();
                    newYPosition = platform->getYPosition() - getGlobalBounds().height + (getGlobalBounds().height - hitBoxHeight[1]);
