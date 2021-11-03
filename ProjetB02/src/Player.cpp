@@ -121,8 +121,8 @@ void Player::update(bool left, bool right, bool space, float fps, vector<Platfor
     }
     if(!space)
     {
-        setYSpeed(1.0);
-        newYPosition += getYSpeed() * fps;
+//        setYSpeed(1.0);
+//        newYPosition += getYSpeed() * fps;
     }
 
     newXPosition += getXSpeed() * fps;
@@ -143,37 +143,25 @@ void Player::collision(int &newXPosition, int &newYPosition, vector<Platform*> l
         if(getGlobalBoundsHitBox().intersects(platform->getGlobalBounds()))
         {
             //Bottom collision
-            if(getYPosition() + hitBoxHeight[0] < platform->getYPosition()
-               && getYPosition() + hitBoxHeight[1] < platform->getYPosition()+platform->getSize()
-               && getXPosition() + hitBoxWidth[0] < platform->getXPosition() + platform->getSize()
-               && getXPosition() + hitBoxWidth[1] > platform->getXPosition())
+            if(getYSpeed() > 0)
                {
                    newXPosition = getXPosition();
-                   newYPosition = platform->getYPosition() - getGlobalBounds().height + (10*scale);
+                   newYPosition = platform->getYPosition() - getGlobalBounds().height + (getGlobalBounds().height - hitBoxHeight[1]);
                }
             //Top collision
-            else if(getYPosition() + hitBoxHeight[0] > platform->getYPosition()
-               && getYPosition() + hitBoxHeight[1] > platform->getYPosition()+platform->getSize()
-               && getXPosition() + hitBoxWidth[0] < platform->getXPosition() + platform->getSize()
-               && getXPosition() + hitBoxWidth[1] > platform->getXPosition())
+            if(getYSpeed() < 0)
                {
                    newXPosition = getXPosition();
-                   newYPosition = platform->getYPosition() + platform->getSize() - (10*scale);
+                   newYPosition = platform->getYPosition() + platform->getSize() - hitBoxHeight[0];
                }
             //Right collision
-            if(getXPosition() + hitBoxWidth[0] < platform->getXPosition()
-               && getXPosition() + hitBoxWidth[1] < platform->getXPosition()+platform->getSize()
-               && getYPosition() + hitBoxHeight[0] < platform->getYPosition() + platform->getSize()
-               && getYPosition() +hitBoxHeight[1] > platform->getYPosition())
+            if(getXSpeed() > 0)
                {
-                   newXPosition = platform->getXPosition() - getGlobalBounds().width+(20*scale);
+                   newXPosition = platform->getXPosition() - getGlobalBounds().width + (getGlobalBounds().width - hitBoxWidth[1]);
                    newYPosition = getYPosition();
                }
             //Left collision
-            if(getXPosition() + hitBoxWidth[0] > platform->getXPosition()
-               && getXPosition() + hitBoxWidth[1] > platform->getXPosition()+platform->getSize()
-               && getYPosition() + hitBoxHeight[0] < platform->getYPosition() + platform->getSize()
-               && getYPosition() + hitBoxHeight[1] > platform->getYPosition())
+            if(getXSpeed() < 0)
                {
                    newXPosition = platform->getXPosition() + platform->getSize() - hitBoxWidth[0];
                    newYPosition = getYPosition();
@@ -181,37 +169,6 @@ void Player::collision(int &newXPosition, int &newYPosition, vector<Platform*> l
         }
     }
 
-//    bool collisionLeft = false, collisionRight = false, collisionTop = false, collisionBottom = false;
-//
-//    if(getXPosition() + hitBoxWidth[0] < 0)
-//    {
-//        collisionLeft = true;
-//    }
-//    if(getXPosition() + hitBoxWidth[1] > 800)
-//    {
-//        collisionRight = true;
-//    }
-//    if(getYPosition() + hitBoxHeight[0] < 0)
-//    {
-//        collisionTop = true;
-//    }
-//    if(getYPosition() + hitBoxHeight[1] > 400)
-//    {
-//        collisionBottom = true;
-//    }
-//
-//    if(collisionLeft)
-//        newXPosition = 0 - hitBoxWidth[0];
-//
-//    if(collisionRight)
-//        newXPosition = 800 - hitBoxWidth[1];
-//
-//    if(collisionTop)
-//        newYPosition = 0 - hitBoxHeight[0];
-//
-//    if(collisionBottom)
-//        newYPosition = 400 - hitBoxHeight[1];
-//
     setPosition(newXPosition, newYPosition);
 
 }
