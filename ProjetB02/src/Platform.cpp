@@ -47,6 +47,16 @@ void Platform::setYPosition(float y)
     yPosition = y;
 }
 
+FloatRect Platform::getGlobalBounds()
+{
+    return sprite.getGlobalBounds();
+}
+
+float Platform::getSize()
+{
+    return size;
+}
+
 Sprite Platform::getSprite()const
 {
     return sprite;

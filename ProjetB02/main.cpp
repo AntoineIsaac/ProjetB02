@@ -28,7 +28,7 @@ int main()
     float fps;
 
     //Creation of a player
-    Player player(400.0, 0, "Images/zombie.gif");
+    Player player(300.0, 100, "Images/zombie.gif");
 
     //Creation of a Zombie
     Zombie zombie(0, 0, "Images/zombie2.gif");
@@ -54,9 +54,7 @@ int main()
             input.InputHandler(event, window);
         }
 
-
-        float groundHeight = 250.0;
-        player.update(input.GetButton().left, input.GetButton().right, input.GetButton().space, fps, groundHeight);
+        player.update(input.GetButton().left, input.GetButton().right, input.GetButton().space, fps, level1);
 
         //Set the view on the player
         //view.setCenter(player.getXPosition(), player.getYPosition());
@@ -66,7 +64,7 @@ int main()
 
         //Draw the player
         window.draw(player.getSprite());
-        window.draw(zombie.getSprite());
+        //window.draw(zombie.getSprite());
 
         //Draw the platform
         for(Platform* p : level1)

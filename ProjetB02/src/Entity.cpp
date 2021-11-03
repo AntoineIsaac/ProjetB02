@@ -72,9 +72,9 @@ void Entity::setScale(float x)
     sprite.scale(x, x);
 }
 
-FloatRect Entity::getLocalBounds()
+FloatRect Entity::getGlobalBounds()
 {
-    return sprite.getLocalBounds();
+    return sprite.getGlobalBounds();
 }
 
 float Entity::getXSpeed()const

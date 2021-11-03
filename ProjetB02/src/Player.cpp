@@ -64,9 +64,19 @@ void Player::setScale(float x)
     Entity::setScale(x);
 }
 
-FloatRect Player::getLocalBounds()
+FloatRect Player::getGlobalBounds()
 {
-    return Entity::getLocalBounds();
+    return Entity::getGlobalBounds();
+}
+
+FloatRect Player::getGlobalBoundsHitBox()
+{
+    FloatRect rect = Entity::getGlobalBounds();
+    rect.left += hitBoxWidth[0];
+    rect.top += hitBoxHeight[0];
+    rect.height = hitBoxHeight[1] - hitBoxHeight[0];
+    rect.width = hitBoxWidth[1] - hitBoxWidth[0];
+    return rect;
 }
 
 float Player::getXSpeed()const
@@ -89,7 +99,7 @@ void Player::setYSpeed(float ySpeed)
     Entity::setYSpeed(ySpeed);
 }
 
-void Player::update(bool left, bool right, bool space, float fps, float groundHeight)
+void Player::update(bool left, bool right, bool space, float fps, vector<Platform*> level)
 {
     int newXPosition = getXPosition();
     int newYPosition = getYPosition();
@@ -107,11 +117,11 @@ void Player::update(bool left, bool right, bool space, float fps, float groundHe
     if(space)
     {
         setYSpeed(-10.0);
-        newYPosition += getYSpeed() - 100;
+        newYPosition += getYSpeed();
     }
     if(!space)
     {
-        setYSpeed(10.0);
+        setYSpeed(1.0);
         newYPosition += getYSpeed() * fps;
     }
 
@@ -119,45 +129,89 @@ void Player::update(bool left, bool right, bool space, float fps, float groundHe
 
     setPosition(newXPosition, newYPosition);
 
-    collision(newXPosition, newYPosition);
+    collision(newXPosition, newYPosition, level);
 
 
 }
 
-void Player::collision(int &newXPosition, int &newYPosition)
+void Player::collision(int &newXPosition, int &newYPosition, vector<Platform*> level)
 {
 
-    bool collisionLeft = false, collisionRight = false, collisionTop = false, collisionBottom = false;
-
-    if(getXPosition() + hitBoxWidth[0] < 0)
+    for(Platform* platform : level)
     {
-        collisionLeft = true;
+        //If the player touch the platform
+        if(getGlobalBoundsHitBox().intersects(platform->getGlobalBounds()))
+        {
+            //Bottom collision
+            if(getYPosition() + hitBoxHeight[0] < platform->getYPosition()
+               && getYPosition() + hitBoxHeight[1] < platform->getYPosition()+platform->getSize()
+               && getXPosition() + hitBoxWidth[0] < platform->getXPosition() + platform->getSize()
+               && getXPosition() + hitBoxWidth[1] > platform->getXPosition())
+               {
+                   newXPosition = getXPosition();
+                   newYPosition = platform->getYPosition() - getGlobalBounds().height + (10*scale);
+               }
+            //Top collision
+            else if(getYPosition() + hitBoxHeight[0] > platform->getYPosition()
+               && getYPosition() + hitBoxHeight[1] > platform->getYPosition()+platform->getSize()
+               && getXPosition() + hitBoxWidth[0] < platform->getXPosition() + platform->getSize()
+               && getXPosition() + hitBoxWidth[1] > platform->getXPosition())
+               {
+                   newXPosition = getXPosition();
+                   newYPosition = platform->getYPosition() + platform->getSize() - (10*scale);
+               }
+            //Right collision
+            if(getXPosition() + hitBoxWidth[0] < platform->getXPosition()
+               && getXPosition() + hitBoxWidth[1] < platform->getXPosition()+platform->getSize()
+               && getYPosition() + hitBoxHeight[0] < platform->getYPosition() + platform->getSize()
+               && getYPosition() +hitBoxHeight[1] > platform->getYPosition())
+               {
+                   newXPosition = platform->getXPosition() - getGlobalBounds().width+(20*scale);
+                   newYPosition = getYPosition();
+               }
+            //Left collision
+            if(getXPosition() + hitBoxWidth[0] > platform->getXPosition()
+               && getXPosition() + hitBoxWidth[1] > platform->getXPosition()+platform->getSize()
+               && getYPosition() + hitBoxHeight[0] < platform->getYPosition() + platform->getSize()
+               && getYPosition() + hitBoxHeight[1] > platform->getYPosition())
+               {
+                   newXPosition = platform->getXPosition() + platform->getSize() - hitBoxWidth[0];
+                   newYPosition = getYPosition();
+               }
+        }
     }
-    if(getXPosition() + hitBoxWidth[1] > 800)
-    {
-        collisionRight = true;
-    }
-    if(getYPosition() + hitBoxHeight[0] < 0)
-    {
-        collisionTop = true;
-    }
-    if(getYPosition() + hitBoxHeight[1] > 400)
-    {
-        collisionBottom = true;
-    }
 
-    if(collisionLeft)
-        newXPosition = 0 - hitBoxWidth[0];
-
-    if(collisionRight)
-        newXPosition = 800 - hitBoxWidth[1];
-
-    if(collisionTop)
-        newYPosition = 0 - hitBoxHeight[0];
-
-    if(collisionBottom)
-        newYPosition = 400 - hitBoxHeight[1];
-
+//    bool collisionLeft = false, collisionRight = false, collisionTop = false, collisionBottom = false;
+//
+//    if(getXPosition() + hitBoxWidth[0] < 0)
+//    {
+//        collisionLeft = true;
+//    }
+//    if(getXPosition() + hitBoxWidth[1] > 800)
+//    {
+//        collisionRight = true;
+//    }
+//    if(getYPosition() + hitBoxHeight[0] < 0)
+//    {
+//        collisionTop = true;
+//    }
+//    if(getYPosition() + hitBoxHeight[1] > 400)
+//    {
+//        collisionBottom = true;
+//    }
+//
+//    if(collisionLeft)
+//        newXPosition = 0 - hitBoxWidth[0];
+//
+//    if(collisionRight)
+//        newXPosition = 800 - hitBoxWidth[1];
+//
+//    if(collisionTop)
+//        newYPosition = 0 - hitBoxHeight[0];
+//
+//    if(collisionBottom)
+//        newYPosition = 400 - hitBoxHeight[1];
+//
     setPosition(newXPosition, newYPosition);
 
 }

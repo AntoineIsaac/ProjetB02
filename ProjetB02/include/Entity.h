@@ -37,7 +37,7 @@ class Entity
         virtual void setPosition(float x, float y)=0;
         virtual void move(float x, float y);
         virtual void setScale(float x)=0;
-        virtual FloatRect getLocalBounds();
+        virtual FloatRect getGlobalBounds();
 
         virtual float getXSpeed()const=0;
         virtual float getYSpeed()const=0;

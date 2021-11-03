@@ -16,6 +16,8 @@ class Platform
         float yPosition;
         Texture texture;
         Sprite sprite;
+        float scale = 1.;
+        float size = 75*scale;
 
     public:
         Platform(float xPosition, float yPosition);
@@ -29,6 +31,8 @@ class Platform
 
         virtual float getYPosition()const;
         virtual void setYPosition(float y);
+        virtual FloatRect getGlobalBounds();
+        virtual float getSize();
 
         virtual Sprite getSprite()const;
         virtual void setSprite(string textureString, IntRect coord);

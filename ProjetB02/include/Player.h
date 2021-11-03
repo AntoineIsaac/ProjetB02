@@ -4,6 +4,7 @@
 #include <string>
 #include <iostream>
 #include <cmath>
+#include "Platform.h"
 
 
 class Player : public Entity
@@ -31,7 +32,8 @@ class Player : public Entity
         void setPosition(float x, float y);
         void move(float x, float y);
         void setScale(float x);
-        FloatRect getLocalBounds();
+        FloatRect getGlobalBounds();
+        FloatRect getGlobalBoundsHitBox();
 
         float getXSpeed()const;
         float getYSpeed()const;
@@ -39,8 +41,8 @@ class Player : public Entity
         void setYSpeed(float ySpeed);
 
         //Functions
-        void update(bool left, bool right, bool space, float fps, float groundHeight);
-        void collision(int &newXPosition, int &newYposition);
+        void update(bool left, bool right, bool space, float fps, vector<Platform*> level);
+        void collision(int &newXPosition, int &newYposition, vector<Platform*> level);
 };
 
 #endif // PLAYER_H
