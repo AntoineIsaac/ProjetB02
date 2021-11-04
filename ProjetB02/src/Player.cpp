@@ -139,37 +139,85 @@ void Player::collision(int &newXPosition, int &newYPosition, vector<Platform*> l
 
     for(Platform* platform : level)
     {
-
-
-        //If the player touch the platform
-        if(getGlobalBoundsHitBox().intersects(platform->getGlobalBounds()))
+        if(getXPosition() + hitBoxWidth[0] < platform->getXPosition()
+           && getXPosition() + hitBoxWidth[1] > platform->getXPosition() + platform->getSize()
+           && getYPosition() + hitBoxHeight[0] < platform->getYPosition() + platform->getSize()
+           && getYPosition() + hitBoxHeight[1] > platform->getYPosition())
         {
-
-            //Bottom collision
-            if(getYSpeed() > 0 )
-               {
-                   newXPosition = getXPosition();
-                   newYPosition = platform->getYPosition() - getGlobalBounds().height + (getGlobalBounds().height - hitBoxHeight[1]);
-               }
-            //Top collision
-            if(getYSpeed() < 0)
-               {
-                   newXPosition = getXPosition();
-                   newYPosition = platform->getYPosition() + platform->getSize() - hitBoxHeight[0];
-               }
-            //Right collision
             if(getXSpeed() > 0)
-               {
-                   newXPosition = platform->getXPosition() - getGlobalBounds().width + (getGlobalBounds().width - hitBoxWidth[1]);
-                   newYPosition = getYPosition();
-               }
-            //Left collision
+            {
+                newXPosition = platform->getXPosition() - getGlobalBounds().width + (getGlobalBounds().width - hitBoxWidth[1]);
+            }
             if(getXSpeed() < 0)
-               {
-                   newXPosition = platform->getXPosition() + platform->getSize() - hitBoxWidth[0];
-                   newYPosition = getYPosition();
-               }
+            {
+                newXPosition = platform->getXPosition() + platform->getSize() - hitBoxWidth[0];
+            }
+            if(getYSpeed() > 0)
+            {
+                newYPosition = platform->getYPosition() - getGlobalBounds().height + (getGlobalBounds().height - hitBoxHeight[1]);
+            }
+            if(getYSpeed() < 0)
+            {
+                newYPosition = platform->getYPosition() + platform->getSize() - hitBoxHeight[0];
+            }
         }
+
+
+//         //If the player touch the platform
+//        if(getGlobalBoundsHitBox().intersects(platform->getGlobalBounds()))
+//        {
+//            //Bottom collision
+//            if(getYSpeed() > 0 )
+//               {
+//                   if(getXPosition() + hitBoxWidth[1] < platform->getXPosition()
+//                      && getXPosition() + hitBoxWidth[1] < platform->getXPosition() + platform->getSize()
+//                      && getYPosition() + hitBoxHeight[0] < platform->getYPosition() + platform->getSize()
+//                      && getYPosition() + hitBoxHeight[1] > platform->getYPosition())
+//                   {
+//                        newXPosition = platform->getXPosition() - getGlobalBounds().width + (getGlobalBounds().width - hitBoxWidth[1]);
+//                   }
+//                   else if(getXSpeed() > 0)
+//                   {
+//                        //newXPosition = platform->getXPosition() - getGlobalBounds().width + (getGlobalBounds().width - hitBoxWidth[1]);
+//                        newXPosition = getXPosition() + getXSpeed();
+//                   }
+//
+//                   if(getXPosition() + hitBoxWidth[0] > platform->getXPosition() + platform->getSize()
+//                      && getXPosition() + hitBoxWidth[1] > platform->getXPosition() + platform->getSize()
+//                      && getYPosition() + hitBoxHeight[0] < platform->getYPosition() + platform->getSize()
+//                      && getYPosition() + hitBoxHeight[1] > platform->getYPosition())
+//                   {
+//                        newXPosition = platform->getXPosition() - getGlobalBounds().width + (getGlobalBounds().width - hitBoxWidth[1]);
+//                   }
+//                    else if(getXSpeed() < 0)
+//                   {
+//                        //newXPosition = platform->getXPosition() + platform->getSize() - hitBoxWidth[0];
+//                        newXPosition = getXPosition() - getXSpeed();
+//                   }
+//                   else
+//                   {
+//                       newXPosition = getXPosition();
+//                   }
+//                   newYPosition = platform->getYPosition() - getGlobalBounds().height + (getGlobalBounds().height - hitBoxHeight[1]);
+//               }
+//            //Top collision
+//            if(getYSpeed() < 0)
+//               {
+//                   if(getXSpeed() > 0)
+//                   {
+//                        newXPosition = platform->getXPosition() - getGlobalBounds().width + (getGlobalBounds().width - hitBoxWidth[1]);
+//                   }
+//                   else if(getXSpeed() < 0)
+//                   {
+//                        newXPosition = platform->getXPosition() + platform->getSize() - hitBoxWidth[0];
+//                   }
+//                   else
+//                   {
+//                       newXPosition = getXPosition();
+//                   }
+//                   newYPosition = platform->getYPosition() + platform->getSize() - hitBoxHeight[0];
+//               }
+//        }
     }
 
     setPosition(newXPosition, newYPosition);

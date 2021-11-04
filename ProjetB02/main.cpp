@@ -57,8 +57,8 @@ int main()
         player.update(input.GetButton().left, input.GetButton().right, input.GetButton().space, fps, level1);
 
         //Set the view on the player
-        //view.setCenter(player.getXPosition(), player.getYPosition());
-        //window.setView(view);
+        view.setCenter(player.getXPosition(), player.getYPosition());
+        window.setView(view);
 
         window.clear();
 
