@@ -10,9 +10,12 @@
 class Player : public Entity
 {
     private :
-        float scale = 0.5;
+        float scale = 0.3;
         float hitBoxWidth[2] = {80*scale, 280*scale};
         float hitBoxHeight[2] = {20*scale, 490*scale};
+        float width = hitBoxWidth[1] - hitBoxWidth[0];
+        float height = hitBoxHeight[1] - hitBoxHeight[0];
+        bool onGround;
 
     public:
         Player(float xPosition, float yPosition, string textureString);

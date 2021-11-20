@@ -1,0 +1,39 @@
+# depslib dependency file v1.0
+1637059444 source:/home/antoine/Documents/Projet/ProjetB02/pIsaac/main.cpp
+	<iostream>
+	"Position1984.h"
+	"Arene1984.h"
+	"Personnage1984.h"
+	"Druide1984.h"
+
+1637056493 /home/antoine/Documents/Projet/ProjetB02/pIsaac/include/Position1984.h
+	<string>
+
+1637057961 /home/antoine/Documents/Projet/ProjetB02/pIsaac/include/Arene1984.h
+	<vector>
+	<stdlib.h>
+	"Personnage1984.h"
+	<string>
+	<iostream>
+	<iomanip>
+
+1637060331 /home/antoine/Documents/Projet/ProjetB02/pIsaac/include/Personnage1984.h
+	<string>
+	"Position1984.h"
+	<sstream>
+
+1637060347 /home/antoine/Documents/Projet/ProjetB02/pIsaac/include/Druide1984.h
+	"Personnage1984.h"
+
+1637060046 source:/home/antoine/Documents/Projet/ProjetB02/pIsaac/src/Arene1984.cpp
+	"Arene1984.h"
+
+1637060367 source:/home/antoine/Documents/Projet/ProjetB02/pIsaac/src/Druide1984.cpp
+	"Druide1984.h"
+
+1637060326 source:/home/antoine/Documents/Projet/ProjetB02/pIsaac/src/Personnage1984.cpp
+	"Personnage1984.h"
+
+1637056500 source:/home/antoine/Documents/Projet/ProjetB02/pIsaac/src/Position1984.cpp
+	"Position1984.h"
+

@@ -116,18 +116,16 @@ void Player::update(bool left, bool right, bool space, float fps, vector<Platfor
     }
     if(space)
     {
-        setYSpeed(-10.0);
-        newYPosition += getYSpeed();
+        setYSpeed(-20.0 * fps);
+        onGround = false;
     }
     if(!space)
     {
-        setYSpeed(1.0);
-        newYPosition += getYSpeed() * fps;
+        setYSpeed(10.0 * fps);
     }
 
-    newXPosition += getXSpeed() * fps;
-
-    setPosition(newXPosition, newYPosition);
+    newXPosition += getXSpeed();
+    newYPosition += getYSpeed();
 
     collision(newXPosition, newYPosition, level);
 
@@ -137,87 +135,68 @@ void Player::update(bool left, bool right, bool space, float fps, vector<Platfor
 void Player::collision(int &newXPosition, int &newYPosition, vector<Platform*> level)
 {
 
-    for(Platform* platform : level)
+    for(Platform * platform : level)
     {
-        if(getXPosition() + hitBoxWidth[0] < platform->getXPosition()
-           && getXPosition() + hitBoxWidth[1] > platform->getXPosition() + platform->getSize()
-           && getYPosition() + hitBoxHeight[0] < platform->getYPosition() + platform->getSize()
-           && getYPosition() + hitBoxHeight[1] > platform->getYPosition())
+        //Left
+        if(onGround == true)
         {
-            if(getXSpeed() > 0)
+            //Left
+            if( newXPosition + hitBoxWidth[0] < platform->getXPosition() + platform->getSize() && getXPosition() + hitBoxWidth[0] >= platform->getXPosition() + platform->getSize()
+           && (((getYPosition()  + hitBoxHeight[1] < platform->getYPosition() + platform->getSize() ) && (getYPosition() + hitBoxHeight[1] > platform->getYPosition()) ) || ((getYPosition() + hitBoxHeight[0] + (height/2) < platform->getYPosition() + platform->getSize()) && (getYPosition()  + hitBoxHeight[0] + (height/2) > platform->getYPosition())) || ((getYPosition() + hitBoxHeight[0] < platform->getYPosition() + platform->getSize() ) && (getYPosition()  + hitBoxHeight[0] > platform->getYPosition())) ))
+           {
+                newXPosition =  platform->getXPosition() + platform->getSize() - hitBoxWidth[0];
+           }
+
+           //Bottom
+           if( newYPosition + hitBoxHeight[1] > platform->getYPosition() && getYPosition() + hitBoxHeight[1] <= platform->getYPosition()
+           && (((getXPosition() +hitBoxWidth[0] < platform->getXPosition() + platform->getSize()) && (getXPosition() + hitBoxWidth[0] > platform->getXPosition())) || ((getXPosition() + hitBoxWidth[0] + (width/2) < platform->getXPosition() + platform->getSize()) && (getXPosition() + hitBoxWidth[0] + (width/2) > platform->getXPosition())) || ((getXPosition() + hitBoxWidth[1] < platform->getXPosition() + platform->getSize()) && (getXPosition() + hitBoxWidth[1] > platform->getXPosition()))))
             {
-                newXPosition = platform->getXPosition() - getGlobalBounds().width + (getGlobalBounds().width - hitBoxWidth[1]);
+                newYPosition =  platform->getYPosition() - height - hitBoxHeight[0];
+                onGround = true;
             }
-            if(getXSpeed() < 0)
+
+            //Right
+            if( newXPosition + hitBoxWidth[1] > platform->getXPosition() && getXPosition() + hitBoxWidth[1] <= platform->getXPosition()
+               && (((getYPosition() + hitBoxHeight[1] < platform->getYPosition() + platform->getSize()) && (getYPosition()  + hitBoxHeight[1] > platform->getYPosition())) || ((getYPosition()  + hitBoxHeight[0] +(height/2) < platform->getYPosition() + platform->getSize()) && (getYPosition()  + hitBoxHeight[0] + (height/2) > platform->getYPosition())) || ((getYPosition() + hitBoxHeight[0] < platform->getYPosition() + platform->getSize()) && (getYPosition()  + hitBoxHeight[0] > platform->getYPosition())) ))
             {
-                newXPosition = platform->getXPosition() + platform->getSize() - hitBoxWidth[0];
+                    newXPosition =  platform->getXPosition() - width - hitBoxWidth[0];
             }
-            if(getYSpeed() > 0)
-            {
-                newYPosition = platform->getYPosition() - getGlobalBounds().height + (getGlobalBounds().height - hitBoxHeight[1]);
-            }
-            if(getYSpeed() < 0)
-            {
-                newYPosition = platform->getYPosition() + platform->getSize() - hitBoxHeight[0];
-            }
+
+
         }
+        else
+        {
+            //Left
+            if( newXPosition + hitBoxWidth[0] < platform->getXPosition() + platform->getSize() && getXPosition() + hitBoxWidth[0] >= platform->getXPosition() + platform->getSize()
+                    && (((getYPosition()  + hitBoxHeight[1] <= platform->getYPosition() + platform->getSize() ) && (getYPosition() + hitBoxHeight[1] >= platform->getYPosition()) ) || ((getYPosition() + hitBoxHeight[0] + (height/2) < platform->getYPosition() + platform->getSize()) && (getYPosition()  + hitBoxHeight[0] + (height/2) > platform->getYPosition())) || ((getYPosition() + hitBoxHeight[0] < platform->getYPosition() + platform->getSize() ) && (getYPosition()  + hitBoxHeight[0] > platform->getYPosition())) ))
+                {
+                    newXPosition =  platform->getXPosition() + platform->getSize() - hitBoxWidth[0];
+                }
+
+            //Bottom
+            if( newYPosition + hitBoxHeight[1] > platform->getYPosition() && getYPosition() + hitBoxHeight[1] <= platform->getYPosition()
+                    && (((getXPosition() +hitBoxWidth[0] <= platform->getXPosition() + platform->getSize()) && (getXPosition() + hitBoxWidth[0] >= platform->getXPosition())) || ((getXPosition() + hitBoxWidth[0] + (width/2) < platform->getXPosition() + platform->getSize()) && (getXPosition() + hitBoxWidth[0] + (width/2) > platform->getXPosition())) || ((getXPosition() + hitBoxWidth[1] <= platform->getXPosition() + platform->getSize()) && (getXPosition() + hitBoxWidth[1] >= platform->getXPosition()))))
+                    {
+                            newYPosition =  platform->getYPosition() - height - hitBoxHeight[0];
+                            onGround = true;
+                    }
+
+                    //Right
+            if( newXPosition + hitBoxWidth[1] > platform->getXPosition() && getXPosition() + hitBoxWidth[1] <= platform->getXPosition()
+               && (((getYPosition() + hitBoxHeight[1] <= platform->getYPosition() + platform->getSize()) && (getYPosition()  + hitBoxHeight[1] >= platform->getYPosition())) || ((getYPosition()  + hitBoxHeight[0] +(height/2) < platform->getYPosition() + platform->getSize()) && (getYPosition()  + hitBoxHeight[0] + (height/2) > platform->getYPosition())) || ((getYPosition() + hitBoxHeight[0] < platform->getYPosition() + platform->getSize()) && (getYPosition()  + hitBoxHeight[0] > platform->getYPosition())) ))
+            {
+                    newXPosition =  platform->getXPosition() - width - hitBoxWidth[0];
+            }
+
+            //Top
+            if( newYPosition + hitBoxHeight[0] < platform->getYPosition() + platform->getSize() && getYPosition() + hitBoxHeight[0] >= platform->getYPosition() + platform->getSize()
+               && (((getXPosition() +hitBoxWidth[0] < platform->getXPosition() + platform->getSize()) && (getXPosition() + hitBoxWidth[0] > platform->getXPosition())) || ((getXPosition() + hitBoxWidth[0] + (width/2) < platform->getXPosition() + platform->getSize()) && (getXPosition() + hitBoxWidth[0] + (width/2) > platform->getXPosition())) || ((getXPosition() + hitBoxWidth[1] < platform->getXPosition() + platform->getSize()) && (getXPosition() + hitBoxWidth[1] > platform->getXPosition()))))
+            {
+                newYPosition =  platform->getYPosition() + platform->getSize() - hitBoxHeight[0];
+            }
 
 
-//         //If the player touch the platform
-//        if(getGlobalBoundsHitBox().intersects(platform->getGlobalBounds()))
-//        {
-//            //Bottom collision
-//            if(getYSpeed() > 0 )
-//               {
-//                   if(getXPosition() + hitBoxWidth[1] < platform->getXPosition()
-//                      && getXPosition() + hitBoxWidth[1] < platform->getXPosition() + platform->getSize()
-//                      && getYPosition() + hitBoxHeight[0] < platform->getYPosition() + platform->getSize()
-//                      && getYPosition() + hitBoxHeight[1] > platform->getYPosition())
-//                   {
-//                        newXPosition = platform->getXPosition() - getGlobalBounds().width + (getGlobalBounds().width - hitBoxWidth[1]);
-//                   }
-//                   else if(getXSpeed() > 0)
-//                   {
-//                        //newXPosition = platform->getXPosition() - getGlobalBounds().width + (getGlobalBounds().width - hitBoxWidth[1]);
-//                        newXPosition = getXPosition() + getXSpeed();
-//                   }
-//
-//                   if(getXPosition() + hitBoxWidth[0] > platform->getXPosition() + platform->getSize()
-//                      && getXPosition() + hitBoxWidth[1] > platform->getXPosition() + platform->getSize()
-//                      && getYPosition() + hitBoxHeight[0] < platform->getYPosition() + platform->getSize()
-//                      && getYPosition() + hitBoxHeight[1] > platform->getYPosition())
-//                   {
-//                        newXPosition = platform->getXPosition() - getGlobalBounds().width + (getGlobalBounds().width - hitBoxWidth[1]);
-//                   }
-//                    else if(getXSpeed() < 0)
-//                   {
-//                        //newXPosition = platform->getXPosition() + platform->getSize() - hitBoxWidth[0];
-//                        newXPosition = getXPosition() - getXSpeed();
-//                   }
-//                   else
-//                   {
-//                       newXPosition = getXPosition();
-//                   }
-//                   newYPosition = platform->getYPosition() - getGlobalBounds().height + (getGlobalBounds().height - hitBoxHeight[1]);
-//               }
-//            //Top collision
-//            if(getYSpeed() < 0)
-//               {
-//                   if(getXSpeed() > 0)
-//                   {
-//                        newXPosition = platform->getXPosition() - getGlobalBounds().width + (getGlobalBounds().width - hitBoxWidth[1]);
-//                   }
-//                   else if(getXSpeed() < 0)
-//                   {
-//                        newXPosition = platform->getXPosition() + platform->getSize() - hitBoxWidth[0];
-//                   }
-//                   else
-//                   {
-//                       newXPosition = getXPosition();
-//                   }
-//                   newYPosition = platform->getYPosition() + platform->getSize() - hitBoxHeight[0];
-//               }
-//        }
+        }
     }
 
     setPosition(newXPosition, newYPosition);
