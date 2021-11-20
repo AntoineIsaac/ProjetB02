@@ -54,6 +54,7 @@
 			<Add library="sfml-system" />
 			<Add library="sfml-audio" />
 		</Linker>
+		<Unit filename="include/Checkpoint.h" />
 		<Unit filename="include/Entity.h" />
 		<Unit filename="include/GrassBlock.h" />
 		<Unit filename="include/Input.h" />
@@ -63,6 +64,7 @@
 		<Unit filename="include/Player.h" />
 		<Unit filename="include/Zombie.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/Checkpoint.cpp" />
 		<Unit filename="src/Entity.cpp" />
 		<Unit filename="src/GrassBlock.cpp" />
 		<Unit filename="src/Input.cpp" />

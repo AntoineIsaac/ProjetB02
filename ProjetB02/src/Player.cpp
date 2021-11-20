@@ -135,7 +135,8 @@ void Player::update(bool left, bool right, bool space, float fps, vector<Platfor
 void Player::collision(int &newXPosition, int &newYPosition, vector<Platform*> level)
 {
 
-
+    float withoutCollX = newXPosition;
+    float withoutCollY = newYPosition;
 
     for(Platform * platform : level)
     {
@@ -164,8 +165,8 @@ void Player::collision(int &newXPosition, int &newYPosition, vector<Platform*> l
             if( newXPosition + hitBoxWidth[1] > platform->getXPosition() && getXPosition() + hitBoxWidth[1] <= platform->getXPosition()
                && (((getYPosition() + hitBoxHeight[1] < platform->getYPosition() + platform->getSize()) && (getYPosition()  + hitBoxHeight[1] > platform->getYPosition())) || ((getYPosition()  + hitBoxHeight[0] +(height/2) < platform->getYPosition() + platform->getSize()) && (getYPosition()  + hitBoxHeight[0] + (height/2) > platform->getYPosition())) || ((getYPosition() + hitBoxHeight[0] < platform->getYPosition() + platform->getSize()) && (getYPosition()  + hitBoxHeight[0] > platform->getYPosition())) ))
             {
-                    newXPosition =  platform->getXPosition() - width - hitBoxWidth[0];
-                    coll = true;
+                newXPosition =  platform->getXPosition() - width - hitBoxWidth[0];
+                coll = true;
             }
 
 
@@ -175,26 +176,26 @@ void Player::collision(int &newXPosition, int &newYPosition, vector<Platform*> l
             //Left
             if( newXPosition + hitBoxWidth[0] < platform->getXPosition() + platform->getSize() && getXPosition() + hitBoxWidth[0] >= platform->getXPosition() + platform->getSize()
                     && (((getYPosition()  + hitBoxHeight[1] <= platform->getYPosition() + platform->getSize() ) && (getYPosition() + hitBoxHeight[1] >= platform->getYPosition()) ) || ((getYPosition() + hitBoxHeight[0] + (height/2) < platform->getYPosition() + platform->getSize()) && (getYPosition()  + hitBoxHeight[0] + (height/2) > platform->getYPosition())) || ((getYPosition() + hitBoxHeight[0] < platform->getYPosition() + platform->getSize() ) && (getYPosition()  + hitBoxHeight[0] > platform->getYPosition())) ))
-                {
-                    newXPosition =  platform->getXPosition() + platform->getSize() - hitBoxWidth[0];
-                    coll = true;
-                }
+            {
+                newXPosition =  platform->getXPosition() + platform->getSize() - hitBoxWidth[0];
+                coll = true;
+            }
 
             //Bottom
             if( newYPosition + hitBoxHeight[1] > platform->getYPosition() && getYPosition() + hitBoxHeight[1] <= platform->getYPosition()
                     && (((getXPosition() +hitBoxWidth[0] <= platform->getXPosition() + platform->getSize()) && (getXPosition() + hitBoxWidth[0] >= platform->getXPosition())) || ((getXPosition() + hitBoxWidth[0] + (width/2) < platform->getXPosition() + platform->getSize()) && (getXPosition() + hitBoxWidth[0] + (width/2) > platform->getXPosition())) || ((getXPosition() + hitBoxWidth[1] <= platform->getXPosition() + platform->getSize()) && (getXPosition() + hitBoxWidth[1] >= platform->getXPosition()))))
-                    {
-                            newYPosition =  platform->getYPosition() - height - hitBoxHeight[0];
-                            onGround = true;
-                            coll = true;
-                    }
+            {
+                newYPosition =  platform->getYPosition() - height - hitBoxHeight[0];
+                onGround = true;
+                coll = true;
+            }
 
                     //Right
             if( newXPosition + hitBoxWidth[1] > platform->getXPosition() && getXPosition() + hitBoxWidth[1] <= platform->getXPosition()
                && (((getYPosition() + hitBoxHeight[1] <= platform->getYPosition() + platform->getSize()) && (getYPosition()  + hitBoxHeight[1] >= platform->getYPosition())) || ((getYPosition()  + hitBoxHeight[0] +(height/2) < platform->getYPosition() + platform->getSize()) && (getYPosition()  + hitBoxHeight[0] + (height/2) > platform->getYPosition())) || ((getYPosition() + hitBoxHeight[0] < platform->getYPosition() + platform->getSize()) && (getYPosition()  + hitBoxHeight[0] > platform->getYPosition())) ))
             {
-                    newXPosition =  platform->getXPosition() - width - hitBoxWidth[0];
-                    coll = true;
+                newXPosition =  platform->getXPosition() - width - hitBoxWidth[0];
+                coll = true;
             }
 
             //Top
@@ -214,10 +215,11 @@ void Player::collision(int &newXPosition, int &newYPosition, vector<Platform*> l
             {
                 Checkpoint* c = (Checkpoint*) platform;
                 c->switchCheckpoint();
+                newXPosition = withoutCollX;
+                newYPosition = withoutCollY;
             }
         }
     }
-
     setPosition(newXPosition, newYPosition);
 
 }
