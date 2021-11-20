@@ -138,6 +138,8 @@ void Player::collision(int &newXPosition, int &newYPosition, vector<Platform*> l
     float withoutCollX = newXPosition;
     float withoutCollY = newYPosition;
 
+    bool colGround = false;
+
     for(Platform * platform : level)
     {
         bool coll = false;
@@ -159,6 +161,7 @@ void Player::collision(int &newXPosition, int &newYPosition, vector<Platform*> l
                 newYPosition =  platform->getYPosition() - height - hitBoxHeight[0];
                 onGround = true;
                 coll = true;
+                colGround = true;
             }
 
             //Right
@@ -188,6 +191,7 @@ void Player::collision(int &newXPosition, int &newYPosition, vector<Platform*> l
                 newYPosition =  platform->getYPosition() - height - hitBoxHeight[0];
                 onGround = true;
                 coll = true;
+                colGround = true;
             }
 
                     //Right
@@ -219,6 +223,12 @@ void Player::collision(int &newXPosition, int &newYPosition, vector<Platform*> l
                 newYPosition = withoutCollY;
             }
         }
+    }
+
+    //Lorsqu"il tombe dans le vide, onGround = false
+    if(colGround == false)
+    {
+        onGround = false;
     }
     setPosition(newXPosition, newYPosition);
 
