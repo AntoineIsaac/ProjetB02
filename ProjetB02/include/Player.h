@@ -11,12 +11,13 @@
 class Player : public Entity
 {
     private :
-        float scale = 0.3;
+        float scale = 0.1;
         float hitBoxWidth[2] = {80*scale, 280*scale};
         float hitBoxHeight[2] = {20*scale, 490*scale};
         float width = hitBoxWidth[1] - hitBoxWidth[0];
         float height = hitBoxHeight[1] - hitBoxHeight[0];
         bool onGround;
+        int animation = 1;
 
     public:
         Player(float xPosition, float yPosition, string textureString);
@@ -47,6 +48,8 @@ class Player : public Entity
         //Functions
         void update(bool left, bool right, bool space, float fps, vector<Platform*> level);
         void collision(int &newXPosition, int &newYposition, vector<Platform*> level);
+
+        void loadTexture();
 };
 
 #endif // PLAYER_H

@@ -153,3 +153,84 @@
 1637408130 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Checkpoint.cpp
 	"../include/Checkpoint.h"
 
+1637417578 source:/home/ugo/Documents/projet/ProjetB02/ProjetB02/main.cpp
+	<SFML/Window.hpp>
+	<SFML/System.hpp>
+	<SFML/Graphics.hpp>
+	"include/Player.h"
+	"include/Zombie.h"
+	"include/Input.h"
+	"include/Platform.h"
+	"include/GrassBlock.h"
+	"include/LavaBlock.h"
+	"include/Level.h"
+
+1637418247 /home/ugo/Documents/projet/ProjetB02/ProjetB02/include/Player.h
+	"Entity.h"
+	<string>
+	<iostream>
+	<cmath>
+	"Platform.h"
+	"Checkpoint.h"
+
+1637417960 /home/ugo/Documents/projet/ProjetB02/ProjetB02/include/Entity.h
+	<SFML/Graphics.hpp>
+	<string>
+
+1637414445 /home/ugo/Documents/projet/ProjetB02/ProjetB02/include/Platform.h
+	<SFML/Window.hpp>
+	<SFML/System.hpp>
+	<SFML/Graphics.hpp>
+	<string>
+
+1637414445 /home/ugo/Documents/projet/ProjetB02/ProjetB02/include/Checkpoint.h
+	"Platform.h"
+
+1637402708 /home/ugo/Documents/projet/ProjetB02/ProjetB02/include/Zombie.h
+	"Entity.h"
+
+1635585054 /home/ugo/Documents/projet/ProjetB02/ProjetB02/include/Input.h
+	<SFML/Window.hpp>
+	<SFML/System.hpp>
+	<SFML/Graphics.hpp>
+
+1637414445 /home/ugo/Documents/projet/ProjetB02/ProjetB02/include/GrassBlock.h
+	"Platform.h"
+
+1637414445 /home/ugo/Documents/projet/ProjetB02/ProjetB02/include/LavaBlock.h
+	"Platform.h"
+
+1637414445 /home/ugo/Documents/projet/ProjetB02/ProjetB02/include/Level.h
+	"Platform.h"
+	"GrassBlock.h"
+	"LavaBlock.h"
+	"Checkpoint.h"
+	<string>
+
+1637414445 source:/home/ugo/Documents/projet/ProjetB02/ProjetB02/src/Checkpoint.cpp
+	"../include/Checkpoint.h"
+
+1637417090 source:/home/ugo/Documents/projet/ProjetB02/ProjetB02/src/Entity.cpp
+	"../include/Entity.h"
+
+1637414445 source:/home/ugo/Documents/projet/ProjetB02/ProjetB02/src/GrassBlock.cpp
+	"../include/GrassBlock.h"
+
+1635585054 source:/home/ugo/Documents/projet/ProjetB02/ProjetB02/src/Input.cpp
+	"../include/Input.h"
+
+1637414445 source:/home/ugo/Documents/projet/ProjetB02/ProjetB02/src/LavaBlock.cpp
+	"../include/LavaBlock.h"
+
+1637414445 source:/home/ugo/Documents/projet/ProjetB02/ProjetB02/src/Level.cpp
+	"../include/Level.h"
+
+1637414445 source:/home/ugo/Documents/projet/ProjetB02/ProjetB02/src/Platform.cpp
+	"../include/Platform.h"
+
+1637418181 source:/home/ugo/Documents/projet/ProjetB02/ProjetB02/src/Player.cpp
+	"../include/Player.h"
+
+1637417192 source:/home/ugo/Documents/projet/ProjetB02/ProjetB02/src/Zombie.cpp
+	"../include/Zombie.h"
+

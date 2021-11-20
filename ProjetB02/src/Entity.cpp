@@ -35,6 +35,11 @@ Sprite Entity::getSprite()const
     return sprite;
 }
 
+Texture Entity::getTexture()const
+{
+    return texture;
+}
+
 float Entity::getXPosition()const
 {
     return xPosition;

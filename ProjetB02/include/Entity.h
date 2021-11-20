@@ -9,7 +9,7 @@ using namespace std;
 
 class Entity
 {
-    private:
+    protected:
         float xSpeed;
         float ySpeed;
         float xPosition;
@@ -27,7 +27,8 @@ class Entity
 
         //Getters and setters
         virtual Sprite getSprite()const=0;
-
+        virtual Texture getTexture()const;
+        virtual void loadTexture() = 0;
 
         virtual float getXPosition()const=0;
         virtual float getYPosition()const=0;

@@ -103,16 +103,18 @@ void Player::update(bool left, bool right, bool space, float fps, vector<Platfor
 {
     int newXPosition = getXPosition();
     int newYPosition = getYPosition();
-
+    bool move = false;
     setXSpeed(0);
 
     if(left)
     {
         setXSpeed(-5.0 * fps);
+        move = true;
     }
     if(right)
     {
         setXSpeed(5.0 * fps);
+        move = true;
     }
     if(space)
     {
@@ -128,6 +130,14 @@ void Player::update(bool left, bool right, bool space, float fps, vector<Platfor
     newYPosition += getYSpeed();
 
     collision(newXPosition, newYPosition, level);
+
+    if(move == true)
+    {
+        animation++;
+        if(animation > 8)
+            animation = 1;
+        loadTexture();
+    }
 
 
 }
@@ -232,4 +242,12 @@ void Player::collision(int &newXPosition, int &newYPosition, vector<Platform*> l
     }
     setPosition(newXPosition, newYPosition);
 
+}
+
+void Player::loadTexture()
+{
+    if(!texture.loadFromFile("./Images/jackfree/png/Run ("+to_string(animation)+").png"))
+    {
+        cout << "Erreur dans le chargement de la texture"<<endl;
+    }
 }

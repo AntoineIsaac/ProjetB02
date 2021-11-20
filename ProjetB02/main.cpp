@@ -28,10 +28,12 @@ int main()
     float fps;
 
     //Creation of a player
-    Player player(300.0, 100, "Images/zombie.gif");
+    Player player(300.0, 100, "./Images/jackfree/png/Run (1).png");
+
+    //player.getSprite().setScale(Vector2f(0.05f, 0.05f));
 
     //Creation of a Zombie
-    Zombie zombie(0, 0, "Images/zombie2.gif");
+    //Zombie zombie(0, 0, "Images/jackfree/png/Run (0).png");
 
     //Creation of a block
 
