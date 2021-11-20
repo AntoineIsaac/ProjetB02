@@ -2,7 +2,7 @@
 
 Platform::Platform(float xPosition, float yPosition):xPosition(xPosition), yPosition(yPosition)
 {
-    //ctor
+    setScale(scale);
 }
 
 Platform::~Platform()
@@ -68,4 +68,9 @@ void Platform::setSprite(string textureString, IntRect coord)
     sprite.setTexture(texture);
     sprite.setTextureRect(coord);
     sprite.setPosition(xPosition, yPosition);
+}
+
+void Platform::setScale(float x)
+{
+    sprite.scale(x, x);
 }

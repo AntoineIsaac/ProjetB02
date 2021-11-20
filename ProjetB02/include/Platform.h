@@ -16,11 +16,16 @@ class Platform
         float yPosition;
         Texture texture;
         Sprite sprite;
-        float scale = 1.;
-        float size = 75*scale;
+
+
+
+
 
     public:
-        Platform(float xPosition, float yPosition);
+        static inline float scale = 5.;
+        static inline float size = 16*scale;
+
+        Platform(float xPosition=0, float yPosition=0);
         virtual ~Platform();
         Platform(const Platform& other);
         Platform& operator=(const Platform& other);
@@ -36,6 +41,10 @@ class Platform
 
         virtual Sprite getSprite()const;
         virtual void setSprite(string textureString, IntRect coord);
+
+        virtual void setScale(float x);
+
+        virtual int getType()const = 0;
 
 };
 

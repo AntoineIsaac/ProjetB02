@@ -2,7 +2,7 @@
 
 GrassBlock::GrassBlock(float xPosition, float yPosition):Platform(xPosition, yPosition)
 {
-    setSprite("Images/ZOciz.jpg", IntRect(75 * 4, 75 * 3, 75, 75));
+    setSprite("Images/blocks.png", IntRect(16 * 3, 16 * 0, 16, 16));
 }
 
 GrassBlock::~GrassBlock()
@@ -53,3 +53,9 @@ void GrassBlock::setSprite(string textureString, IntRect coord)
 {
     Platform::setSprite(textureString, coord);
 }
+
+int GrassBlock::getType() const
+{
+    return 1;
+}
+

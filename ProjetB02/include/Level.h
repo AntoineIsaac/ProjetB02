@@ -3,6 +3,7 @@
 #include "Platform.h"
 #include "GrassBlock.h"
 #include "LavaBlock.h"
+#include "Checkpoint.h"
 #include <string>
 
 using namespace std;

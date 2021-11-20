@@ -2,7 +2,7 @@
 
 LavaBlock::LavaBlock(float xPosition, float yPosition):Platform(xPosition, yPosition)
 {
-    setSprite("Images/ZOciz.jpg", IntRect(75 * 0, 75 * 4, 75, 75));
+    setSprite("Images/blocks.png", IntRect(16 * 11, 16 * 18, 16, 16));
 }
 
 LavaBlock::~LavaBlock()
@@ -52,5 +52,10 @@ Sprite LavaBlock::getSprite()const
 void LavaBlock::setSprite(string textureString, IntRect coord)
 {
     Platform::setSprite(textureString, coord);
+}
+
+int LavaBlock::getType() const
+{
+    return 2;
 }
 

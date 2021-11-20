@@ -5,6 +5,7 @@
 #include <iostream>
 #include <cmath>
 #include "Platform.h"
+#include "Checkpoint.h"
 
 
 class Player : public Entity

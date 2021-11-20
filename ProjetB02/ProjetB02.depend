@@ -18,15 +18,16 @@
 	<SFML/Graphics.hpp>
 	<string>
 
-1637401648 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Player.cpp
+1637408324 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Player.cpp
 	"../include/Player.h"
 
-1637401686 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Player.h
+1637408333 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Player.h
 	"Entity.h"
 	<string>
 	<iostream>
 	<cmath>
 	"Platform.h"
+	"Checkpoint.h"
 
 1636624141 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Input.h
 	<SFML/Window.hpp>
@@ -42,34 +43,35 @@
 1636624141 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Zombie.h
 	"Entity.h"
 
-1636624141 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/GrassBlock.cpp
+1637408008 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/GrassBlock.cpp
 	"../include/GrassBlock.h"
 
-1636624141 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/GrassBlock.h
+1637407981 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/GrassBlock.h
 	"Platform.h"
 
-1636624141 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Platform.h
+1637407962 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Platform.h
 	<SFML/Window.hpp>
 	<SFML/System.hpp>
 	<SFML/Graphics.hpp>
 	<string>
 
-1636624141 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/LavaBlock.cpp
+1637408030 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/LavaBlock.cpp
 	"../include/LavaBlock.h"
 
-1636624141 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/LavaBlock.h
+1637407994 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/LavaBlock.h
 	"Platform.h"
 
-1636624141 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Platform.cpp
+1637406856 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Platform.cpp
 	"../include/Platform.h"
 
-1636624141 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Level.h
+1637407483 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Level.h
 	"Platform.h"
 	"GrassBlock.h"
 	"LavaBlock.h"
+	"Checkpoint.h"
 	<string>
 
-1636624141 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Level.cpp
+1637408100 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Level.cpp
 	"../include/Level.h"
 
 1636014723 source:/home/antoine/Documents/Projet2/ProjetB02/ProjetB02/main.cpp
@@ -144,4 +146,10 @@
 
 1635924452 source:/home/antoine/Documents/Projet2/ProjetB02/ProjetB02/src/Zombie.cpp
 	"../include/Zombie.h"
+
+1637407989 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Checkpoint.h
+	"Platform.h"
+
+1637408130 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Checkpoint.cpp
+	"../include/Checkpoint.h"
 

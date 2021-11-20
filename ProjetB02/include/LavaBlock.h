@@ -23,6 +23,7 @@ class LavaBlock : public Platform
         Sprite getSprite()const;
         void setSprite(string textureString, IntRect coord);
 
+        int getType()const;
 
 };
 

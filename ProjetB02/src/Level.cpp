@@ -29,9 +29,11 @@ vector<Platform*> Level::createLevel1()const
                         {0, 1, 2, 0, 0, 0, 0, 1},
                         {0, 1, 0, 0, 0, 0, 0, 1},
                         {0, 1, 0, 0, 0, 0, 0, 1},
-                        {0, 1, 0, 0, 0, 0, 0, 1},
+                        {0, 1, 3, 0, 0, 0, 0, 1},
                         {0, 1, 1, 1, 1, 1, 1, 1}};
     vector<Platform*> platform;
+
+    Platform* p;
 
 
     for(int i = 0; i < 6; i++)
@@ -40,11 +42,15 @@ vector<Platform*> Level::createLevel1()const
         {
             if(level[i][j] == 1)
             {
-                platform.push_back(new GrassBlock(75*j, 75*i));
+                platform.push_back(new GrassBlock(p->size*j, p->size*i));
             }
             else if(level[i][j] == 2)
             {
-                platform.push_back(new LavaBlock(75*j, 75*i));
+                platform.push_back(new LavaBlock(p->size*j, p->size*i));
+            }
+            else if(level[i][j] == 3)
+            {
+                platform.push_back(new Checkpoint(p->size*j, p->size*i));
             }
         }
     }
