@@ -17,6 +17,8 @@ class Entity
         string textureString;
         Texture texture;
         Sprite sprite;
+        enum Direction{gauche, droite};
+        Direction direction = Direction::droite;
 
     public:
         Entity(float xPosition, float yPosition, string textureString);

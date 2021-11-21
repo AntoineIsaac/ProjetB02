@@ -26,10 +26,10 @@ Level& Level::operator=(const Level& rhs)
 vector<Platform*> Level::createLevel1()const
 {
     int level[6][8] = {{0, 1, 1, 1, 1, 0, 0, 1},
-                        {0, 1, 2, 0, 0, 0, 0, 1},
+                        {0, 1, 0, 0, 1, 0, 0, 1},
                         {0, 1, 0, 0, 0, 0, 0, 1},
                         {0, 1, 0, 0, 0, 0, 0, 1},
-                        {0, 1, 0, 3, 0, 0, 0, 1},
+                        {0, 1, 0, 0, 0, 0, 0, 1},
                         {0, 1, 1, 1, 1, 1, 1, 1}};
     vector<Platform*> platform;
 

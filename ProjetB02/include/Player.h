@@ -11,9 +11,9 @@
 class Player : public Entity
 {
     private :
-        float scale = 0.1;
-        float hitBoxWidth[2] = {80*scale, 280*scale};
-        float hitBoxHeight[2] = {20*scale, 490*scale};
+        float scale = 0.2;
+        float hitBoxWidth[2] = {0*scale, 491*scale};
+        float hitBoxHeight[2] = {115*scale, 725*scale};
         float width = hitBoxWidth[1] - hitBoxWidth[0];
         float height = hitBoxHeight[1] - hitBoxHeight[0];
         bool onGround;
@@ -50,6 +50,8 @@ class Player : public Entity
         void collision(int &newXPosition, int &newYposition, vector<Platform*> level);
 
         void loadTexture();
+        void loadTextureIdle();
+        void loadTextureJump();
 };
 
 #endif // PLAYER_H

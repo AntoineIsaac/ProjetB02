@@ -3,6 +3,7 @@
 Player::Player(float xPosition, float yPosition, string textureString):Entity(xPosition, yPosition, textureString)
 {
     setScale(scale);
+    //sprite.setOrigin(width/2, height/2);
 }
 
 Player::~Player()
@@ -108,11 +109,21 @@ void Player::update(bool left, bool right, bool space, float fps, vector<Platfor
 
     if(left)
     {
-        setXSpeed(-5.0 * fps);
-        move = true;
+//        if(direction == Direction::droite)
+//        {
+//            sprite.setScale(Vector2f(-0.2, 0.2));
+//            direction = Direction::gauche;
+//        }
+            setXSpeed(-5.0 * fps);
+            move = true;
     }
     if(right)
     {
+//        if(direction == Direction::gauche)
+//        {
+//            sprite.setScale(Vector2f(0.2, 0.2));
+//            direction = Direction::droite;
+//        }
         setXSpeed(5.0 * fps);
         move = true;
     }
@@ -133,11 +144,20 @@ void Player::update(bool left, bool right, bool space, float fps, vector<Platfor
 
     if(move == true)
     {
-        animation++;
-        if(animation > 8)
-            animation = 1;
-        loadTexture();
-    }
+        if(onGround == false)
+            loadTextureJump();
+        else
+        {
+            animation++;
+            if(animation > 8)
+                animation = 1;
+            loadTexture();
+        }
+    }else
+        if(onGround == false)
+            loadTextureJump();
+        else
+            loadTextureIdle();
 
 
 }
@@ -157,10 +177,10 @@ void Player::collision(int &newXPosition, int &newYPosition, vector<Platform*> l
         if(onGround == true)
         {
             //Left
-            if( newXPosition + hitBoxWidth[0] < platform->getXPosition() + platform->getSize() && getXPosition() + hitBoxWidth[0] >= platform->getXPosition() + platform->getSize()
+           if( newXPosition + hitBoxWidth[0] < platform->getXPosition() + platform->getSize() && getXPosition() + hitBoxWidth[0] >= platform->getXPosition() + platform->getSize()
            && (((getYPosition()  + hitBoxHeight[1] < platform->getYPosition() + platform->getSize() ) && (getYPosition() + hitBoxHeight[1] > platform->getYPosition()) ) || ((getYPosition() + hitBoxHeight[0] + (height/2) < platform->getYPosition() + platform->getSize()) && (getYPosition()  + hitBoxHeight[0] + (height/2) > platform->getYPosition())) || ((getYPosition() + hitBoxHeight[0] < platform->getYPosition() + platform->getSize() ) && (getYPosition()  + hitBoxHeight[0] > platform->getYPosition())) ))
            {
-                newXPosition =  platform->getXPosition() + platform->getSize() - hitBoxWidth[0];
+                newXPosition = platform->getXPosition() + platform->getSize() - hitBoxWidth[0];
                 coll = true;
            }
 
@@ -181,14 +201,11 @@ void Player::collision(int &newXPosition, int &newYPosition, vector<Platform*> l
                 newXPosition =  platform->getXPosition() - width - hitBoxWidth[0];
                 coll = true;
             }
-
-
         }
         else
         {
             //Left
-            if( newXPosition + hitBoxWidth[0] < platform->getXPosition() + platform->getSize() && getXPosition() + hitBoxWidth[0] >= platform->getXPosition() + platform->getSize()
-                    && (((getYPosition()  + hitBoxHeight[1] <= platform->getYPosition() + platform->getSize() ) && (getYPosition() + hitBoxHeight[1] >= platform->getYPosition()) ) || ((getYPosition() + hitBoxHeight[0] + (height/2) < platform->getYPosition() + platform->getSize()) && (getYPosition()  + hitBoxHeight[0] + (height/2) > platform->getYPosition())) || ((getYPosition() + hitBoxHeight[0] < platform->getYPosition() + platform->getSize() ) && (getYPosition()  + hitBoxHeight[0] > platform->getYPosition())) ))
+            if( newXPosition + hitBoxWidth[0] < platform->getXPosition() + platform->getSize() && getXPosition() + hitBoxWidth[0] >= platform->getXPosition() + platform->getSize()&& (((getYPosition()  + hitBoxHeight[1] < platform->getYPosition() + platform->getSize() ) && (getYPosition() + hitBoxHeight[1] > platform->getYPosition()) ) || ((getYPosition() + hitBoxHeight[0] + (height/2) < platform->getYPosition() + platform->getSize()) && (getYPosition()  + hitBoxHeight[0] + (height/2) > platform->getYPosition())) || ((getYPosition() + hitBoxHeight[0] < platform->getYPosition() + platform->getSize() ) && (getYPosition()  + hitBoxHeight[0] > platform->getYPosition())) ))
             {
                 newXPosition =  platform->getXPosition() + platform->getSize() - hitBoxWidth[0];
                 coll = true;
@@ -205,9 +222,7 @@ void Player::collision(int &newXPosition, int &newYPosition, vector<Platform*> l
             }
 
                     //Right
-            if( newXPosition + hitBoxWidth[1] > platform->getXPosition() && getXPosition() + hitBoxWidth[1] <= platform->getXPosition()
-               && (((getYPosition() + hitBoxHeight[1] <= platform->getYPosition() + platform->getSize()) && (getYPosition()  + hitBoxHeight[1] >= platform->getYPosition())) || ((getYPosition()  + hitBoxHeight[0] +(height/2) < platform->getYPosition() + platform->getSize()) && (getYPosition()  + hitBoxHeight[0] + (height/2) > platform->getYPosition())) || ((getYPosition() + hitBoxHeight[0] < platform->getYPosition() + platform->getSize()) && (getYPosition()  + hitBoxHeight[0] > platform->getYPosition())) ))
-            {
+if( newXPosition + hitBoxWidth[1] > platform->getXPosition() && getXPosition() + hitBoxWidth[1] <= platform->getXPosition() && (((getYPosition() + hitBoxHeight[1] <= platform->getYPosition() + platform->getSize()) && (getYPosition()  + hitBoxHeight[1] >= platform->getYPosition())) || ((getYPosition()  + hitBoxHeight[0] +(height/2) < platform->getYPosition() + platform->getSize()) && (getYPosition()  + hitBoxHeight[0] + (height/2) > platform->getYPosition())) || ((getYPosition() + hitBoxHeight[0] < platform->getYPosition() + platform->getSize()) && (getYPosition()  + hitBoxHeight[0] > platform->getYPosition())) ))            {
                 newXPosition =  platform->getXPosition() - width - hitBoxWidth[0];
                 coll = true;
             }
@@ -247,6 +262,22 @@ void Player::collision(int &newXPosition, int &newYPosition, vector<Platform*> l
 void Player::loadTexture()
 {
     if(!texture.loadFromFile("./Images/jackfree/png/Run ("+to_string(animation)+").png"))
+    {
+        cout << "Erreur dans le chargement de la texture"<<endl;
+    }
+}
+
+void Player::loadTextureIdle()
+{
+    if(!texture.loadFromFile("./Images/jackfree/png/Idle (1).png"))
+    {
+        cout << "Erreur dans le chargement de la texture"<<endl;
+    }
+}
+
+void Player::loadTextureJump()
+{
+    if(!texture.loadFromFile("./Images/jackfree/png/Jump (3).png"))
     {
         cout << "Erreur dans le chargement de la texture"<<endl;
     }

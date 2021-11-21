@@ -2,7 +2,7 @@
 
 LavaBlock::LavaBlock(float xPosition, float yPosition):Platform(xPosition, yPosition)
 {
-    setSprite("Images/blocks.png", IntRect(16 * 11, 16 * 18, 16, 16));
+    setSprite("Images/blocks.png", IntRect(16 * 22, 16 * 22, 16, 16));
 }
 
 LavaBlock::~LavaBlock()
