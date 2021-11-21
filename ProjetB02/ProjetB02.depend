@@ -165,7 +165,7 @@
 	"include/LavaBlock.h"
 	"include/Level.h"
 
-1637492858 /home/ugo/Documents/projet/ProjetB02/ProjetB02/include/Player.h
+1637494182 /home/ugo/Documents/projet/ProjetB02/ProjetB02/include/Player.h
 	"Entity.h"
 	<string>
 	<iostream>
@@ -173,7 +173,7 @@
 	"Platform.h"
 	"Checkpoint.h"
 
-1637487647 /home/ugo/Documents/projet/ProjetB02/ProjetB02/include/Entity.h
+1637493793 /home/ugo/Documents/projet/ProjetB02/ProjetB02/include/Entity.h
 	<SFML/Graphics.hpp>
 	<string>
 
@@ -219,16 +219,16 @@
 1635585054 source:/home/ugo/Documents/projet/ProjetB02/ProjetB02/src/Input.cpp
 	"../include/Input.h"
 
-1637487975 source:/home/ugo/Documents/projet/ProjetB02/ProjetB02/src/LavaBlock.cpp
+1637493793 source:/home/ugo/Documents/projet/ProjetB02/ProjetB02/src/LavaBlock.cpp
 	"../include/LavaBlock.h"
 
-1637493414 source:/home/ugo/Documents/projet/ProjetB02/ProjetB02/src/Level.cpp
+1637493793 source:/home/ugo/Documents/projet/ProjetB02/ProjetB02/src/Level.cpp
 	"../include/Level.h"
 
 1637414445 source:/home/ugo/Documents/projet/ProjetB02/ProjetB02/src/Platform.cpp
 	"../include/Platform.h"
 
-1637493278 source:/home/ugo/Documents/projet/ProjetB02/ProjetB02/src/Player.cpp
+1637493814 source:/home/ugo/Documents/projet/ProjetB02/ProjetB02/src/Player.cpp
 	"../include/Player.h"
 
 1637417192 source:/home/ugo/Documents/projet/ProjetB02/ProjetB02/src/Zombie.cpp

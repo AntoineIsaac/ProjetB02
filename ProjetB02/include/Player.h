@@ -12,7 +12,7 @@ class Player : public Entity
 {
     private :
         float scale = 0.2;
-        float hitBoxWidth[2] = {0*scale, 491*scale};
+        float hitBoxWidth[2] = {50*scale, 490*scale};
         float hitBoxHeight[2] = {115*scale, 725*scale};
         float width = hitBoxWidth[1] - hitBoxWidth[0];
         float height = hitBoxHeight[1] - hitBoxHeight[0];
