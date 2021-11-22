@@ -11,15 +11,21 @@
 class Player : public Entity
 {
     private :
-        float scale = 0.2;
-        float hitBoxWidth[2] = {50*scale, 490*scale};
+        float scale = 0.1;
+        //490 si on veut au bout de la tête
+        float hitBoxWidth[2] = {50*scale, 365*scale};
         float hitBoxHeight[2] = {115*scale, 725*scale};
         float width = hitBoxWidth[1] - hitBoxWidth[0];
         float height = hitBoxHeight[1] - hitBoxHeight[0];
-        bool onGround;
+
         int animation = 1;
 
+        Vector2f respawnPosition;
+
+
     public:
+        bool onGround;
+
         Player(float xPosition, float yPosition, string textureString);
         virtual ~Player();
         Player(const Player& other);
@@ -52,6 +58,9 @@ class Player : public Entity
         void loadTexture();
         void loadTextureIdle();
         void loadTextureJump();
+
+        Vector2f getRespawnPosition()const;
+        void setRespawnPosition(float x, float y);
 };
 
 #endif // PLAYER_H

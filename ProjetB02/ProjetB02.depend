@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1637413337 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/main.cpp
+1637574750 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/main.cpp
 	<SFML/Window.hpp>
 	<SFML/System.hpp>
 	<SFML/Graphics.hpp>
@@ -11,17 +11,17 @@
 	"include/LavaBlock.h"
 	"include/Level.h"
 
-1636624141 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Entity.cpp
+1637495097 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Entity.cpp
 	"../include/Entity.h"
 
-1636624141 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Entity.h
+1637495097 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Entity.h
 	<SFML/Graphics.hpp>
 	<string>
 
-1637414077 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Player.cpp
+1637574253 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Player.cpp
 	"../include/Player.h"
 
-1637408333 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Player.h
+1637574659 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Player.h
 	"Entity.h"
 	<string>
 	<iostream>
@@ -29,10 +29,11 @@
 	"Platform.h"
 	"Checkpoint.h"
 
-1636624141 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Input.h
+1637574771 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Input.h
 	<SFML/Window.hpp>
 	<SFML/System.hpp>
 	<SFML/Graphics.hpp>
+	"Player.h"
 
 1636624141 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Input.cpp
 	"../include/Input.h"
@@ -49,13 +50,13 @@
 1637407981 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/GrassBlock.h
 	"Platform.h"
 
-1637407962 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Platform.h
+1637571777 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Platform.h
 	<SFML/Window.hpp>
 	<SFML/System.hpp>
 	<SFML/Graphics.hpp>
 	<string>
 
-1637408030 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/LavaBlock.cpp
+1637495097 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/LavaBlock.cpp
 	"../include/LavaBlock.h"
 
 1637407994 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/LavaBlock.h
@@ -71,7 +72,7 @@
 	"Checkpoint.h"
 	<string>
 
-1637413460 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Level.cpp
+1637571448 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Level.cpp
 	"../include/Level.h"
 
 1636014723 source:/home/antoine/Documents/Projet2/ProjetB02/ProjetB02/main.cpp

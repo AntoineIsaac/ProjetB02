@@ -25,12 +25,12 @@ Level& Level::operator=(const Level& rhs)
 
 vector<Platform*> Level::createLevel1()const
 {
-    int level[6][8] = {{0, 1, 1, 1, 1, 0, 0, 1},
-                        {0, 1, 0, 0, 1, 0, 0, 1},
-                        {0, 1, 0, 0, 0, 0, 0, 1},
-                        {0, 1, 0, 0, 0, 0, 0, 1},
-                        {0, 1, 0, 0, 0, 0, 0, 1},
-                        {0, 1, 1, 1, 1, 1, 1, 1}};
+    int level[6][13] = {{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+                        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+                        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+                        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+                        {0, 3, 0, 0, 0, 0, 0, 0, 3 ,0, 0 , 0, 0},
+                        {1, 1, 1, 1, 1, 0, 2, 1, 1, 1, 0, 2, 1}};
     vector<Platform*> platform;
 
     Platform* p;
@@ -38,7 +38,7 @@ vector<Platform*> Level::createLevel1()const
 
     for(int i = 0; i < 6; i++)
     {
-        for(int j = 0; j<8; j++)
+        for(int j = 0; j<13; j++)
         {
             if(level[i][j] == 1)
             {

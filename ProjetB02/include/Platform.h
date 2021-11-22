@@ -22,7 +22,7 @@ class Platform
 
 
     public:
-        static inline float scale = 5.;
+        static inline float scale = 3.5;
         static inline float size = 16*scale;
 
         Platform(float xPosition=0, float yPosition=0);

@@ -127,14 +127,16 @@ void Player::update(bool left, bool right, bool space, float fps, vector<Platfor
         setXSpeed(5.0 * fps);
         move = true;
     }
-    if(space)
+
+    if(space && onGround == true)
     {
-        setYSpeed(-20.0 * fps);
+        setYSpeed(-30.0 * fps);
         onGround = false;
     }
+
     if(!space)
     {
-        setYSpeed(10.0 * fps);
+        setYSpeed(15.0 * fps);
     }
 
     newXPosition += getXSpeed();
@@ -154,10 +156,13 @@ void Player::update(bool left, bool right, bool space, float fps, vector<Platfor
             loadTexture();
         }
     }else
+    {
         if(onGround == false)
             loadTextureJump();
         else
             loadTextureIdle();
+    }
+
 
 
 }
@@ -249,9 +254,21 @@ void Player::collision(int &newXPosition, int &newYPosition, vector<Platform*> l
             if(platform->getType() == 3)
             {
                 Checkpoint* c = (Checkpoint*) platform;
-                c->switchCheckpoint();
+
                 newXPosition = withoutCollX;
                 newYPosition = withoutCollY;
+
+                if(c->isActivated() == false)
+                {
+                    c->switchCheckpoint();
+                    setRespawnPosition(c->getXPosition(), c->getYPosition() - 100);
+                }
+            }
+
+            if(platform->getType() == 2)
+            {
+                newXPosition = getRespawnPosition().x;
+                newYPosition = getRespawnPosition().y;
             }
         }
     }
@@ -262,6 +279,11 @@ void Player::collision(int &newXPosition, int &newYPosition, vector<Platform*> l
         onGround = false;
     }
     setPosition(newXPosition, newYPosition);
+
+    if(getYPosition() > 700)
+    {
+        setPosition(getRespawnPosition().x, getRespawnPosition().y);
+    }
 
 }
 
@@ -288,3 +310,15 @@ void Player::loadTextureJump()
         cout << "Erreur dans le chargement de la texture"<<endl;
     }
 }
+
+Vector2f Player::getRespawnPosition() const
+{
+    return respawnPosition;
+}
+
+void Player::setRespawnPosition(float x, float y)
+{
+    this->respawnPosition.x = x;
+    this->respawnPosition.y = y;
+}
+
