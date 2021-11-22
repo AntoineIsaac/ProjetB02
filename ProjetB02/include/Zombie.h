@@ -24,6 +24,8 @@ class Zombie : public Entity
         void setPosition(float x, float y);
         void setScale(float x);
 
+
+
         float getXSpeed()const;
         float getYSpeed()const;
         void setXSpeed(float xSpeed);

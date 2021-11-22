@@ -128,19 +128,19 @@ void Player::update(bool left, bool right, bool space, float fps, vector<Platfor
         move = true;
     }
 
-    if(space && onGround == true)
+    if(space)
     {
         setYSpeed(-30.0 * fps);
-        onGround = false;
-    }
-
-    if(!space)
-    {
-        setYSpeed(15.0 * fps);
     }
 
     newXPosition += getXSpeed();
     newYPosition += getYSpeed();
+
+    if(onGround == false && newYPosition <  getYPosition() - jumpHeight)
+    {
+        setYSpeed(15.0 * fps);
+        newYPosition += getYSpeed();
+    }
 
     collision(newXPosition, newYPosition, level);
 
@@ -265,6 +265,7 @@ void Player::collision(int &newXPosition, int &newYPosition, vector<Platform*> l
                 }
             }
 
+            //Respawn si il touche un bloc de lave
             if(platform->getType() == 2)
             {
                 newXPosition = getRespawnPosition().x;
@@ -278,8 +279,10 @@ void Player::collision(int &newXPosition, int &newYPosition, vector<Platform*> l
     {
         onGround = false;
     }
+
     setPosition(newXPosition, newYPosition);
 
+    //Respawn si il tombe dans le vide
     if(getYPosition() > 700)
     {
         setPosition(getRespawnPosition().x, getRespawnPosition().y);

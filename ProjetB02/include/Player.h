@@ -22,6 +22,8 @@ class Player : public Entity
 
         Vector2f respawnPosition;
 
+        float jumpHeight = 30.;
+
 
     public:
         bool onGround;

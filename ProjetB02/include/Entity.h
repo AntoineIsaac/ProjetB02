@@ -30,12 +30,12 @@ class Entity
         //Getters and setters
         virtual Sprite getSprite()const=0;
         virtual Texture getTexture()const;
-        virtual void loadTexture() = 0;
+        virtual void loadTexture()=0;
 
-        virtual float getXPosition()const=0;
-        virtual float getYPosition()const=0;
-        virtual void setXPosition(float x)=0;
-        virtual void setYPosition(float y)=0;
+        virtual float getXPosition()const;
+        virtual float getYPosition()const;
+        virtual void setXPosition(float x);
+        virtual void setYPosition(float y);
 
         virtual void setPosition(float x, float y)=0;
         virtual void move(float x, float y);

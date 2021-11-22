@@ -74,6 +74,8 @@ void Zombie::setXSpeed(float xSpeed)
     Entity::setXSpeed(xSpeed);
 }
 
+
+
 void Zombie::setYSpeed(float ySpeed)
 {
     Entity::setYSpeed(ySpeed);

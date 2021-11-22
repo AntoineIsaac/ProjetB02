@@ -5,6 +5,7 @@
 #include "LavaBlock.h"
 #include "Checkpoint.h"
 #include <string>
+#include "Zombie.h"
 
 using namespace std;
 
@@ -22,6 +23,8 @@ class Level
 
 
         vector<Platform*> createLevel1()const;
+
+        vector<Zombie*> createZombiesLevel1()const;
 };
 
 #endif // LEVEL_H
