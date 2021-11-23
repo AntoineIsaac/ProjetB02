@@ -108,6 +108,8 @@ void Player::update(bool left, bool right, bool space, float fps, vector<Platfor
     bool move = false;
     setXSpeed(0);
 
+
+
     if(left)
     {
 //        if(direction == Direction::droite)
@@ -129,24 +131,31 @@ void Player::update(bool left, bool right, bool space, float fps, vector<Platfor
         move = true;
     }
 
-    if(space)
+    if(space && onGround == true)
     {
-        setYSpeed(-30.0 * fps);
+        //récupérer le y du bloc du quel on saute
+        jumpBlock = getYPosition();
+        setYSpeed(-15.0 * fps);
     }
 
     newXPosition += getXSpeed();
     newYPosition += getYSpeed();
 
+    if(alreadyTouched == false){
+        setYSpeed(15.0 * fps);
+        alreadyTouched = true;
+    }
+
+    if (onGround == false && newYPosition < (jumpBlock - jumpHeight))
+    {
+        space = false;
+        setYSpeed(7.5 * fps);
+    }
+
 
     collision(newXPosition, newYPosition, level);
     collisionEnemies(newXPosition, newYPosition, enemies);
 
-
-    if(onGround == false && newYPosition <  getYPosition() - jumpHeight)
-    {
-        setYSpeed(15.0 * fps);
-        setPosition(getXPosition(), getYPosition() + getYSpeed());
-    }
 
 
     if(move == true)
