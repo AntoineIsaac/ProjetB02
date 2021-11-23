@@ -137,14 +137,17 @@ void Player::update(bool left, bool right, bool space, float fps, vector<Platfor
     newXPosition += getXSpeed();
     newYPosition += getYSpeed();
 
-    if(onGround == false || newYPosition <  getYPosition() - jumpHeight)
-    {
-        setYSpeed(15.0 * fps);
-        newYPosition += getYSpeed();
-    }
 
     collision(newXPosition, newYPosition, level);
     collisionEnemies(newXPosition, newYPosition, enemies);
+
+
+    if(onGround == false && newYPosition <  getYPosition() - jumpHeight)
+    {
+        setYSpeed(15.0 * fps);
+        setPosition(getXPosition(), getYPosition() + getYSpeed());
+    }
+
 
     if(move == true)
     {
