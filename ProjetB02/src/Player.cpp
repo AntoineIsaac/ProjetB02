@@ -76,7 +76,8 @@ FloatRect Player::getGlobalBoundsHitBox()
     rect.left += hitBoxWidth[0];
     rect.top += hitBoxHeight[0];
     rect.height = hitBoxHeight[1] - hitBoxHeight[0];
-    rect.width = hitBoxWidth[1] - hitBoxWidth[0];
+    // +125 pour que ce soit sa tête qui soit en collision avec le zombie et non ses pieds
+    rect.width = hitBoxWidth[1] - hitBoxWidth[0] + (125*scale);
     return rect;
 }
 
