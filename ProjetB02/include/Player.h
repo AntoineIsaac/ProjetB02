@@ -6,6 +6,7 @@
 #include <cmath>
 #include "Platform.h"
 #include "Checkpoint.h"
+#include "Zombie.h"
 
 
 class Player : public Entity
@@ -54,8 +55,9 @@ class Player : public Entity
         void setYSpeed(float ySpeed);
 
         //Functions
-        void update(bool left, bool right, bool space, float fps, vector<Platform*> level);
+        void update(bool left, bool right, bool space, float fps, vector<Platform*> level, vector<Zombie*> enemies);
         void collision(int &newXPosition, int &newYposition, vector<Platform*> level);
+        void collisionEnemies(int &newXPosition, int &newYposition, vector<Zombie*> enemies);
 
         void loadTexture();
         void loadTextureIdle();

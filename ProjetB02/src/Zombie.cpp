@@ -3,6 +3,7 @@
 Zombie::Zombie(float xPosition, float yPosition, string textureString):Entity(xPosition, yPosition, textureString)
 {
     setXSpeed(3.0);
+    setScale(scale);
 }
 
 Zombie::~Zombie()
@@ -49,6 +50,11 @@ void Zombie::setYPosition(float y)
     Entity::setYPosition(y);
 }
 
+int Zombie::getWidth() const
+{
+    return width;
+}
+
 void Zombie::setPosition(float x, float y)
 {
     Entity::setPosition(x, y);
@@ -79,4 +85,24 @@ void Zombie::setXSpeed(float xSpeed)
 void Zombie::setYSpeed(float ySpeed)
 {
     Entity::setYSpeed(ySpeed);
+}
+
+
+FloatRect Zombie::getGlobalBoundsHitBox()
+{
+    FloatRect rect = Entity::getGlobalBounds();
+    rect.left += hitBoxWidth[0];
+    rect.top += hitBoxHeight[0];
+    rect.height = height;
+    rect.width = width;
+    return rect;
+}
+
+
+void Zombie::loadTexture()
+{
+    if(!texture.loadFromFile("./Images/zombie2.gif"))
+    {
+        cout << "Erreur dans le chargement de la texture"<<endl;
+    }
 }

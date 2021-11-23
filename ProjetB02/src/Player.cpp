@@ -100,7 +100,7 @@ void Player::setYSpeed(float ySpeed)
     Entity::setYSpeed(ySpeed);
 }
 
-void Player::update(bool left, bool right, bool space, float fps, vector<Platform*> level)
+void Player::update(bool left, bool right, bool space, float fps, vector<Platform*> level, vector<Zombie*> enemies)
 {
     int newXPosition = getXPosition();
     int newYPosition = getYPosition();
@@ -136,13 +136,14 @@ void Player::update(bool left, bool right, bool space, float fps, vector<Platfor
     newXPosition += getXSpeed();
     newYPosition += getYSpeed();
 
-    if(onGround == false && newYPosition <  getYPosition() - jumpHeight)
+    if(onGround == false || newYPosition <  getYPosition() - jumpHeight)
     {
         setYSpeed(15.0 * fps);
         newYPosition += getYSpeed();
     }
 
     collision(newXPosition, newYPosition, level);
+    collisionEnemies(newXPosition, newYPosition, enemies);
 
     if(move == true)
     {
@@ -169,8 +170,6 @@ void Player::update(bool left, bool right, bool space, float fps, vector<Platfor
 
 void Player::collision(int &newXPosition, int &newYPosition, vector<Platform*> level)
 {
-
-
     float withoutCollX = newXPosition;
     float withoutCollY = newYPosition;
 
@@ -289,6 +288,20 @@ void Player::collision(int &newXPosition, int &newYPosition, vector<Platform*> l
     }
 
 }
+
+void Player::collisionEnemies(int& newXPosition, int& newYposition, vector<Zombie*>enemies)
+{
+    for(Zombie* zombie : enemies)
+    {
+        if(getGlobalBoundsHitBox().intersects(zombie->getGlobalBoundsHitBox()))
+        {
+            setPosition(getRespawnPosition().x, getRespawnPosition().y);
+            break;
+        }
+    }
+}
+
+
 
 void Player::loadTexture()
 {

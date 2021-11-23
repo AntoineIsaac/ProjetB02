@@ -33,13 +33,14 @@ int main()
     //player.getSprite().setScale(Vector2f(0.05f, 0.05f));
 
     //Creation of a Zombie
-    //Zombie zombie(0, 0, "Images/jackfree/png/Run (0).png");
+    Zombie zombie(0, 0, "Images/jackfree/png/Run (0).png");
 
     //Creation of a block
 
     //Platform* level[] = {new GrassBlock(0, 0), new LavaBlock(75, 0)};
     Level level;
     vector<Platform*> level1 = level.createLevel1();
+    vector<Zombie*> zombieLevel1 = level.createZombiesLevel1();
 
     Input input;
 
@@ -56,7 +57,7 @@ int main()
             input.InputHandler(event, window);
         }
 
-        player.update(input.GetButton().left, input.GetButton().right, input.GetButton().space, fps, level1);
+        player.update(input.GetButton().left, input.GetButton().right, input.GetButton().space, fps, level1, zombieLevel1);
 
         //Set the view on the player
         view.setCenter(player.getXPosition(), player.getYPosition());
@@ -67,6 +68,13 @@ int main()
         //Draw the player
         window.draw(player.getSprite());
         //window.draw(zombie.getSprite());
+
+        //Draw the Zombies of the level
+        for(Zombie* z : zombieLevel1)
+        {
+            window.draw(z->getSprite());
+            z->setPosition(z->getXPosition(), z->getYPosition());
+        }
 
         //Draw the platform
         for(Platform* p : level1)
