@@ -285,7 +285,7 @@ void Player::collision(int &newXPosition, int &newYPosition, vector<Platform*> l
             }
 
             //Passe au travers des bloc d'obsidian pour pouvoir rentrer dans le portail
-            if(platform->getType() == 5 || platform->getType() == 6)
+            if(platform->getType() == 5 || platform->getType() == 6 || platform->getType() == 8)
             {
                 newXPosition = withoutCollX;
                 newYPosition = withoutCollY;

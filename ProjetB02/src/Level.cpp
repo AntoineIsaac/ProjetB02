@@ -50,33 +50,16 @@ vector<Platform*> Level::createLevel1()const
     {
         for(int j = 0; j<33; j++)
         {
-            if(level[i][j] == 1)
+            switch(level[i][j])
             {
-                platform.push_back(new GrassBlock(p->size*j, p->size*i));
-            }
-            else if(level[i][j] == 2)
-            {
-                platform.push_back(new LavaBlock(p->size*j, p->size*i));
-            }
-            else if(level[i][j] == 3)
-            {
-                platform.push_back(new Checkpoint(p->size*j, p->size*i));
-            }
-            else if(level[i][j] == 4)
-            {
-                platform.push_back(new NetherBlock(p->size*j, p->size*i));
-            }
-            else if(level[i][j] == 5)
-            {
-                platform.push_back(new ObsidianBlock(p->size*j, p->size*i));
-            }
-            else if(level[i][j] == 6)
-            {
-                platform.push_back(new PortalBlock(p->size*j, p->size*i));
-            }
-            else if(level[i][j] == 7)
-            {
-                platform.push_back(new SpiderWebBlock(p->size*j, p->size*i));
+                case(1): platform.push_back(new GrassBlock(p->size*j, p->size*i)); break;
+                case(2): platform.push_back(new LavaBlock(p->size*j, p->size*i)); break;
+                case(3): platform.push_back(new Checkpoint(p->size*j, p->size*i)); break;
+                case(4): platform.push_back(new NetherBlock(p->size*j, p->size*i)); break;
+                case(5): platform.push_back(new ObsidianBlock(p->size*j, p->size*i)); break;
+                case(6): platform.push_back(new PortalBlock(p->size*j, p->size*i)); break;
+                case(7): platform.push_back(new SpiderWebBlock(p->size*j, p->size*i)); break;
+//                case(8): platform.push_back(new NetherWoodBlock(p->size*j, p->size*i)); break;
             }
         }
     }
@@ -84,6 +67,45 @@ vector<Platform*> Level::createLevel1()const
     return platform;
 }
 
+
+vector<Platform*> Level::createDecorLevel1()const
+{
+    int level[16][33] = {{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+                        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+                        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+                        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 5, 5, 5},
+                        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 2, 4, 2, 4, 0, 0, 0, 0, 5, 6, 6, 5},
+                        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 4, 4, 4, 4, 4, 4, 0, 0, 0, 5, 6, 6, 5},
+                        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 6, 6, 5},
+                        {0, 10, 0, 0, 8, 8, 0, 0, 0, 8, 8, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 4, 4, 4, 4, 4},
+                        {0, 8, 0, 8, 0, 0, 8, 10, 0, 8, 0, 8, 0, 0, 0, 0, 0, 4, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+                        {0, 8, 8, 0, 0, 0, 0, 8, 0, 0, 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+                        {0, 0, 8, 0, 0, 0, 0, 8, 8, 0, 0, 0, 8, 0, 0, 0, 0, 0, 0, 0, 4, 3, 4, 0, 0, 0, 0, 0, 0, 0, 4, 0, 0},
+                        {0, 0, 8, 0, 0, 0, 0, 0, 8, 0, 0, 0, 8, 0, 4, 4, 4, 4, 0, 0, 0, 0, 8, 0, 0, 0, 0, 0, 0, 4, 4, 4, 0},
+                        {3, 4, 4, 0, 0, 0, 0, 0, 0, 8, 0, 0, 4, 0, 4, 4, 4, 4, 0, 0, 0, 0, 8, 0, 0, 0, 0, 0, 4, 0, 4, 0, 4},
+                        {4, 4, 4, 4, 4, 0, 2, 2, 4, 3, 0, 0, 4, 2, 4, 4, 4, 4, 0, 0, 0, 0, 8, 8, 0, 0, 0, 0, 0, 0, 4, 0, 0},
+                        {4, 4, 4, 4, 4, 0, 2, 2, 4 ,4, 0 ,0, 4, 4, 4, 4, 4, 4, 0, 0, 0, 0, 0, 8, 8, 0, 0, 0, 0, 0, 4, 4, 4},
+                        {4, 4, 4, 4, 4, 0, 4, 4, 4, 4, 0, 0, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 0, 8, 0, 0, 4, 4, 4, 4, 4, 4, 4}};
+    vector<Platform*> platform;
+
+    Platform* p;
+
+
+    for(int i = 0; i < 16; i++)
+    {
+        for(int j = 0; j<33; j++)
+        {
+            switch(level[i][j])
+            {
+                case(8): platform.push_back(new NetherWoodBlock(p->size*j, p->size*i)); break;
+                case(9): platform.push_back(new LeafBlock(p->size*j, p->size*i)); break;
+                case(10): platform.push_back(new FireBlock(p->size*j, p->size*i)); break;
+            }
+        }
+    }
+
+    return platform;
+}
 
 vector<Zombie*> Level::createZombiesLevel1()const
 {

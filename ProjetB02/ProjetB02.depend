@@ -161,7 +161,7 @@
 1637744127 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Checkpoint.cpp
 	"../include/Checkpoint.h"
 
-1637760314 source:/home/ugo/Documents/projet/ProjetB02/ProjetB02/main.cpp
+1637764010 source:/home/ugo/Documents/projet/ProjetB02/ProjetB02/main.cpp
 	<SFML/Window.hpp>
 	<SFML/System.hpp>
 	<SFML/Graphics.hpp>
@@ -169,8 +169,6 @@
 	"include/Zombie.h"
 	"include/Input.h"
 	"include/Platform.h"
-	"include/GrassBlock.h"
-	"include/LavaBlock.h"
 	"include/Level.h"
 
 1637760959 /home/ugo/Documents/projet/ProjetB02/ProjetB02/include/Player.h
@@ -211,7 +209,7 @@
 1637414445 /home/ugo/Documents/projet/ProjetB02/ProjetB02/include/LavaBlock.h
 	"Platform.h"
 
-1637759162 /home/ugo/Documents/projet/ProjetB02/ProjetB02/include/Level.h
+1637764268 /home/ugo/Documents/projet/ProjetB02/ProjetB02/include/Level.h
 	"Platform.h"
 	"GrassBlock.h"
 	"LavaBlock.h"
@@ -222,6 +220,9 @@
 	"PortalBlock.h"
 	"ObsidianBlock.h"
 	"SpiderWebBlock.h"
+	"NetherWoodBlock.h"
+	"LeafBlock.h"
+	"FireBlock.h"
 
 1637759162 source:/home/ugo/Documents/projet/ProjetB02/ProjetB02/src/Checkpoint.cpp
 	"../include/Checkpoint.h"
@@ -238,13 +239,13 @@
 1637494866 source:/home/ugo/Documents/projet/ProjetB02/ProjetB02/src/LavaBlock.cpp
 	"../include/LavaBlock.h"
 
-1637761059 source:/home/ugo/Documents/projet/ProjetB02/ProjetB02/src/Level.cpp
+1637762989 source:/home/ugo/Documents/projet/ProjetB02/ProjetB02/src/Level.cpp
 	"../include/Level.h"
 
 1637414445 source:/home/ugo/Documents/projet/ProjetB02/ProjetB02/src/Platform.cpp
 	"../include/Platform.h"
 
-1637760937 source:/home/ugo/Documents/projet/ProjetB02/ProjetB02/src/Player.cpp
+1637762455 source:/home/ugo/Documents/projet/ProjetB02/ProjetB02/src/Player.cpp
 	"../include/Player.h"
 
 1637759162 source:/home/ugo/Documents/projet/ProjetB02/ProjetB02/src/Zombie.cpp
@@ -377,7 +378,7 @@
 1637759162 /home/ugo/Documents/projet/ProjetB02/ProjetB02/include/SpiderWebBlock.h
 	"Platform.h"
 
-1637759162 source:/home/ugo/Documents/projet/ProjetB02/ProjetB02/src/NetherBlock.cpp
+1637761655 source:/home/ugo/Documents/projet/ProjetB02/ProjetB02/src/NetherBlock.cpp
 	"../include/NetherBlock.h"
 
 1637759162 source:/home/ugo/Documents/projet/ProjetB02/ProjetB02/src/ObsidianBlock.cpp
@@ -388,4 +389,22 @@
 
 1637759162 source:/home/ugo/Documents/projet/ProjetB02/ProjetB02/src/PortalBlock.cpp
 	"../include/PortalBlock.h"
+
+1637761834 /home/ugo/Documents/projet/ProjetB02/ProjetB02/include/NetherWoodBlock.h
+	"Platform.h"
+
+1637762401 source:/home/ugo/Documents/projet/ProjetB02/ProjetB02/src/NetherWoodBlock.cpp
+	"../include/NetherWoodBlock.h"
+
+1637763922 /home/ugo/Documents/projet/ProjetB02/ProjetB02/include/LeafBlock.h
+	"Platform.h"
+
+1637764356 /home/ugo/Documents/projet/ProjetB02/ProjetB02/include/FireBlock.h
+	"Platform.h"
+
+1637764075 source:/home/ugo/Documents/projet/ProjetB02/ProjetB02/src/LeafBlock.cpp
+	"../include/LeafBlock.h"
+
+1637764261 source:/home/ugo/Documents/projet/ProjetB02/ProjetB02/src/FireBlock.cpp
+	"../include/FireBlock.h"
 

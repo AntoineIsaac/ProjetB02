@@ -5,8 +5,6 @@
 #include "include/Zombie.h"
 #include "include/Input.h"
 #include "include/Platform.h"
-#include "include/GrassBlock.h"
-#include "include/LavaBlock.h"
 #include "include/Level.h"
 
 using namespace sf;
@@ -41,6 +39,7 @@ int main()
     Level level;
     vector<Platform*> level1 = level.createLevel1();
     vector<Zombie*> zombieLevel1 = level.createZombiesLevel1();
+    vector<Platform*> decorLevel1 = level.createDecorLevel1();
 
     Input input;
 
@@ -74,6 +73,12 @@ int main()
         window.clear();
 //        window.draw(background);
 
+        // Draw the decor
+        for(Platform* p : decorLevel1)
+        {
+            window.draw(p->getSprite());
+        }
+
         //Draw the player
         window.draw(player.getSprite());
         //window.draw(zombie.getSprite());
@@ -90,7 +95,6 @@ int main()
         {
             window.draw(p->getSprite());
         }
-
 
         window.display();
     }

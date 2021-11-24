@@ -10,6 +10,9 @@
 #include "PortalBlock.h"
 #include "ObsidianBlock.h"
 #include "SpiderWebBlock.h"
+#include "NetherWoodBlock.h"
+#include "LeafBlock.h"
+#include "FireBlock.h"
 
 using namespace std;
 
@@ -25,9 +28,8 @@ class Level
         Level(const Level& other);
         Level& operator=(const Level& other);
 
-
         vector<Platform*> createLevel1()const;
-
+        vector<Platform*> createDecorLevel1()const;
         vector<Zombie*> createZombiesLevel1()const;
 };
 
