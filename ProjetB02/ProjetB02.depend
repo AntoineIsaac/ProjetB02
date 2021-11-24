@@ -161,7 +161,7 @@
 1637744127 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Checkpoint.cpp
 	"../include/Checkpoint.h"
 
-1637418409 source:/home/ugo/Documents/projet/ProjetB02/ProjetB02/main.cpp
+1637760314 source:/home/ugo/Documents/projet/ProjetB02/ProjetB02/main.cpp
 	<SFML/Window.hpp>
 	<SFML/System.hpp>
 	<SFML/Graphics.hpp>
@@ -173,19 +173,20 @@
 	"include/LavaBlock.h"
 	"include/Level.h"
 
-1637494182 /home/ugo/Documents/projet/ProjetB02/ProjetB02/include/Player.h
+1637760959 /home/ugo/Documents/projet/ProjetB02/ProjetB02/include/Player.h
 	"Entity.h"
 	<string>
 	<iostream>
 	<cmath>
 	"Platform.h"
 	"Checkpoint.h"
+	"Zombie.h"
 
-1637493793 /home/ugo/Documents/projet/ProjetB02/ProjetB02/include/Entity.h
+1637759162 /home/ugo/Documents/projet/ProjetB02/ProjetB02/include/Entity.h
 	<SFML/Graphics.hpp>
 	<string>
 
-1637414445 /home/ugo/Documents/projet/ProjetB02/ProjetB02/include/Platform.h
+1637759162 /home/ugo/Documents/projet/ProjetB02/ProjetB02/include/Platform.h
 	<SFML/Window.hpp>
 	<SFML/System.hpp>
 	<SFML/Graphics.hpp>
@@ -194,8 +195,10 @@
 1637414445 /home/ugo/Documents/projet/ProjetB02/ProjetB02/include/Checkpoint.h
 	"Platform.h"
 
-1637402708 /home/ugo/Documents/projet/ProjetB02/ProjetB02/include/Zombie.h
+1637759162 /home/ugo/Documents/projet/ProjetB02/ProjetB02/include/Zombie.h
 	"Entity.h"
+	<string>
+	<iostream>
 
 1635585054 /home/ugo/Documents/projet/ProjetB02/ProjetB02/include/Input.h
 	<SFML/Window.hpp>
@@ -208,14 +211,19 @@
 1637414445 /home/ugo/Documents/projet/ProjetB02/ProjetB02/include/LavaBlock.h
 	"Platform.h"
 
-1637414445 /home/ugo/Documents/projet/ProjetB02/ProjetB02/include/Level.h
+1637759162 /home/ugo/Documents/projet/ProjetB02/ProjetB02/include/Level.h
 	"Platform.h"
 	"GrassBlock.h"
 	"LavaBlock.h"
 	"Checkpoint.h"
 	<string>
+	"Zombie.h"
+	"NetherBlock.h"
+	"PortalBlock.h"
+	"ObsidianBlock.h"
+	"SpiderWebBlock.h"
 
-1637414445 source:/home/ugo/Documents/projet/ProjetB02/ProjetB02/src/Checkpoint.cpp
+1637759162 source:/home/ugo/Documents/projet/ProjetB02/ProjetB02/src/Checkpoint.cpp
 	"../include/Checkpoint.h"
 
 1637418409 source:/home/ugo/Documents/projet/ProjetB02/ProjetB02/src/Entity.cpp
@@ -227,19 +235,19 @@
 1635585054 source:/home/ugo/Documents/projet/ProjetB02/ProjetB02/src/Input.cpp
 	"../include/Input.h"
 
-1637493793 source:/home/ugo/Documents/projet/ProjetB02/ProjetB02/src/LavaBlock.cpp
+1637494866 source:/home/ugo/Documents/projet/ProjetB02/ProjetB02/src/LavaBlock.cpp
 	"../include/LavaBlock.h"
 
-1637493793 source:/home/ugo/Documents/projet/ProjetB02/ProjetB02/src/Level.cpp
+1637761059 source:/home/ugo/Documents/projet/ProjetB02/ProjetB02/src/Level.cpp
 	"../include/Level.h"
 
 1637414445 source:/home/ugo/Documents/projet/ProjetB02/ProjetB02/src/Platform.cpp
 	"../include/Platform.h"
 
-1637493814 source:/home/ugo/Documents/projet/ProjetB02/ProjetB02/src/Player.cpp
+1637760937 source:/home/ugo/Documents/projet/ProjetB02/ProjetB02/src/Player.cpp
 	"../include/Player.h"
 
-1637417192 source:/home/ugo/Documents/projet/ProjetB02/ProjetB02/src/Zombie.cpp
+1637759162 source:/home/ugo/Documents/projet/ProjetB02/ProjetB02/src/Zombie.cpp
 	"../include/Zombie.h"
 
 1637694984 source:/home/declercq/Documents/Projet/ProjetB02/ProjetB02/main.cpp
@@ -356,4 +364,28 @@
 
 1637748302 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/SpiderWebBlock.cpp
 	"../include/SpiderWebBlock.h"
+
+1637759162 /home/ugo/Documents/projet/ProjetB02/ProjetB02/include/NetherBlock.h
+	"Platform.h"
+
+1637759162 /home/ugo/Documents/projet/ProjetB02/ProjetB02/include/PortalBlock.h
+	"Platform.h"
+
+1637759162 /home/ugo/Documents/projet/ProjetB02/ProjetB02/include/ObsidianBlock.h
+	"Platform.h"
+
+1637759162 /home/ugo/Documents/projet/ProjetB02/ProjetB02/include/SpiderWebBlock.h
+	"Platform.h"
+
+1637759162 source:/home/ugo/Documents/projet/ProjetB02/ProjetB02/src/NetherBlock.cpp
+	"../include/NetherBlock.h"
+
+1637759162 source:/home/ugo/Documents/projet/ProjetB02/ProjetB02/src/ObsidianBlock.cpp
+	"../include/ObsidianBlock.h"
+
+1637759162 source:/home/ugo/Documents/projet/ProjetB02/ProjetB02/src/SpiderWebBlock.cpp
+	"../include/SpiderWebBlock.h"
+
+1637759162 source:/home/ugo/Documents/projet/ProjetB02/ProjetB02/src/PortalBlock.cpp
+	"../include/PortalBlock.h"
 

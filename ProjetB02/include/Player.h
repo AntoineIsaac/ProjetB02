@@ -23,7 +23,7 @@ class Player : public Entity
 
         Vector2f respawnPosition;
 
-        float jumpHeight = 300.;
+        float jumpHeight = 175.;
         int jumpBlock;
         bool alreadyTouched = false;
 

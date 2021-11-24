@@ -28,7 +28,7 @@ int main()
     float fps;
 
     //Creation of a player
-    Player player(80.0, 250, "./Images/jackfree/png/Run (1).png");
+    Player player(80.0, 900, "./Images/jackfree/png/Run (1).png");
 
     //player.getSprite().setScale(Vector2f(0.05f, 0.05f));
 

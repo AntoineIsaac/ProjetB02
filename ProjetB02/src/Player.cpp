@@ -310,7 +310,7 @@ void Player::collision(int &newXPosition, int &newYPosition, vector<Platform*> l
     setPosition(newXPosition, newYPosition);
 
     //Respawn si il tombe dans le vide
-    if(getYPosition() > 700)
+    if(getYPosition() > 1000)
     {
         setPosition(getRespawnPosition().x, getRespawnPosition().y);
     }
