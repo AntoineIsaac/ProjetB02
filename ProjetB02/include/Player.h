@@ -26,7 +26,7 @@ class Player : public Entity
         float jumpHeight = 175.;
         int jumpBlock;
         bool alreadyTouched = false;
-
+        bool colTop = false;
 
     public:
         bool onGround;
@@ -58,7 +58,7 @@ class Player : public Entity
 
         //Functions
         void update(bool left, bool right, bool space, float fps, vector<Platform*> level, vector<Zombie*> enemies);
-        void collision(int &newXPosition, int &newYposition, vector<Platform*> level);
+        bool collision(int &newXPosition, int &newYposition, vector<Platform*> level);
         void collisionEnemies(int &newXPosition, int &newYposition, vector<Zombie*> enemies);
 
         void loadTexture();
