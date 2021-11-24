@@ -146,14 +146,14 @@ void Player::update(bool left, bool right, bool space, float fps, vector<Platfor
         alreadyTouched = true;
     }
 
-    if (onGround == false && newYPosition < (jumpBlock - jumpHeight))
+    if (onGround == false && ((newYPosition < (jumpBlock - jumpHeight) || colTop == true)))
     {
         space = false;
         setYSpeed(7.5 * fps);
     }
 
 
-    collision(newXPosition, newYPosition, level);
+    colTop = collision(newXPosition, newYPosition, level);
     collisionEnemies(newXPosition, newYPosition, enemies);
 
 
@@ -181,12 +181,13 @@ void Player::update(bool left, bool right, bool space, float fps, vector<Platfor
 
 }
 
-void Player::collision(int &newXPosition, int &newYPosition, vector<Platform*> level)
+bool Player::collision(int &newXPosition, int &newYPosition, vector<Platform*> level)
 {
     float withoutCollX = newXPosition;
     float withoutCollY = newYPosition;
 
     bool colGround = false;
+    bool colTop = false;
 
     for(Platform * platform : level)
     {
@@ -256,6 +257,7 @@ void Player::collision(int &newXPosition, int &newYPosition, vector<Platform*> l
             {
                 newYPosition =  platform->getYPosition() + platform->getSize() - hitBoxHeight[0];
                 coll = true;
+                colTop = true;
             }
 
 
@@ -299,6 +301,7 @@ void Player::collision(int &newXPosition, int &newYPosition, vector<Platform*> l
 
 
         }
+
     }
 
     //Lorsqu"il tombe dans le vide, onGround = false
@@ -314,6 +317,7 @@ void Player::collision(int &newXPosition, int &newYPosition, vector<Platform*> l
     {
         setPosition(getRespawnPosition().x, getRespawnPosition().y);
     }
+    return colTop;
 
 }
 
