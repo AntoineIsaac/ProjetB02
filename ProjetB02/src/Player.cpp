@@ -263,26 +263,41 @@ void Player::collision(int &newXPosition, int &newYPosition, vector<Platform*> l
 
         if(coll == true)
         {
-            if(platform->getType() == 3)
-            {
-                Checkpoint* c = (Checkpoint*) platform;
-
-                newXPosition = withoutCollX;
-                newYPosition = withoutCollY;
-
-                if(c->isActivated() == false)
-                {
-                    c->switchCheckpoint();
-                    setRespawnPosition(c->getXPosition(), c->getYPosition() - 100);
-                }
-            }
-
             //Respawn si il touche un bloc de lave
             if(platform->getType() == 2)
             {
                 newXPosition = getRespawnPosition().x;
                 newYPosition = getRespawnPosition().y;
             }
+
+
+            //Il active la JackOLantern si il marche dessus et active le checkpoint
+            if(platform->getType() == 3)
+            {
+                Checkpoint* j = (Checkpoint*) platform;
+
+                if(j->isActivated() == false)
+                {
+                    j->switchCheckpoint();
+
+                    setRespawnPosition(j->getXPosition(), j->getYPosition() - 100);
+                }
+            }
+
+            //Passe au travers des bloc d'obsidian pour pouvoir rentrer dans le portail
+            if(platform->getType() == 5 || platform->getType() == 6)
+            {
+                newXPosition = withoutCollX;
+                newYPosition = withoutCollY;
+            }
+
+            if(platform->getType() == 7)
+            {
+                newXPosition = withoutCollX;
+                newYPosition = withoutCollY;
+            }
+
+
         }
     }
 

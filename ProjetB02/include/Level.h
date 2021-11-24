@@ -6,6 +6,10 @@
 #include "Checkpoint.h"
 #include <string>
 #include "Zombie.h"
+#include "NetherBlock.h"
+#include "PortalBlock.h"
+#include "ObsidianBlock.h"
+#include "SpiderWebBlock.h"
 
 using namespace std;
 

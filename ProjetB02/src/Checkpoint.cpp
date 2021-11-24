@@ -2,7 +2,7 @@
 
 Checkpoint::Checkpoint(float xPosition, float yPosition):Platform(xPosition, yPosition)
 {
-    setSprite("Images/blocks.png", IntRect(16 * 3, 16 * 7, 16, 16));
+    setSprite("Images/blocks.png", IntRect(16 * 7, 16 * 7, 16, 16));
 }
 
 Checkpoint::~Checkpoint()
@@ -59,7 +59,7 @@ void Checkpoint::switchCheckpoint()
     activated = !activated;
     if(activated == true)
     {
-        setSprite("Images/blocks.png", IntRect(16 * 3, 16 * 6, 16, 16));
+        setSprite("Images/blocks.png", IntRect(16 * 8, 16 * 7, 16, 16));
     }
 }
 

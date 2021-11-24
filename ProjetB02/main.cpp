@@ -28,12 +28,12 @@ int main()
     float fps;
 
     //Creation of a player
-    Player player(80.0, 319, "./Images/jackfree/png/Run (1).png");
+    Player player(80.0, 250, "./Images/jackfree/png/Run (1).png");
 
     //player.getSprite().setScale(Vector2f(0.05f, 0.05f));
 
     //Creation of a Zombie
-    Zombie zombie(0, 0, "Images/jackfree/png/Run (0).png");
+    //Zombie zombie(0, 0, "Images/jackfree/png/Run (0).png");
 
     //Creation of a block
 
@@ -43,6 +43,14 @@ int main()
     vector<Zombie*> zombieLevel1 = level.createZombiesLevel1();
 
     Input input;
+
+
+//    RectangleShape background;
+//    background.setSize(Vector2f(800, 800));
+//    background.setPosition(0, 0);
+//    Texture Maintexture;
+//    Maintexture.loadFromFile("Images/ciel.jpg");
+//    background.setTexture(&Maintexture);
 
 
     while (window.isOpen())
@@ -64,6 +72,7 @@ int main()
         window.setView(view);
 
         window.clear();
+//        window.draw(background);
 
         //Draw the player
         window.draw(player.getSprite());
@@ -81,6 +90,7 @@ int main()
         {
             window.draw(p->getSprite());
         }
+
 
         window.display();
     }
