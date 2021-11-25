@@ -142,7 +142,7 @@ void Player::update(bool left, bool right, bool space, float fps, vector<Platfor
     newYPosition += getYSpeed();
 
     if(alreadyTouched == false){
-        setYSpeed(15.0 * fps);
+        setYSpeed(7.5 * fps);
         alreadyTouched = true;
     }
 
@@ -282,7 +282,7 @@ bool Player::collision(int &newXPosition, int &newYPosition, vector<Platform*> l
                 {
                     j->switchCheckpoint();
 
-                    setRespawnPosition(j->getXPosition(), j->getYPosition() - 100);
+                    setRespawnPosition(j->getXPosition(), j->getYPosition() - (height + 20));
                 }
             }
 
