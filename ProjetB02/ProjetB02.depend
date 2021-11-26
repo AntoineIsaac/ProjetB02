@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1637761518 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/main.cpp
+1637765164 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/main.cpp
 	<SFML/Window.hpp>
 	<SFML/System.hpp>
 	<SFML/Graphics.hpp>
@@ -7,8 +7,6 @@
 	"include/Zombie.h"
 	"include/Input.h"
 	"include/Platform.h"
-	"include/GrassBlock.h"
-	"include/LavaBlock.h"
 	"include/Level.h"
 
 1637495097 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Entity.cpp
@@ -18,10 +16,10 @@
 	<SFML/Graphics.hpp>
 	<string>
 
-1637763599 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Player.cpp
+1637913417 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Player.cpp
 	"../include/Player.h"
 
-1637763609 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Player.h
+1637764697 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Player.h
 	"Entity.h"
 	<string>
 	<iostream>
@@ -67,7 +65,7 @@
 1637406856 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Platform.cpp
 	"../include/Platform.h"
 
-1637748232 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Level.h
+1637765164 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Level.h
 	"Platform.h"
 	"GrassBlock.h"
 	"LavaBlock.h"
@@ -78,6 +76,9 @@
 	"PortalBlock.h"
 	"ObsidianBlock.h"
 	"SpiderWebBlock.h"
+	"NetherWoodBlock.h"
+	"LeafBlock.h"
+	"FireBlock.h"
 
 1637763702 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Level.cpp
 	"../include/Level.h"
@@ -407,4 +408,22 @@
 
 1637764948 source:/home/ugo/Documents/projet/ProjetB02/ProjetB02/src/FireBlock.cpp
 	"../include/FireBlock.h"
+
+1637765164 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/NetherWoodBlock.h
+	"Platform.h"
+
+1637765164 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/LeafBlock.h
+	"Platform.h"
+
+1637765164 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/FireBlock.h
+	"Platform.h"
+
+1637765164 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/FireBlock.cpp
+	"../include/FireBlock.h"
+
+1637765164 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/LeafBlock.cpp
+	"../include/LeafBlock.h"
+
+1637765164 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/NetherWoodBlock.cpp
+	"../include/NetherWoodBlock.h"
 
