@@ -57,11 +57,13 @@
 		<Unit filename="include/Checkpoint.h" />
 		<Unit filename="include/Entity.h" />
 		<Unit filename="include/FireBlock.h" />
+		<Unit filename="include/Game.h" />
 		<Unit filename="include/GrassBlock.h" />
 		<Unit filename="include/Input.h" />
 		<Unit filename="include/LavaBlock.h" />
 		<Unit filename="include/LeafBlock.h" />
 		<Unit filename="include/Level.h" />
+		<Unit filename="include/Menu.h" />
 		<Unit filename="include/NetherBlock.h" />
 		<Unit filename="include/NetherWoodBlock.h" />
 		<Unit filename="include/ObsidianBlock.h" />
@@ -74,11 +76,13 @@
 		<Unit filename="src/Checkpoint.cpp" />
 		<Unit filename="src/Entity.cpp" />
 		<Unit filename="src/FireBlock.cpp" />
+		<Unit filename="src/Game.cpp" />
 		<Unit filename="src/GrassBlock.cpp" />
 		<Unit filename="src/Input.cpp" />
 		<Unit filename="src/LavaBlock.cpp" />
 		<Unit filename="src/LeafBlock.cpp" />
 		<Unit filename="src/Level.cpp" />
+		<Unit filename="src/Menu.cpp" />
 		<Unit filename="src/NetherBlock.cpp" />
 		<Unit filename="src/NetherWoodBlock.cpp" />
 		<Unit filename="src/ObsidianBlock.cpp" />

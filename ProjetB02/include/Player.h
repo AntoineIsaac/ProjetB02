@@ -7,6 +7,7 @@
 #include "Platform.h"
 #include "Checkpoint.h"
 #include "Zombie.h"
+#include "Game.h"
 
 
 class Player : public Entity

@@ -287,10 +287,16 @@ bool Player::collision(int &newXPosition, int &newYPosition, vector<Platform*> l
             }
 
             //Passe au travers des bloc d'obsidian pour pouvoir rentrer dans le portail
-            if(platform->getType() == 5 || platform->getType() == 6 || platform->getType() == 8)
+            if(platform->getType() == 5 || platform->getType() == 8)
             {
                 newXPosition = withoutCollX;
                 newYPosition = withoutCollY;
+            }
+
+            if(platform->getType() == 6)
+            {
+                //game.setEndLevel(true);
+                cout<<"On passe à true"<<endl;
             }
 
             if(platform->getType() == 7)
