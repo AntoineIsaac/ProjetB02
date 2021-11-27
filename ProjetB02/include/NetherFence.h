@@ -10,7 +10,7 @@ class NetherFence : public Platform
         NetherFence(const NetherFence& other);
         NetherFence& operator=(const NetherFence& other);
 
-        int getType()const;
+        string getType()const;
 };
 
 #endif // NETHERFENCE_H

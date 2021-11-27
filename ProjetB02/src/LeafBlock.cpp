@@ -24,7 +24,7 @@ LeafBlock& LeafBlock::operator=(const LeafBlock& rhs)
     return *this;
 }
 
-int LeafBlock::getType() const
+string LeafBlock::getType() const
 {
-    return 9;
+    return "LeafBlock";
 }

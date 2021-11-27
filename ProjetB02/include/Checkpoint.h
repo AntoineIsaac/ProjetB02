@@ -16,7 +16,7 @@ class Checkpoint : public Platform
         void switchCheckpoint();
         bool isActivated()const;
 
-        int getType()const;
+        string getType()const;
 };
 
 #endif // CHECKPOINT_H

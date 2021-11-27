@@ -13,7 +13,7 @@ class LavaBlock : public Platform
         LavaBlock(const LavaBlock& other);
         LavaBlock& operator=(const LavaBlock& other);
 
-        int getType()const;
+        string getType()const;
 
 };
 

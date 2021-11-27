@@ -24,8 +24,8 @@ LavaBlock& LavaBlock::operator=(const LavaBlock& rhs)
     return *this;
 }
 
-int LavaBlock::getType() const
+string LavaBlock::getType() const
 {
-    return 2;
+    return "LavaBlock";
 }
 

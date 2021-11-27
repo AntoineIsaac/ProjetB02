@@ -10,7 +10,7 @@ class NetherWoodBlock : public Platform
         NetherWoodBlock(const NetherWoodBlock& other);
         NetherWoodBlock& operator=(const NetherWoodBlock& other);
 
-        int getType()const;
+        string getType()const;
 };
 
 #endif // NETHERWOODBLOCK_H

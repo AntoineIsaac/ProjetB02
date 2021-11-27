@@ -10,7 +10,7 @@ class LeafBlock : public Platform
         LeafBlock(const LeafBlock& other);
         LeafBlock& operator=(const LeafBlock& other);
 
-        int getType()const;
+        string getType()const;
 };
 
 #endif // LEAFBLOCK_H

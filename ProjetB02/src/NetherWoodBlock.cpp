@@ -24,8 +24,8 @@ NetherWoodBlock& NetherWoodBlock::operator=(const NetherWoodBlock& rhs)
     return *this;
 }
 
-int NetherWoodBlock::getType() const
+string NetherWoodBlock::getType() const
 {
-    return 8;
+    return "NetherWoodBlock";
 }
 

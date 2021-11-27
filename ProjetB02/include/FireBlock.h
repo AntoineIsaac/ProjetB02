@@ -10,7 +10,7 @@ class FireBlock : public Platform
         FireBlock(const FireBlock& other);
         FireBlock& operator=(const FireBlock& other);
 
-        int getType()const;
+        string getType()const;
 };
 
 #endif // FIREBLOCK_H

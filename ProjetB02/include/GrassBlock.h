@@ -13,7 +13,7 @@ class GrassBlock : public Platform
         GrassBlock(const GrassBlock& other);
         GrassBlock& operator=(const GrassBlock& other);
 
-        int getType()const;
+        string getType()const;
 
 
 };

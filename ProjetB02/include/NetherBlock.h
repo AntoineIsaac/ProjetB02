@@ -11,7 +11,7 @@ class NetherBlock : public Platform
         NetherBlock(const NetherBlock& other);
         NetherBlock& operator=(const NetherBlock& other);
 
-        int getType()const;
+        string getType()const;
 };
 
 #endif // NETHERBLOCK_H

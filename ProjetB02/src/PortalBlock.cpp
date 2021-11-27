@@ -24,7 +24,7 @@ PortalBlock& PortalBlock::operator=(const PortalBlock& rhs)
     return *this;
 }
 
-int PortalBlock::getType() const
+string PortalBlock::getType() const
 {
-    return 6;
+    return "PortalBlock";
 }

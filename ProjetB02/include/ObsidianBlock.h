@@ -11,7 +11,7 @@ class ObsidianBlock : public Platform
         ObsidianBlock(const ObsidianBlock& other);
         ObsidianBlock& operator=(const ObsidianBlock& other);
 
-        int getType()const;
+        string getType()const;
 };
 
 #endif // OBSIDIANBLOCK_H

@@ -24,7 +24,7 @@ NetherFence& NetherFence::operator=(const NetherFence& rhs)
     return *this;
 }
 
-int NetherFence::getType() const
+string NetherFence::getType() const
 {
-    return 11;
+    return "NetherFence";
 }

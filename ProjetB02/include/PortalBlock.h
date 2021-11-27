@@ -11,7 +11,7 @@ class PortalBlock : public Platform
         PortalBlock(const PortalBlock& other);
         PortalBlock& operator=(const PortalBlock& other);
 
-        int getType()const;
+        string getType()const;
 };
 
 #endif // PORTALBLOCK_H

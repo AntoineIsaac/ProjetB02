@@ -24,7 +24,7 @@ SpiderWebBlock& SpiderWebBlock::operator=(const SpiderWebBlock& rhs)
     return *this;
 }
 
-int SpiderWebBlock::getType() const
+string SpiderWebBlock::getType() const
 {
-    return 7;
+    return "SpiderWebBlock";
 }

@@ -24,7 +24,7 @@ FireBlock& FireBlock::operator=(const FireBlock& rhs)
     return *this;
 }
 
-int FireBlock::getType() const
+string FireBlock::getType() const
 {
-    return 10;
+    return "FireBlock";
 }

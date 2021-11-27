@@ -24,7 +24,7 @@ NetherBlock& NetherBlock::operator=(const NetherBlock& rhs)
     return *this;
 }
 
-int NetherBlock::getType() const
+string NetherBlock::getType() const
 {
-    return 4;
+    return "NetherBlock";
 }

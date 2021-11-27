@@ -24,8 +24,8 @@ GrassBlock& GrassBlock::operator=(const GrassBlock& rhs)
     return *this;
 }
 
-int GrassBlock::getType() const
+string GrassBlock::getType() const
 {
-    return 1;
+    return "GrassBlock";
 }
 

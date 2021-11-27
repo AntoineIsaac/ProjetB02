@@ -11,7 +11,7 @@ class SpiderWebBlock : public Platform
         SpiderWebBlock(const SpiderWebBlock& other);
         SpiderWebBlock& operator=(const SpiderWebBlock& other);
 
-        int getType()const;
+        string getType()const;
 };
 
 #endif // SPIDERWEBBLOCK_H

@@ -24,7 +24,7 @@ ObsidianBlock& ObsidianBlock::operator=(const ObsidianBlock& rhs)
     return *this;
 }
 
-int ObsidianBlock::getType() const
+string ObsidianBlock::getType() const
 {
-    return 5;
+    return "ObsidianBlock";
 }

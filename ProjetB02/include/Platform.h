@@ -44,7 +44,7 @@ class Platform
 
         virtual void setScale(float x);
 
-        virtual int getType()const = 0;
+        virtual string getType()const = 0;
 
 };
 

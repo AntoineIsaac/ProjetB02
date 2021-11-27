@@ -78,14 +78,14 @@ void Player::update(bool left, bool right, bool space, float fps, vector<Platfor
     newYPosition += getYSpeed();
 
     if(alreadyTouched == false){
-        setYSpeed(7.5 * fps);
+        setYSpeed(9 * fps);
         alreadyTouched = true;
     }
 
     if (onGround == false && ((newYPosition < (jumpBlock - jumpHeight) || colTop == true)))
     {
         space = false;
-        setYSpeed(7.5 * fps);
+        setYSpeed(9 * fps);
     }
 
 
@@ -205,14 +205,14 @@ bool Player::collision(int &newXPosition, int &newYPosition, vector<Platform*> l
         if(coll == true)
         {
             //Respawn si il touche un bloc de lave
-            if(platform->getType() == 2)
+            if(platform->getType() == "LavaBlock")
             {
                 dead = true;
             }
 
 
             //Il active la JackOLantern si il marche dessus et active le checkpoint
-            if(platform->getType() == 3)
+            if(platform->getType() == "Checkpoint")
             {
                 Checkpoint* j = (Checkpoint*) platform;
 
@@ -225,14 +225,14 @@ bool Player::collision(int &newXPosition, int &newYPosition, vector<Platform*> l
             }
 
             //Passe au travers des bloc d'obsidian pour pouvoir rentrer dans le portail
-            if(platform->getType() == 5 || platform->getType() == 8)
+            if(platform->getType() == "ObsidianBlock" || platform->getType() == "NetherWoodBlock")
             {
                 newXPosition = withoutCollX;
                 newYPosition = withoutCollY;
                 onGround = false;
             }
 
-            if(platform->getType() == 6)
+            if(platform->getType() == "PortalBlock")
             {
                 if(onGround == true)
                 {
@@ -245,7 +245,7 @@ bool Player::collision(int &newXPosition, int &newYPosition, vector<Platform*> l
                 }
             }
 
-            if(platform->getType() == 7)
+            if(platform->getType() == "SpiderWebBlock")
             {
                 newXPosition = withoutCollX;
                 newYPosition = withoutCollY;

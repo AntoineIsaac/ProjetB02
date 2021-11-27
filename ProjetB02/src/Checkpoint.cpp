@@ -38,7 +38,7 @@ bool Checkpoint::isActivated()const
     return activated;
 }
 
-int Checkpoint::getType() const
+string Checkpoint::getType() const
 {
-    return 3;
+    return "Checkpoint";
 }
