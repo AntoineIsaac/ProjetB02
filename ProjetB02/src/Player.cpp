@@ -190,6 +190,8 @@ bool Player::collision(int &newXPosition, int &newYPosition, vector<Platform*> l
     bool colGround = false;
     bool colTop = false;
 
+    bool dead = false;
+
     for(Platform * platform : level)
     {
         bool coll = false;
@@ -270,8 +272,7 @@ bool Player::collision(int &newXPosition, int &newYPosition, vector<Platform*> l
             //Respawn si il touche un bloc de lave
             if(platform->getType() == 2)
             {
-                newXPosition = getRespawnPosition().x;
-                newYPosition = getRespawnPosition().y;
+                dead = true;
             }
 
 
@@ -316,12 +317,13 @@ bool Player::collision(int &newXPosition, int &newYPosition, vector<Platform*> l
     if(colGround == false)
     {
         onGround = false;
+        canJump = false;
     }
 
     setPosition(newXPosition, newYPosition);
 
     //Respawn si il tombe dans le vide
-    if(getYPosition() > 1000)
+    if(getYPosition() > 1000 || dead == true)
     {
         setPosition(getRespawnPosition().x, getRespawnPosition().y);
     }
