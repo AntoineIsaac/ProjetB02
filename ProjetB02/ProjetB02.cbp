@@ -65,6 +65,7 @@
 		<Unit filename="include/Level.h" />
 		<Unit filename="include/Menu.h" />
 		<Unit filename="include/NetherBlock.h" />
+		<Unit filename="include/NetherFence.h" />
 		<Unit filename="include/NetherWoodBlock.h" />
 		<Unit filename="include/ObsidianBlock.h" />
 		<Unit filename="include/Platform.h" />
@@ -84,6 +85,7 @@
 		<Unit filename="src/Level.cpp" />
 		<Unit filename="src/Menu.cpp" />
 		<Unit filename="src/NetherBlock.cpp" />
+		<Unit filename="src/NetherFence.cpp" />
 		<Unit filename="src/NetherWoodBlock.cpp" />
 		<Unit filename="src/ObsidianBlock.cpp" />
 		<Unit filename="src/Platform.cpp" />

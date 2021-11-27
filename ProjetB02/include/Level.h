@@ -13,6 +13,7 @@
 #include "NetherWoodBlock.h"
 #include "LeafBlock.h"
 #include "FireBlock.h"
+#include "NetherFence.h"
 
 using namespace std;
 
