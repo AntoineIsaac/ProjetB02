@@ -58,7 +58,6 @@ void Game::startLevel1(Menu* menu)
     {
         if(endLevel == true)
         {
-            menu->level1Finish();
             this_thread::sleep_for(2000ms);
             window.close();
 

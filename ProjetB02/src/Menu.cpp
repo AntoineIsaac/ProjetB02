@@ -11,10 +11,11 @@ Menu::Menu(float width, float height)
 	this->height = height;
 
 	mainMenu[0].setFont(font);
-	mainMenu[0].setFillColor(Color::White);
+	mainMenu[0].setFillColor(Color::Blue);
 	mainMenu[0].setString("Play");
-	mainMenu[0].setCharacterSize(70);
+	mainMenu[0].setCharacterSize(85);
 	mainMenu[0].setPosition(400, 200);
+	mainMenu[0].setStyle(1);
 
 	mainMenu[1].setFont(font);
 	mainMenu[1].setFillColor(Color::White);
@@ -34,7 +35,7 @@ Menu::Menu(float width, float height)
 	mainMenu[3].setCharacterSize(70);
 	mainMenu[3].setPosition(400, 500);
 
-	MenuSelected = -1;
+	MenuSelected = 0;
 }
 
 
@@ -54,7 +55,17 @@ void Menu::MoveUp()
 {
 	if (MenuSelected - 1 >= 0)
 	{
-		mainMenu[MenuSelected].setFillColor(Color::White);
+	    if(MenuSelected == 0 && level1Succeed == true)
+        {
+            mainMenu[MenuSelected].setFillColor(Color::Green);
+        }
+        else
+        {
+            mainMenu[MenuSelected].setFillColor(Color::White);
+        }
+        mainMenu[MenuSelected].setCharacterSize(70);
+        mainMenu[MenuSelected].setStyle(0);
+
 
 		MenuSelected--;
 		if(MenuSelected == -1)
@@ -62,7 +73,17 @@ void Menu::MoveUp()
             MenuSelected = 2;
         }
 
-		mainMenu[MenuSelected].setFillColor(Color::Blue);
+        if(MenuSelected == 0 && level1Succeed == true)
+        {
+            mainMenu[MenuSelected].setFillColor(Color::Green);
+        }
+        else
+        {
+            mainMenu[MenuSelected].setFillColor(Color::Blue);
+        }
+        mainMenu[MenuSelected].setCharacterSize(85);
+        mainMenu[MenuSelected].setStyle(1);
+
 	}
 }
 
@@ -70,7 +91,17 @@ void Menu::MoveDown()
 {
 	if (MenuSelected + 1 <= Max_main_menu)
 	{
-		mainMenu[MenuSelected].setFillColor(Color::White);
+		if(MenuSelected == 0 && level1Succeed == true)
+        {
+            mainMenu[MenuSelected].setFillColor(Color::Green);
+        }
+        else
+        {
+            mainMenu[MenuSelected].setFillColor(Color::White);
+        }
+        mainMenu[MenuSelected].setCharacterSize(70);
+        mainMenu[MenuSelected].setStyle(0);
+
 
 		MenuSelected++;
 		if(MenuSelected == 4)
@@ -78,7 +109,16 @@ void Menu::MoveDown()
             MenuSelected = 0;
         }
 
-		mainMenu[MenuSelected].setFillColor(Color::Blue);
+		if(MenuSelected == 0 && level1Succeed == true)
+        {
+            mainMenu[MenuSelected].setFillColor(Color::Green);
+        }
+        else
+        {
+            mainMenu[MenuSelected].setFillColor(Color::Blue);
+        }
+        mainMenu[MenuSelected].setCharacterSize(85);
+        mainMenu[MenuSelected].setStyle(1);
 	}
 }
 
@@ -100,8 +140,6 @@ void Menu::startMenu()
     sf::RenderWindow menu(sf::VideoMode(width, height), "The running dead");
 
 	menu.setPosition(Vector2i(300,0));
-
-	Menu mainMenu(menu.getSize().x, menu.getSize().y);
 
 	//mainmenu
 	RectangleShape background;
@@ -140,12 +178,12 @@ void Menu::startMenu()
             {
                 if(event.key.code == Keyboard::Up)
                 {
-                    mainMenu.MoveUp();
+                    MoveUp();
                     break;
                 }
                 if(event.key.code == Keyboard::Down)
                 {
-                    mainMenu.MoveDown();
+                    MoveDown();
                     break;
                 }
                 if(event.key.code == Keyboard::Return)
@@ -158,11 +196,11 @@ void Menu::startMenu()
                     RenderWindow about(VideoMode(width, height), "about");
                     about.setPosition(Vector2i(300,0));
 
-                    int x = mainMenu.MenuPressed();
+                    int x = MenuPressed();
                     if(x == 0)
                     {
                         game.startLevel1(this);
-                        level1Finish();
+                        level1Finish(menu);
                     }
                     if(x == 1)
                     {
@@ -232,7 +270,7 @@ void Menu::startMenu()
 
 		menu.draw(background);
 
-		mainMenu.draw(menu);
+		draw(menu);
 
 		menu.display();
 
@@ -240,9 +278,10 @@ void Menu::startMenu()
 }
 }
 
-void Menu::level1Finish()
+void Menu::level1Finish(RenderWindow& menu)
 {
-    mainMenu[0].setFillColor(Color::White);
+    level1Succeed = true;
+    mainMenu[0].setFillColor(Color::Green);
     mainMenu[0].setString("FINITO");
 }
 
