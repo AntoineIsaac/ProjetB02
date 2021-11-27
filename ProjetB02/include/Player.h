@@ -9,6 +9,7 @@
 #include "Platform.h"
 #include "Checkpoint.h"
 #include "Zombie.h"
+#include <thread>
 class Game;
 
 
@@ -41,27 +42,11 @@ class Player : public Entity
         Player(const Player& other);
         Player& operator=(const Player& other);
 
-        //Getters and setters
-        Sprite getSprite()const;
 
-        float getXPosition()const;
-        float getYPosition()const;
-        void setXPosition(float x);
-        void setYPosition(float y);
 
-        //Redefinition of sprite method
-        void setPosition(float x, float y);
-        void move(float x, float y);
-        void setScale(float x);
-        FloatRect getGlobalBounds();
-        FloatRect getGlobalBoundsHitBox();
-
-        float getXSpeed()const;
-        float getYSpeed()const;
-        void setXSpeed(float xSpeed);
-        void setYSpeed(float ySpeed);
 
         //Functions
+        FloatRect getGlobalBoundsHitBox();
         void update(bool left, bool right, bool space, float fps, vector<Platform*> level, vector<Zombie*> enemies, Game* game);
         bool collision(int &newXPosition, int &newYposition, vector<Platform*> level, Game* game);
         void collisionEnemies(int &newXPosition, int &newYposition, vector<Zombie*> enemies);

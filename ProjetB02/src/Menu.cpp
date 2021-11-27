@@ -200,7 +200,6 @@ void Menu::startMenu()
                     if(x == 0)
                     {
                         game.startLevel1(this);
-                        level1Finish(menu);
                     }
                     if(x == 1)
                     {
@@ -278,7 +277,7 @@ void Menu::startMenu()
 }
 }
 
-void Menu::level1Finish(RenderWindow& menu)
+void Menu::level1Finish()
 {
     level1Succeed = true;
     mainMenu[0].setFillColor(Color::Green);

@@ -24,51 +24,6 @@ Player& Player::operator=(const Player& rhs)
     return *this;
 }
 
-Sprite Player::getSprite()const
-{
-    return Entity::getSprite();
-}
-
-float Player::getXPosition()const
-{
-    return Entity::getXPosition();
-}
-
-float Player::getYPosition()const
-{
-    return Entity::getYPosition();
-}
-
-void Player::setXPosition(float x)
-{
-    Entity::setXPosition(x);
-}
-
-void Player::move(float x, float y)
-{
-    Entity::move(x, y);
-}
-
-void Player::setYPosition(float y)
-{
-    Entity::setYPosition(y);
-}
-
-void Player::setPosition(float x, float y)
-{
-    Entity::setPosition(x, y);
-}
-
-void Player::setScale(float x)
-{
-    Entity::setScale(x);
-}
-
-FloatRect Player::getGlobalBounds()
-{
-    return Entity::getGlobalBounds();
-}
-
 FloatRect Player::getGlobalBoundsHitBox()
 {
     FloatRect rect = Entity::getGlobalBounds();
@@ -80,25 +35,6 @@ FloatRect Player::getGlobalBoundsHitBox()
     return rect;
 }
 
-float Player::getXSpeed()const
-{
-    return Entity::getXSpeed();
-}
-
-float Player::getYSpeed()const
-{
-    return Entity::getYSpeed();
-}
-
-void Player::setXSpeed(float xSpeed)
-{
-    Entity::setXSpeed(xSpeed);
-}
-
-void Player::setYSpeed(float ySpeed)
-{
-    Entity::setYSpeed(ySpeed);
-}
 
 void Player::update(bool left, bool right, bool space, float fps, vector<Platform*> level, vector<Zombie*> enemies, Game* game)
 {

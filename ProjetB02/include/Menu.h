@@ -42,7 +42,7 @@ class Menu
         }
 
         void startMenu();
-        void level1Finish(RenderWindow& menu);
+        void level1Finish();
 
 
 };

@@ -42,8 +42,7 @@ void Game::startLevel1(Menu* menu)
     float fps;
 
     //Creation of a player
-    Player player(800.0, 900, "./Images/jackfree/png/Run (1).png");
-    player.setPosition(player.getXPosition(), player.getYPosition());
+    Player player(80.0, 1000, "./Images/jackfree/png/Run (1).png");
 
     //Creation of the level, the decoration and the zombie in this level
     Level level;
@@ -58,6 +57,7 @@ void Game::startLevel1(Menu* menu)
     {
         if(endLevel == true)
         {
+            menu->level1Finish();
             this_thread::sleep_for(2000ms);
             window.close();
 

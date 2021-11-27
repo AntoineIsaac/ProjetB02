@@ -17,8 +17,8 @@ class Entity
         string textureString;
         Texture texture;
         Sprite sprite;
-        enum Direction{gauche, droite};
-        Direction direction = Direction::droite;
+//        enum Direction{gauche, droite};
+//        Direction direction = Direction::droite;
 
     public:
         Entity(float xPosition, float yPosition, string textureString);
@@ -28,7 +28,7 @@ class Entity
 
 
         //Getters and setters
-        virtual Sprite getSprite()const=0;
+        virtual Sprite getSprite()const;
         virtual Texture getTexture()const;
         virtual void loadTexture()=0;
 
@@ -37,15 +37,15 @@ class Entity
         virtual void setXPosition(float x);
         virtual void setYPosition(float y);
 
-        virtual void setPosition(float x, float y)=0;
+        virtual void setPosition(float x, float y);
         virtual void move(float x, float y);
-        virtual void setScale(float x)=0;
+        virtual void setScale(float x);
         virtual FloatRect getGlobalBounds();
 
-        virtual float getXSpeed()const=0;
-        virtual float getYSpeed()const=0;
-        virtual void setXSpeed(float xSpeed)=0;
-        virtual void setYSpeed(float ySpeed)=0;
+        virtual float getXSpeed()const;
+        virtual float getYSpeed()const;
+        virtual void setXSpeed(float xSpeed);
+        virtual void setYSpeed(float ySpeed);
 
 };
 

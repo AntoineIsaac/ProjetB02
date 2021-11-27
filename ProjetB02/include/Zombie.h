@@ -22,26 +22,8 @@ class Zombie : public Entity
         Zombie(const Zombie& other);
         Zombie& operator=(const Zombie& other);
 
-        //Getters and setters
-        Sprite getSprite()const;
-
-        float getXPosition()const;
-        float getYPosition()const;
-        void setXPosition(float x);
-        void setYPosition(float y);
 
         int getWidth()const;
-
-        //Redefinition of sprite method
-        void setPosition(float x, float y);
-        void setScale(float x);
-
-
-
-        float getXSpeed()const;
-        float getYSpeed()const;
-        void setXSpeed(float xSpeed);
-        void setYSpeed(float ySpeed);
 
         FloatRect getGlobalBoundsHitBox();
 
