@@ -17,7 +17,7 @@
 	<SFML/Graphics.hpp>
 	<string>
 
-1638018342 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Player.cpp
+1638027397 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Player.cpp
 	"../include/Player.h"
 
 1638018274 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Player.h
@@ -68,7 +68,7 @@
 1637928760 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Platform.cpp
 	"../include/Platform.h"
 
-1638014004 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Level.h
+1638028400 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Level.h
 	"Platform.h"
 	"GrassBlock.h"
 	"LavaBlock.h"
@@ -82,9 +82,10 @@
 	"NetherWoodBlock.h"
 	"LeafBlock.h"
 	"FireBlock.h"
+	"SandBlock.h"
 	"NetherFence.h"
 
-1638018215 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Level.cpp
+1638026262 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Level.cpp
 	"../include/Level.h"
 
 1636014723 source:/home/antoine/Documents/Projet2/ProjetB02/ProjetB02/main.cpp
@@ -586,7 +587,7 @@
 1637934282 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/Game.cpp
 	"../include/Game.h"
 
-1638005928 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Game.h
+1638028075 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Game.h
 	<SFML/Window.hpp>
 	<SFML/System.hpp>
 	<SFML/Graphics.hpp>
@@ -599,13 +600,15 @@
 	<chrono>
 	<thread>
 	"Menu.h"
+	"Level1.h"
+	"Level2.h"
 
 1638018060 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Menu.h
 	<SFML/Graphics.hpp>
 	<iostream>
 	"Game.h"
 
-1638018063 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Game.cpp
+1638028178 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Game.cpp
 	"../include/Game.h"
 
 1638018052 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Menu.cpp
@@ -782,4 +785,22 @@
 
 1638018650 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/NetherFence.cpp
 	"../include/NetherFence.h"
+
+1638026673 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Level1.h
+	"Level.h"
+
+1638028387 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Level1.cpp
+	"../include/Level1.h"
+
+1638026630 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Level2.h
+	"Level.h"
+
+1638028448 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Level2.cpp
+	"../include/Level2.h"
+
+1638028323 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/SandBlock.h
+	"Platform.h"
+
+1638028367 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/SandBlock.cpp
+	"../include/SandBlock.h"
 

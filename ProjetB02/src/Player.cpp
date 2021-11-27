@@ -78,14 +78,14 @@ void Player::update(bool left, bool right, bool space, float fps, vector<Platfor
     newYPosition += getYSpeed();
 
     if(alreadyTouched == false){
-        setYSpeed(9 * fps);
+        setYSpeed(8 * fps);
         alreadyTouched = true;
     }
 
     if (onGround == false && ((newYPosition < (jumpBlock - jumpHeight) || colTop == true)))
     {
         space = false;
-        setYSpeed(9 * fps);
+        setYSpeed(8 * fps);
     }
 
 

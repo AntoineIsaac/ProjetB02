@@ -13,6 +13,8 @@
 #include <chrono>
 #include <thread>
 #include "Menu.h"
+#include "Level1.h"
+#include "Level2.h"
 
 using namespace sf;
 using namespace std;
@@ -23,7 +25,18 @@ class Game
 {
 
     private:
-        bool endLevel = false;
+        bool endLevel1 = false;
+        bool endLevel2 = false;
+
+        int currentLevel = 0;
+
+        int windowWidht = 800;
+        int windowHeight = 800;
+
+        Clock clock;
+        float dt;
+        float multiplier = 60.f;
+        float fps;
 
     public:
         Game();
@@ -31,9 +44,13 @@ class Game
         Game(const Game& other);
         Game& operator=(const Game& other);
 
+        void initWindow();
+
         void startLevel1(Menu* menu);
+        void startLevel2(Menu* menu);
 
         void setEndLevel(bool endLevel);
+
 
     protected:
 
