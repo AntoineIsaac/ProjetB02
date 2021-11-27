@@ -23,7 +23,7 @@ Game& Game::operator=(const Game& rhs)
 }
 
 
-void Game::startLevel1()
+void Game::startLevel1(Menu* menu)
 {
     int windowWidht = 800;
     int windowHeight = 800;
@@ -42,16 +42,10 @@ void Game::startLevel1()
     float fps;
 
     //Creation of a player
-    Player player(80.0, 900, "./Images/jackfree/png/Run (1).png");
+    Player player(800.0, 900, "./Images/jackfree/png/Run (1).png");
+    player.setPosition(player.getXPosition(), player.getYPosition());
 
-    //player.getSprite().setScale(Vector2f(0.05f, 0.05f));
-
-    //Creation of a Zombie
-    //Zombie zombie(0, 0, "Images/jackfree/png/Run (0).png");
-
-    //Creation of a block
-
-    //Platform* level[] = {new GrassBlock(0, 0), new LavaBlock(75, 0)};
+    //Creation of the level, the decoration and the zombie in this level
     Level level;
     vector<Platform*> level1 = level.createLevel1();
     vector<Zombie*> zombieLevel1 = level.createZombiesLevel1();
@@ -60,16 +54,16 @@ void Game::startLevel1()
     Input input;
 
 
-//    RectangleShape background;
-//    background.setSize(Vector2f(800, 800));
-//    background.setPosition(0, 0);
-//    Texture Maintexture;
-//    Maintexture.loadFromFile("Images/ciel.jpg");
-//    background.setTexture(&Maintexture);
-
-
     while (window.isOpen())
     {
+        if(endLevel == true)
+        {
+            menu->level1Finish();
+            this_thread::sleep_for(2000ms);
+            window.close();
+
+        }
+
         dt = clock.restart().asSeconds();
         fps = dt * multiplier;
 
@@ -80,14 +74,13 @@ void Game::startLevel1()
             input.InputHandler(event, window);
         }
 
-        player.update(input.GetButton().left, input.GetButton().right, input.GetButton().space, fps, level1, zombieLevel1);
+        player.update(input.GetButton().left, input.GetButton().right, input.GetButton().space, fps, level1, zombieLevel1, this);
 
         //Set the view on the player
         view.setCenter(player.getXPosition(), player.getYPosition());
         window.setView(view);
 
         window.clear();
-//        window.draw(background);
 
         // Draw the decor
         for(Platform* p : decorLevel1)
@@ -97,7 +90,6 @@ void Game::startLevel1()
 
         //Draw the player
         window.draw(player.getSprite());
-        //window.draw(zombie.getSprite());
 
         //Draw the Zombies of the level
         for(Zombie* z : zombieLevel1)

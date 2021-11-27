@@ -3,7 +3,6 @@
 Player::Player(float xPosition, float yPosition, string textureString):Entity(xPosition, yPosition, textureString)
 {
     setScale(scale);
-    //sprite.setOrigin(width/2, height/2);
 }
 
 Player::~Player()
@@ -101,7 +100,7 @@ void Player::setYSpeed(float ySpeed)
     Entity::setYSpeed(ySpeed);
 }
 
-void Player::update(bool left, bool right, bool space, float fps, vector<Platform*> level, vector<Zombie*> enemies)
+void Player::update(bool left, bool right, bool space, float fps, vector<Platform*> level, vector<Zombie*> enemies, Game* game)
 {
     int newXPosition = getXPosition();
     int newYPosition = getYPosition();
@@ -154,7 +153,7 @@ void Player::update(bool left, bool right, bool space, float fps, vector<Platfor
     }
 
 
-    colTop = collision(newXPosition, newYPosition, level);
+    colTop = collision(newXPosition, newYPosition, level, game);
     collisionEnemies(newXPosition, newYPosition, enemies);
 
 
@@ -182,7 +181,7 @@ void Player::update(bool left, bool right, bool space, float fps, vector<Platfor
 
 }
 
-bool Player::collision(int &newXPosition, int &newYPosition, vector<Platform*> level)
+bool Player::collision(int &newXPosition, int &newYPosition, vector<Platform*> level, Game* game)
 {
     float withoutCollX = newXPosition;
     float withoutCollY = newYPosition;
@@ -294,12 +293,20 @@ bool Player::collision(int &newXPosition, int &newYPosition, vector<Platform*> l
             {
                 newXPosition = withoutCollX;
                 newYPosition = withoutCollY;
+                onGround = false;
             }
 
             if(platform->getType() == 6)
             {
-                //game.setEndLevel(true);
-                cout<<"On passe à true"<<endl;
+                if(onGround == true)
+                {
+                    game->setEndLevel(true);
+                }
+                else
+                {
+                    newXPosition = withoutCollX;
+                    newYPosition = withoutCollY;
+                }
             }
 
             if(platform->getType() == 7)

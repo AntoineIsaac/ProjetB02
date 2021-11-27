@@ -41,6 +41,7 @@ class Menu
         }
 
         void startMenu();
+        void level1Finish();
 
 
 };

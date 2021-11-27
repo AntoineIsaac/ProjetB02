@@ -97,7 +97,7 @@ Menu& Menu::operator=(const Menu& rhs)
 
 void Menu::startMenu()
 {
-    sf::RenderWindow menu(sf::VideoMode(width, height), "SFML WORK!");
+    sf::RenderWindow menu(sf::VideoMode(width, height), "The running dead");
 
 	menu.setPosition(Vector2i(300,0));
 
@@ -161,7 +161,8 @@ void Menu::startMenu()
                     int x = mainMenu.MenuPressed();
                     if(x == 0)
                     {
-                        game.startLevel1();
+                        game.startLevel1(this);
+                        level1Finish();
                     }
                     if(x == 1)
                     {
@@ -235,6 +236,14 @@ void Menu::startMenu()
 
 		menu.display();
 
+		menu.clear();
 }
 }
+
+void Menu::level1Finish()
+{
+    mainMenu[0].setFillColor(Color::White);
+    mainMenu[0].setString("Play");
+}
+
 

@@ -1,13 +1,15 @@
 #ifndef PLAYER_H
 #define PLAYER_H
+#include "Game.h"
 #include "Entity.h"
 #include <string>
 #include <iostream>
 #include <cmath>
+
 #include "Platform.h"
 #include "Checkpoint.h"
 #include "Zombie.h"
-#include "Game.h"
+class Game;
 
 
 class Player : public Entity
@@ -29,6 +31,7 @@ class Player : public Entity
         bool alreadyTouched = false;
         bool colTop = false;
         bool canJump = false;
+
 
     public:
         bool onGround;
@@ -59,8 +62,8 @@ class Player : public Entity
         void setYSpeed(float ySpeed);
 
         //Functions
-        void update(bool left, bool right, bool space, float fps, vector<Platform*> level, vector<Zombie*> enemies);
-        bool collision(int &newXPosition, int &newYposition, vector<Platform*> level);
+        void update(bool left, bool right, bool space, float fps, vector<Platform*> level, vector<Zombie*> enemies, Game* game);
+        bool collision(int &newXPosition, int &newYposition, vector<Platform*> level, Game* game);
         void collisionEnemies(int &newXPosition, int &newYposition, vector<Zombie*> enemies);
 
         void loadTexture();

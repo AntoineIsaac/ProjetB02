@@ -17,10 +17,11 @@
 	<SFML/Graphics.hpp>
 	<string>
 
-1638000043 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Player.cpp
+1638006490 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Player.cpp
 	"../include/Player.h"
 
-1637999990 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Player.h
+1638005754 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Player.h
+	"Game.h"
 	"Entity.h"
 	<string>
 	<iostream>
@@ -28,7 +29,6 @@
 	"Platform.h"
 	"Checkpoint.h"
 	"Zombie.h"
-	"Game.h"
 
 1637928760 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Input.h
 	<SFML/Window.hpp>
@@ -82,7 +82,7 @@
 	"LeafBlock.h"
 	"FireBlock.h"
 
-1638000807 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Level.cpp
+1638002081 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Level.cpp
 	"../include/Level.h"
 
 1636014723 source:/home/antoine/Documents/Projet2/ProjetB02/ProjetB02/main.cpp
@@ -584,7 +584,7 @@
 1637934282 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/Game.cpp
 	"../include/Game.h"
 
-1637934526 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Game.h
+1638005928 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Game.h
 	<SFML/Window.hpp>
 	<SFML/System.hpp>
 	<SFML/Graphics.hpp>
@@ -593,15 +593,19 @@
 	"Input.h"
 	"Platform.h"
 	"Level.h"
+	<string>
+	<chrono>
+	<thread>
+	"Menu.h"
 
-1637999792 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Menu.h
+1638004947 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Menu.h
 	<SFML/Graphics.hpp>
 	<iostream>
 	"Game.h"
 
-1637999592 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Game.cpp
+1638005912 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Game.cpp
 	"../include/Game.h"
 
-1637999825 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Menu.cpp
+1638007084 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Menu.cpp
 	"../include/Menu.h"
 
