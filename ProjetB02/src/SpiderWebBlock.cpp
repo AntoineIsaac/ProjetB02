@@ -24,36 +24,6 @@ SpiderWebBlock& SpiderWebBlock::operator=(const SpiderWebBlock& rhs)
     return *this;
 }
 
-float SpiderWebBlock::getXPosition()const
-{
-    return Platform::getXPosition();
-}
-
-void SpiderWebBlock::setXPosition(float x)
-{
-    Platform::setXPosition(x);
-}
-
-float SpiderWebBlock::getYPosition()const
-{
-    return Platform::getYPosition();
-}
-
-void SpiderWebBlock::setYPosition(float y)
-{
-    Platform::setYPosition(y);
-}
-
-Sprite SpiderWebBlock::getSprite()const
-{
-    return Platform::getSprite();
-}
-
-void SpiderWebBlock::setSprite(string textureString, IntRect coord)
-{
-    Platform::setSprite(textureString, coord);
-}
-
 int SpiderWebBlock::getType() const
 {
     return 7;

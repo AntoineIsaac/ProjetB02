@@ -11,16 +11,6 @@ class NetherBlock : public Platform
         NetherBlock(const NetherBlock& other);
         NetherBlock& operator=(const NetherBlock& other);
 
-        //Getters and setters
-        float getXPosition()const;
-        void setXPosition(float x);
-
-        float getYPosition()const;
-        void setYPosition(float y);
-
-        Sprite getSprite()const;
-        void setSprite(string textureString, IntRect coord);
-
         int getType()const;
 };
 

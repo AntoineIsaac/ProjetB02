@@ -24,36 +24,6 @@ NetherWoodBlock& NetherWoodBlock::operator=(const NetherWoodBlock& rhs)
     return *this;
 }
 
-float NetherWoodBlock::getXPosition()const
-{
-    return Platform::getXPosition();
-}
-
-void NetherWoodBlock::setXPosition(float x)
-{
-    Platform::setXPosition(x);
-}
-
-float NetherWoodBlock::getYPosition()const
-{
-    return Platform::getYPosition();
-}
-
-void NetherWoodBlock::setYPosition(float y)
-{
-    Platform::setYPosition(y);
-}
-
-Sprite NetherWoodBlock::getSprite()const
-{
-    return Platform::getSprite();
-}
-
-void NetherWoodBlock::setSprite(string textureString, IntRect coord)
-{
-    Platform::setSprite(textureString, coord);
-}
-
 int NetherWoodBlock::getType() const
 {
     return 8;

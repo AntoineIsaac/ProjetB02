@@ -24,36 +24,6 @@ PortalBlock& PortalBlock::operator=(const PortalBlock& rhs)
     return *this;
 }
 
-float PortalBlock::getXPosition()const
-{
-    return Platform::getXPosition();
-}
-
-void PortalBlock::setXPosition(float x)
-{
-    Platform::setXPosition(x);
-}
-
-float PortalBlock::getYPosition()const
-{
-    return Platform::getYPosition();
-}
-
-void PortalBlock::setYPosition(float y)
-{
-    Platform::setYPosition(y);
-}
-
-Sprite PortalBlock::getSprite()const
-{
-    return Platform::getSprite();
-}
-
-void PortalBlock::setSprite(string textureString, IntRect coord)
-{
-    Platform::setSprite(textureString, coord);
-}
-
 int PortalBlock::getType() const
 {
     return 6;

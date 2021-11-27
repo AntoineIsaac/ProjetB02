@@ -24,36 +24,6 @@ GrassBlock& GrassBlock::operator=(const GrassBlock& rhs)
     return *this;
 }
 
-float GrassBlock::getXPosition()const
-{
-    return Platform::getXPosition();
-}
-
-void GrassBlock::setXPosition(float x)
-{
-    Platform::setXPosition(x);
-}
-
-float GrassBlock::getYPosition()const
-{
-    return Platform::getYPosition();
-}
-
-void GrassBlock::setYPosition(float y)
-{
-    Platform::setYPosition(y);
-}
-
-Sprite GrassBlock::getSprite()const
-{
-    return Platform::getSprite();
-}
-
-void GrassBlock::setSprite(string textureString, IntRect coord)
-{
-    Platform::setSprite(textureString, coord);
-}
-
 int GrassBlock::getType() const
 {
     return 1;

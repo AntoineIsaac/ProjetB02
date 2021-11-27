@@ -13,16 +13,6 @@ class Checkpoint : public Platform
         Checkpoint(const Checkpoint& other);
         Checkpoint& operator=(const Checkpoint& other);
 
-        //Getters and setters
-        float getXPosition()const;
-        void setXPosition(float x);
-
-        float getYPosition()const;
-        void setYPosition(float y);
-
-        Sprite getSprite()const;
-        void setSprite(string textureString, IntRect coord);
-
         void switchCheckpoint();
         bool isActivated()const;
 

@@ -24,36 +24,6 @@ ObsidianBlock& ObsidianBlock::operator=(const ObsidianBlock& rhs)
     return *this;
 }
 
-float ObsidianBlock::getXPosition()const
-{
-    return Platform::getXPosition();
-}
-
-void ObsidianBlock::setXPosition(float x)
-{
-    Platform::setXPosition(x);
-}
-
-float ObsidianBlock::getYPosition()const
-{
-    return Platform::getYPosition();
-}
-
-void ObsidianBlock::setYPosition(float y)
-{
-    Platform::setYPosition(y);
-}
-
-Sprite ObsidianBlock::getSprite()const
-{
-    return Platform::getSprite();
-}
-
-void ObsidianBlock::setSprite(string textureString, IntRect coord)
-{
-    Platform::setSprite(textureString, coord);
-}
-
 int ObsidianBlock::getType() const
 {
     return 5;

@@ -24,36 +24,6 @@ Checkpoint& Checkpoint::operator=(const Checkpoint& rhs)
     return *this;
 }
 
-float Checkpoint::getXPosition()const
-{
-    return Platform::getXPosition();
-}
-
-void Checkpoint::setXPosition(float x)
-{
-    Platform::setXPosition(x);
-}
-
-float Checkpoint::getYPosition()const
-{
-    return Platform::getYPosition();
-}
-
-void Checkpoint::setYPosition(float y)
-{
-    Platform::setYPosition(y);
-}
-
-Sprite Checkpoint::getSprite()const
-{
-    return Platform::getSprite();
-}
-
-void Checkpoint::setSprite(string textureString, IntRect coord)
-{
-    Platform::setSprite(textureString, coord);
-}
-
 void Checkpoint::switchCheckpoint()
 {
     activated = !activated;

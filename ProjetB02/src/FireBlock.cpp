@@ -24,36 +24,6 @@ FireBlock& FireBlock::operator=(const FireBlock& rhs)
     return *this;
 }
 
-float FireBlock::getXPosition()const
-{
-    return Platform::getXPosition();
-}
-
-void FireBlock::setXPosition(float x)
-{
-    Platform::setXPosition(x);
-}
-
-float FireBlock::getYPosition()const
-{
-    return Platform::getYPosition();
-}
-
-void FireBlock::setYPosition(float y)
-{
-    Platform::setYPosition(y);
-}
-
-Sprite FireBlock::getSprite()const
-{
-    return Platform::getSprite();
-}
-
-void FireBlock::setSprite(string textureString, IntRect coord)
-{
-    Platform::setSprite(textureString, coord);
-}
-
 int FireBlock::getType() const
 {
     return 10;
