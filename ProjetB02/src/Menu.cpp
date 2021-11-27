@@ -243,7 +243,7 @@ void Menu::startMenu()
 void Menu::level1Finish()
 {
     mainMenu[0].setFillColor(Color::White);
-    mainMenu[0].setString("Play");
+    mainMenu[0].setString("FINITO");
 }
 
 
