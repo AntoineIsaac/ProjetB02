@@ -7,6 +7,9 @@ Menu::Menu(float width, float height)
 		cout <<"No font is here";
 	}
 
+	this->width = width;
+	this->height = height;
+
 	mainMenu[0].setFont(font);
 	mainMenu[0].setFillColor(Color::White);
 	mainMenu[0].setString("Play");
@@ -94,7 +97,7 @@ Menu& Menu::operator=(const Menu& rhs)
 
 void Menu::startMenu()
 {
-    sf::RenderWindow menu(sf::VideoMode(960, 720), "SFML WORK!");
+    sf::RenderWindow menu(sf::VideoMode(width, height), "SFML WORK!");
 
 	menu.setPosition(Vector2i(300,0));
 
@@ -102,21 +105,21 @@ void Menu::startMenu()
 
 	//mainmenu
 	RectangleShape background;
-	background.setSize(Vector2f(960, 720));
+	background.setSize(Vector2f(width, height));
 	Texture Maintexture;
 	Maintexture.loadFromFile("Texture/background.jpg");
 	background.setTexture(&Maintexture);
 
 	//options
 	RectangleShape Optionsbackground;
-	Optionsbackground.setSize(Vector2f(960, 720));
+	Optionsbackground.setSize(Vector2f(width, height));
 	Texture options_texture;
 	options_texture.loadFromFile("Texture/options.jpg");
 	Optionsbackground.setTexture(&options_texture);
 
 	//about
 	RectangleShape Aboutbackground;
-	Aboutbackground.setSize(Vector2f(960, 720));
+	Aboutbackground.setSize(Vector2f(width, height));
 	Texture about_texture;
 	about_texture.loadFromFile("Texture/about.jpg");
 	Aboutbackground.setTexture(&about_texture);
@@ -150,9 +153,9 @@ void Menu::startMenu()
 
                     Game game;
 
-                    RenderWindow Options(VideoMode(960, 720), "options");
+                    RenderWindow Options(VideoMode(width, height), "options");
                     Options.setPosition(Vector2i(300,0));
-                    RenderWindow about(VideoMode(960, 720), "about");
+                    RenderWindow about(VideoMode(width, height), "about");
                     about.setPosition(Vector2i(300,0));
 
                     int x = mainMenu.MenuPressed();

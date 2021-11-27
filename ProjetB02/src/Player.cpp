@@ -131,11 +131,12 @@ void Player::update(bool left, bool right, bool space, float fps, vector<Platfor
         move = true;
     }
 
-    if(space && onGround == true)
+    if(space && canJump == true)
     {
         //récupérer le y du bloc du quel on saute
         jumpBlock = getYPosition();
         setYSpeed(-15.0 * fps);
+        canJump = false;
     }
 
     newXPosition += getXSpeed();
@@ -211,6 +212,7 @@ bool Player::collision(int &newXPosition, int &newYPosition, vector<Platform*> l
                 onGround = true;
                 coll = true;
                 colGround = true;
+                canJump = true;
             }
 
             //Right

@@ -28,6 +28,7 @@ class Player : public Entity
         int jumpBlock;
         bool alreadyTouched = false;
         bool colTop = false;
+        bool canJump = false;
 
     public:
         bool onGround;

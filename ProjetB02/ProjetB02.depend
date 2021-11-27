@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1637765164 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/main.cpp
+1637999867 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/main.cpp
 	<SFML/Window.hpp>
 	<SFML/System.hpp>
 	<SFML/Graphics.hpp>
@@ -8,18 +8,19 @@
 	"include/Input.h"
 	"include/Platform.h"
 	"include/Level.h"
+	"include/Menu.h"
 
-1637495097 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Entity.cpp
+1637928760 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Entity.cpp
 	"../include/Entity.h"
 
-1637589892 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Entity.h
+1637928760 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Entity.h
 	<SFML/Graphics.hpp>
 	<string>
 
-1637913417 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Player.cpp
+1638000043 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Player.cpp
 	"../include/Player.h"
 
-1637764697 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Player.h
+1637999990 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Player.h
 	"Entity.h"
 	<string>
 	<iostream>
@@ -27,45 +28,46 @@
 	"Platform.h"
 	"Checkpoint.h"
 	"Zombie.h"
+	"Game.h"
 
-1637574816 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Input.h
+1637928760 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Input.h
 	<SFML/Window.hpp>
 	<SFML/System.hpp>
 	<SFML/Graphics.hpp>
 
-1637574825 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Input.cpp
+1637928760 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Input.cpp
 	"../include/Input.h"
 
-1637655984 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Zombie.cpp
+1637928760 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Zombie.cpp
 	"../include/Zombie.h"
 
-1637656234 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Zombie.h
+1637928760 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Zombie.h
 	"Entity.h"
 	<string>
 	<iostream>
 
-1637744461 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/GrassBlock.cpp
+1637928760 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/GrassBlock.cpp
 	"../include/GrassBlock.h"
 
-1637407981 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/GrassBlock.h
+1637928760 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/GrassBlock.h
 	"Platform.h"
 
-1637741402 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Platform.h
+1637928760 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Platform.h
 	<SFML/Window.hpp>
 	<SFML/System.hpp>
 	<SFML/Graphics.hpp>
 	<string>
 
-1637741402 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/LavaBlock.cpp
+1637928760 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/LavaBlock.cpp
 	"../include/LavaBlock.h"
 
-1637407994 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/LavaBlock.h
+1637928760 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/LavaBlock.h
 	"Platform.h"
 
-1637406856 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Platform.cpp
+1637928760 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Platform.cpp
 	"../include/Platform.h"
 
-1637765164 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Level.h
+1637928760 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Level.h
 	"Platform.h"
 	"GrassBlock.h"
 	"LavaBlock.h"
@@ -80,7 +82,7 @@
 	"LeafBlock.h"
 	"FireBlock.h"
 
-1637763702 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Level.cpp
+1637928760 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Level.cpp
 	"../include/Level.h"
 
 1636014723 source:/home/antoine/Documents/Projet2/ProjetB02/ProjetB02/main.cpp
@@ -156,10 +158,10 @@
 1635924452 source:/home/antoine/Documents/Projet2/ProjetB02/ProjetB02/src/Zombie.cpp
 	"../include/Zombie.h"
 
-1637407989 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Checkpoint.h
+1637928760 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Checkpoint.h
 	"Platform.h"
 
-1637744127 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Checkpoint.cpp
+1637928760 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Checkpoint.cpp
 	"../include/Checkpoint.h"
 
 1637764948 source:/home/ugo/Documents/projet/ProjetB02/ProjetB02/main.cpp
@@ -343,28 +345,28 @@
 1637742797 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/JackOLanternBlock.cpp
 	"../include/JackOLanternBlock.h"
 
-1637744724 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/NetherBlock.h
+1637928760 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/NetherBlock.h
 	"Platform.h"
 
-1637744924 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/NetherBlock.cpp
+1637928760 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/NetherBlock.cpp
 	"../include/NetherBlock.h"
 
-1637746995 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/ObsidianBlock.cpp
+1637928760 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/ObsidianBlock.cpp
 	"../include/ObsidianBlock.h"
 
-1637746502 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/ObsidianBlock.h
+1637928760 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/ObsidianBlock.h
 	"Platform.h"
 
-1637746514 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/PortalBlock.h
+1637928760 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/PortalBlock.h
 	"Platform.h"
 
-1637747020 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/PortalBlock.cpp
+1637928760 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/PortalBlock.cpp
 	"../include/PortalBlock.h"
 
-1637748206 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/SpiderWebBlock.h
+1637928760 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/SpiderWebBlock.h
 	"Platform.h"
 
-1637748302 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/SpiderWebBlock.cpp
+1637928760 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/SpiderWebBlock.cpp
 	"../include/SpiderWebBlock.h"
 
 1637759162 /home/ugo/Documents/projet/ProjetB02/ProjetB02/include/NetherBlock.h
@@ -409,22 +411,22 @@
 1637764948 source:/home/ugo/Documents/projet/ProjetB02/ProjetB02/src/FireBlock.cpp
 	"../include/FireBlock.h"
 
-1637765164 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/NetherWoodBlock.h
+1637928760 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/NetherWoodBlock.h
 	"Platform.h"
 
-1637765164 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/LeafBlock.h
+1637928760 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/LeafBlock.h
 	"Platform.h"
 
-1637765164 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/FireBlock.h
+1637928760 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/FireBlock.h
 	"Platform.h"
 
-1637765164 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/FireBlock.cpp
+1637928760 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/FireBlock.cpp
 	"../include/FireBlock.h"
 
-1637765164 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/LeafBlock.cpp
+1637928760 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/LeafBlock.cpp
 	"../include/LeafBlock.h"
 
-1637765164 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/NetherWoodBlock.cpp
+1637928760 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/NetherWoodBlock.cpp
 	"../include/NetherWoodBlock.h"
 
 1637930251 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/main.cpp
@@ -581,4 +583,25 @@
 
 1637934282 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/Game.cpp
 	"../include/Game.h"
+
+1637934526 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Game.h
+	<SFML/Window.hpp>
+	<SFML/System.hpp>
+	<SFML/Graphics.hpp>
+	"Player.h"
+	"Zombie.h"
+	"Input.h"
+	"Platform.h"
+	"Level.h"
+
+1637999792 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Menu.h
+	<SFML/Graphics.hpp>
+	<iostream>
+	"Game.h"
+
+1637999592 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Game.cpp
+	"../include/Game.h"
+
+1637999825 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Menu.cpp
+	"../include/Menu.h"
 

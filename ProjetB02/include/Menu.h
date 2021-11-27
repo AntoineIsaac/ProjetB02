@@ -21,6 +21,9 @@ class Menu
         Font font;
         Text mainMenu[Max_main_menu];
 
+        int width;
+        int height;
+
 
     public:
         Menu(float width, float height);

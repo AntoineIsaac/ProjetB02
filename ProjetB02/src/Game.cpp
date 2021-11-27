@@ -25,8 +25,8 @@ Game& Game::operator=(const Game& rhs)
 
 void Game::startLevel1()
 {
-    int windowWidht = 960;
-    int windowHeight = 720;
+    int windowWidht = 800;
+    int windowHeight = 800;
     RenderWindow window(VideoMode(windowWidht, windowHeight), "The running dead");
     window.setPosition(Vector2i(300,0));
 
