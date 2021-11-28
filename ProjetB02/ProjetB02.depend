@@ -17,7 +17,7 @@
 	<SFML/Graphics.hpp>
 	<string>
 
-1638090785 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Player.cpp
+1638100413 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Player.cpp
 	"../include/Player.h"
 
 1638090076 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Player.h
@@ -53,7 +53,7 @@
 1638018708 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/GrassBlock.h
 	"Platform.h"
 
-1638018732 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Platform.h
+1638096537 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Platform.h
 	<SFML/Window.hpp>
 	<SFML/System.hpp>
 	<SFML/Graphics.hpp>
@@ -68,7 +68,7 @@
 1637928760 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Platform.cpp
 	"../include/Platform.h"
 
-1638028400 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Level.h
+1638096604 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Level.h
 	"Platform.h"
 	"GrassBlock.h"
 	"LavaBlock.h"
@@ -84,6 +84,14 @@
 	"FireBlock.h"
 	"SandBlock.h"
 	"NetherFence.h"
+	"CactusBlock.h"
+	"QuicksandBlock.h"
+	"RedQuicksandBlock.h"
+	"RedSandBlock.h"
+	"RedSmoothSandBlock.h"
+	"SandBlock.h"
+	"SmoothSandBlock.h"
+	"SugarCaneBlock.h"
 
 1638026262 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Level.cpp
 	"../include/Level.h"
@@ -608,7 +616,7 @@
 	<iostream>
 	"Game.h"
 
-1638090771 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Game.cpp
+1638098076 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Game.cpp
 	"../include/Game.h"
 
 1638090332 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Menu.cpp
@@ -789,7 +797,7 @@
 1638026673 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Level1.h
 	"Level.h"
 
-1638028387 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Level1.cpp
+1638100568 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Level1.cpp
 	"../include/Level1.h"
 
 1638026630 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Level2.h
@@ -798,9 +806,51 @@
 1638028448 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Level2.cpp
 	"../include/Level2.h"
 
-1638028323 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/SandBlock.h
+1638094297 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/SandBlock.h
 	"Platform.h"
 
-1638028367 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/SandBlock.cpp
+1638096212 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/SandBlock.cpp
 	"../include/SandBlock.h"
+
+1638095050 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/CactusBlock.h
+	"Platform.h"
+
+1638095027 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/QuicksandBlock.h
+	"Platform.h"
+
+1638094799 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/RedQuicksandBlock.h
+	"Platform.h"
+
+1638094322 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/RedSandBlock.h
+	"Platform.h"
+
+1638094293 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/RedSmoothSandBlock.h
+	"Platform.h"
+
+1638094250 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/SmoothSandBlock.h
+	"Platform.h"
+
+1638094745 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/SugarCaneBlock.h
+	"Platform.h"
+
+1638097294 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/CactusBlock.cpp
+	"../include/CactusBlock.h"
+
+1638096320 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/QuicksandBlock.cpp
+	"../include/QuicksandBlock.h"
+
+1638096278 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/RedQuicksandBlock.cpp
+	"../include/RedQuicksandBlock.h"
+
+1638096264 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/RedSandBlock.cpp
+	"../include/RedSandBlock.h"
+
+1638096246 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/RedSmoothSandBlock.cpp
+	"../include/RedSmoothSandBlock.h"
+
+1638096187 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/SmoothSandBlock.cpp
+	"../include/SmoothSandBlock.h"
+
+1638097227 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/SugarCaneBlock.cpp
+	"../include/SugarCaneBlock.h"
 

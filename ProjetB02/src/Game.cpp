@@ -43,6 +43,7 @@ void Game::startLevel(Menu* menu)
     vector<Zombie*> zombieLevel;
     vector<Platform*> decorLevel;
     Level* lvl;
+    Color color;
 
 
     switch(currentLevel)
@@ -53,6 +54,7 @@ void Game::startLevel(Menu* menu)
                 level = lvl->createLevel();
                 zombieLevel = lvl->createZombiesLevel();
                 decorLevel = lvl->createDecorLevel();
+                color = Color(0,191,255);
                 break;
 
         case 2:
@@ -61,6 +63,7 @@ void Game::startLevel(Menu* menu)
                 level = lvl->createLevel();
                 zombieLevel = lvl->createZombiesLevel();
                 decorLevel = lvl->createDecorLevel();
+                color = Color::Black;
                 break;
 
     }
@@ -100,7 +103,7 @@ void Game::startLevel(Menu* menu)
         view.setCenter(player.getXPosition(), player.getYPosition());
         window.setView(view);
 
-        window.clear();
+        window.clear(color);
 
         // Draw the decor
         for(Platform* p : decorLevel)

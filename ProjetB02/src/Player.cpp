@@ -205,7 +205,7 @@ bool Player::collision(int &newXPosition, int &newYPosition, vector<Platform*> l
         if(coll == true)
         {
             //Respawn si il touche un bloc de lave
-            if(platform->getType() == "LavaBlock")
+            if(platform->getType() == "LavaBlock" || platform->getType() == "CactusBlock")
             {
                 dead = true;
             }
@@ -225,7 +225,7 @@ bool Player::collision(int &newXPosition, int &newYPosition, vector<Platform*> l
             }
 
             //Passe au travers des bloc d'obsidian pour pouvoir rentrer dans le portail
-            if(platform->getType() == "ObsidianBlock" || platform->getType() == "NetherWoodBlock")
+            if(platform->getType() == "ObsidianBlock" || platform->getType() == "NetherWoodBlock" || platform->getType() == "QuicksandBlock" || platform->getType() == "RedQuicksandBlock")
             {
                 newXPosition = withoutCollX;
                 newYPosition = withoutCollY;

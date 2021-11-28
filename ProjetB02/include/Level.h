@@ -15,6 +15,14 @@
 #include "FireBlock.h"
 #include "SandBlock.h"
 #include "NetherFence.h"
+#include "CactusBlock.h"
+#include "QuicksandBlock.h"
+#include "RedQuicksandBlock.h"
+#include "RedSandBlock.h"
+#include "RedSmoothSandBlock.h"
+#include "SandBlock.h"
+#include "SmoothSandBlock.h"
+#include "SugarCaneBlock.h"
 
 using namespace std;
 
