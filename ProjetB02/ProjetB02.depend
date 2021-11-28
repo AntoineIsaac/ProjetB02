@@ -17,7 +17,7 @@
 	<SFML/Graphics.hpp>
 	<string>
 
-1638100413 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Player.cpp
+1638101111 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Player.cpp
 	"../include/Player.h"
 
 1638090076 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Player.h
@@ -68,7 +68,7 @@
 1637928760 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Platform.cpp
 	"../include/Platform.h"
 
-1638096604 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Level.h
+1638101191 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Level.h
 	"Platform.h"
 	"GrassBlock.h"
 	"LavaBlock.h"
@@ -92,6 +92,8 @@
 	"SandBlock.h"
 	"SmoothSandBlock.h"
 	"SugarCaneBlock.h"
+	"NetherLianaBlock.h"
+	"NetherWartBlock.h"
 
 1638026262 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Level.cpp
 	"../include/Level.h"
@@ -616,10 +618,10 @@
 	<iostream>
 	"Game.h"
 
-1638098076 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Game.cpp
+1638101111 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Game.cpp
 	"../include/Game.h"
 
-1638090332 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Menu.cpp
+1638101118 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Menu.cpp
 	"../include/Menu.h"
 
 1638008034 source:/home/ugo/Documents/ProjetB02/ProjetB02/main.cpp
@@ -633,7 +635,7 @@
 	"include/Level.h"
 	"include/Menu.h"
 
-1638008034 /home/ugo/Documents/ProjetB02/ProjetB02/include/Player.h
+1638092272 /home/ugo/Documents/ProjetB02/ProjetB02/include/Player.h
 	"Game.h"
 	"Entity.h"
 	<string>
@@ -642,8 +644,9 @@
 	"Platform.h"
 	"Checkpoint.h"
 	"Zombie.h"
+	<thread>
 
-1638008034 /home/ugo/Documents/ProjetB02/ProjetB02/include/Game.h
+1638092272 /home/ugo/Documents/ProjetB02/ProjetB02/include/Game.h
 	<SFML/Window.hpp>
 	<SFML/System.hpp>
 	<SFML/Graphics.hpp>
@@ -656,13 +659,15 @@
 	<chrono>
 	<thread>
 	"Menu.h"
+	"Level1.h"
+	"Level2.h"
 
-1638008034 /home/ugo/Documents/ProjetB02/ProjetB02/include/Zombie.h
+1638092272 /home/ugo/Documents/ProjetB02/ProjetB02/include/Zombie.h
 	"Entity.h"
 	<string>
 	<iostream>
 
-1638008034 /home/ugo/Documents/ProjetB02/ProjetB02/include/Entity.h
+1638092272 /home/ugo/Documents/ProjetB02/ProjetB02/include/Entity.h
 	<SFML/Graphics.hpp>
 	<string>
 
@@ -671,13 +676,13 @@
 	<SFML/System.hpp>
 	<SFML/Graphics.hpp>
 
-1638008464 /home/ugo/Documents/ProjetB02/ProjetB02/include/Platform.h
+1638092272 /home/ugo/Documents/ProjetB02/ProjetB02/include/Platform.h
 	<SFML/Window.hpp>
 	<SFML/System.hpp>
 	<SFML/Graphics.hpp>
 	<string>
 
-1638009424 /home/ugo/Documents/ProjetB02/ProjetB02/include/Level.h
+1638098080 /home/ugo/Documents/ProjetB02/ProjetB02/include/Level.h
 	"Platform.h"
 	"GrassBlock.h"
 	"LavaBlock.h"
@@ -691,101 +696,104 @@
 	"NetherWoodBlock.h"
 	"LeafBlock.h"
 	"FireBlock.h"
+	"SandBlock.h"
 	"NetherFence.h"
+	"NetherLianaBlock.h"
+	"NetherWartBlock.h"
 
-1638008608 /home/ugo/Documents/ProjetB02/ProjetB02/include/GrassBlock.h
+1638092272 /home/ugo/Documents/ProjetB02/ProjetB02/include/GrassBlock.h
 	"Platform.h"
 
-1638008615 /home/ugo/Documents/ProjetB02/ProjetB02/include/LavaBlock.h
+1638092272 /home/ugo/Documents/ProjetB02/ProjetB02/include/LavaBlock.h
 	"Platform.h"
 
-1638008591 /home/ugo/Documents/ProjetB02/ProjetB02/include/Checkpoint.h
+1638092272 /home/ugo/Documents/ProjetB02/ProjetB02/include/Checkpoint.h
 	"Platform.h"
 
-1638008570 /home/ugo/Documents/ProjetB02/ProjetB02/include/NetherBlock.h
+1638092272 /home/ugo/Documents/ProjetB02/ProjetB02/include/NetherBlock.h
 	"Platform.h"
 
-1638008649 /home/ugo/Documents/ProjetB02/ProjetB02/include/PortalBlock.h
+1638092272 /home/ugo/Documents/ProjetB02/ProjetB02/include/PortalBlock.h
 	"Platform.h"
 
-1638008640 /home/ugo/Documents/ProjetB02/ProjetB02/include/ObsidianBlock.h
+1638092272 /home/ugo/Documents/ProjetB02/ProjetB02/include/ObsidianBlock.h
 	"Platform.h"
 
-1638008655 /home/ugo/Documents/ProjetB02/ProjetB02/include/SpiderWebBlock.h
+1638092272 /home/ugo/Documents/ProjetB02/ProjetB02/include/SpiderWebBlock.h
 	"Platform.h"
 
-1638008632 /home/ugo/Documents/ProjetB02/ProjetB02/include/NetherWoodBlock.h
+1638092272 /home/ugo/Documents/ProjetB02/ProjetB02/include/NetherWoodBlock.h
 	"Platform.h"
 
-1638008622 /home/ugo/Documents/ProjetB02/ProjetB02/include/LeafBlock.h
+1638092272 /home/ugo/Documents/ProjetB02/ProjetB02/include/LeafBlock.h
 	"Platform.h"
 
-1638008600 /home/ugo/Documents/ProjetB02/ProjetB02/include/FireBlock.h
+1638092272 /home/ugo/Documents/ProjetB02/ProjetB02/include/FireBlock.h
 	"Platform.h"
 
-1638008034 /home/ugo/Documents/ProjetB02/ProjetB02/include/Menu.h
+1638092272 /home/ugo/Documents/ProjetB02/ProjetB02/include/Menu.h
 	<SFML/Graphics.hpp>
 	<iostream>
 	"Game.h"
 
-1638008810 source:/home/ugo/Documents/ProjetB02/ProjetB02/src/Checkpoint.cpp
+1638092272 source:/home/ugo/Documents/ProjetB02/ProjetB02/src/Checkpoint.cpp
 	"../include/Checkpoint.h"
 
 1638008034 source:/home/ugo/Documents/ProjetB02/ProjetB02/src/Entity.cpp
 	"../include/Entity.h"
 
-1638008783 source:/home/ugo/Documents/ProjetB02/ProjetB02/src/FireBlock.cpp
+1638092272 source:/home/ugo/Documents/ProjetB02/ProjetB02/src/FireBlock.cpp
 	"../include/FireBlock.h"
 
-1638008034 source:/home/ugo/Documents/ProjetB02/ProjetB02/src/Game.cpp
+1638096511 source:/home/ugo/Documents/ProjetB02/ProjetB02/src/Game.cpp
 	"../include/Game.h"
 
-1638008771 source:/home/ugo/Documents/ProjetB02/ProjetB02/src/GrassBlock.cpp
+1638092272 source:/home/ugo/Documents/ProjetB02/ProjetB02/src/GrassBlock.cpp
 	"../include/GrassBlock.h"
 
 1638008034 source:/home/ugo/Documents/ProjetB02/ProjetB02/src/Input.cpp
 	"../include/Input.h"
 
-1638008759 source:/home/ugo/Documents/ProjetB02/ProjetB02/src/LavaBlock.cpp
+1638092272 source:/home/ugo/Documents/ProjetB02/ProjetB02/src/LavaBlock.cpp
 	"../include/LavaBlock.h"
 
-1638008750 source:/home/ugo/Documents/ProjetB02/ProjetB02/src/LeafBlock.cpp
+1638092272 source:/home/ugo/Documents/ProjetB02/ProjetB02/src/LeafBlock.cpp
 	"../include/LeafBlock.h"
 
-1638008334 source:/home/ugo/Documents/ProjetB02/ProjetB02/src/Level.cpp
+1638092272 source:/home/ugo/Documents/ProjetB02/ProjetB02/src/Level.cpp
 	"../include/Level.h"
 
-1638008034 source:/home/ugo/Documents/ProjetB02/ProjetB02/src/Menu.cpp
+1638095600 source:/home/ugo/Documents/ProjetB02/ProjetB02/src/Menu.cpp
 	"../include/Menu.h"
 
-1638008553 source:/home/ugo/Documents/ProjetB02/ProjetB02/src/NetherBlock.cpp
+1638092272 source:/home/ugo/Documents/ProjetB02/ProjetB02/src/NetherBlock.cpp
 	"../include/NetherBlock.h"
 
-1638008719 source:/home/ugo/Documents/ProjetB02/ProjetB02/src/NetherWoodBlock.cpp
+1638094303 source:/home/ugo/Documents/ProjetB02/ProjetB02/src/NetherWoodBlock.cpp
 	"../include/NetherWoodBlock.h"
 
-1638008710 source:/home/ugo/Documents/ProjetB02/ProjetB02/src/ObsidianBlock.cpp
+1638092272 source:/home/ugo/Documents/ProjetB02/ProjetB02/src/ObsidianBlock.cpp
 	"../include/ObsidianBlock.h"
 
 1638008034 source:/home/ugo/Documents/ProjetB02/ProjetB02/src/Platform.cpp
 	"../include/Platform.h"
 
-1638008034 source:/home/ugo/Documents/ProjetB02/ProjetB02/src/Player.cpp
+1638092272 source:/home/ugo/Documents/ProjetB02/ProjetB02/src/Player.cpp
 	"../include/Player.h"
 
-1638008694 source:/home/ugo/Documents/ProjetB02/ProjetB02/src/PortalBlock.cpp
+1638092272 source:/home/ugo/Documents/ProjetB02/ProjetB02/src/PortalBlock.cpp
 	"../include/PortalBlock.h"
 
-1638008671 source:/home/ugo/Documents/ProjetB02/ProjetB02/src/SpiderWebBlock.cpp
+1638092272 source:/home/ugo/Documents/ProjetB02/ProjetB02/src/SpiderWebBlock.cpp
 	"../include/SpiderWebBlock.h"
 
-1638008034 source:/home/ugo/Documents/ProjetB02/ProjetB02/src/Zombie.cpp
+1638092272 source:/home/ugo/Documents/ProjetB02/ProjetB02/src/Zombie.cpp
 	"../include/Zombie.h"
 
-1638009266 source:/home/ugo/Documents/ProjetB02/ProjetB02/src/NetherFence.cpp
+1638092272 source:/home/ugo/Documents/ProjetB02/ProjetB02/src/NetherFence.cpp
 	"../include/NetherFence.h"
 
-1638009317 /home/ugo/Documents/ProjetB02/ProjetB02/include/NetherFence.h
+1638092272 /home/ugo/Documents/ProjetB02/ProjetB02/include/NetherFence.h
 	"Platform.h"
 
 1638018708 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/NetherFence.h
@@ -797,13 +805,13 @@
 1638026673 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Level1.h
 	"Level.h"
 
-1638100568 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Level1.cpp
+1638101111 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Level1.cpp
 	"../include/Level1.h"
 
 1638026630 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Level2.h
 	"Level.h"
 
-1638028448 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Level2.cpp
+1638101118 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Level2.cpp
 	"../include/Level2.h"
 
 1638094297 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/SandBlock.h
@@ -812,45 +820,99 @@
 1638096212 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/SandBlock.cpp
 	"../include/SandBlock.h"
 
-1638095050 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/CactusBlock.h
+1638096212 D
+
+1638101111 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/CactusBlock.h
 	"Platform.h"
 
-1638095027 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/QuicksandBlock.h
+1638101111 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/QuicksandBlock.h
 	"Platform.h"
 
-1638094799 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/RedQuicksandBlock.h
+1638101111 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/RedQuicksandBlock.h
 	"Platform.h"
 
-1638094322 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/RedSandBlock.h
+1638101111 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/RedSandBlock.h
 	"Platform.h"
 
-1638094293 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/RedSmoothSandBlock.h
+1638101111 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/RedSmoothSandBlock.h
 	"Platform.h"
 
-1638094250 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/SmoothSandBlock.h
+1638101111 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/SmoothSandBlock.h
 	"Platform.h"
 
-1638094745 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/SugarCaneBlock.h
+1638101111 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/SugarCaneBlock.h
 	"Platform.h"
 
-1638097294 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/CactusBlock.cpp
+1638101111 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/CactusBlock.cpp
 	"../include/CactusBlock.h"
 
-1638096320 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/QuicksandBlock.cpp
+1638101111 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/QuicksandBlock.cpp
 	"../include/QuicksandBlock.h"
 
-1638096278 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/RedQuicksandBlock.cpp
+1638101111 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/RedQuicksandBlock.cpp
 	"../include/RedQuicksandBlock.h"
 
-1638096264 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/RedSandBlock.cpp
+1638101111 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/RedSandBlock.cpp
 	"../include/RedSandBlock.h"
 
-1638096246 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/RedSmoothSandBlock.cpp
+1638101111 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/RedSmoothSandBlock.cpp
 	"../include/RedSmoothSandBlock.h"
 
-1638096187 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/SmoothSandBlock.cpp
+1638101111 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/SmoothSandBlock.cpp
 	"../include/SmoothSandBlock.h"
 
-1638097227 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/SugarCaneBlock.cpp
+1638101111 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/SugarCaneBlock.cpp
 	"../include/SugarCaneBlock.h"
+
+1638097227 e/SugarCaneBlock.h"
+
+1638092272 /home/ugo/Documents/ProjetB02/ProjetB02/include/SandBlock.h
+	"Platform.h"
+
+1638092272 /home/ugo/Documents/ProjetB02/ProjetB02/include/Level1.h
+	"Level.h"
+
+1638092272 /home/ugo/Documents/ProjetB02/ProjetB02/include/Level2.h
+	"Level.h"
+
+1638092272 source:/home/ugo/Documents/ProjetB02/ProjetB02/src/Level1.cpp
+	"../include/Level1.h"
+
+1638098098 source:/home/ugo/Documents/ProjetB02/ProjetB02/src/Level2.cpp
+	"../include/Level2.h"
+
+1638092272 source:/home/ugo/Documents/ProjetB02/ProjetB02/src/SandBlock.cpp
+	"../include/SandBlock.h"
+
+1638094497 /home/ugo/Documents/ProjetB02/ProjetB02/include/NetherLianaBlock.h
+	"Platform.h"
+
+1638094748 source:/home/ugo/Documents/ProjetB02/ProjetB02/src/NetherLianaBlock.cpp
+	"../include/NetherLianaBlock.h"
+
+1638095482 source:/home/ugo/Documents/ProjetB02/ProjetB02/src/NetherRedBlock.cpp
+	"../include/NetherRedBlock.h"
+
+1638095520 /home/ugo/Documents/ProjetB02/ProjetB02/include/NetherRedBlock.h
+	"Platform.h"
+
+1638097036 /home/ugo/Documents/ProjetB02/ProjetB02/include/NetherWartBlock.h
+	"Platform.h"
+
+1638097062 source:/home/ugo/Documents/ProjetB02/ProjetB02/src/NetherWartBlock.cpp
+	"../include/NetherWartBlock.h"
+
+1638097062 6e518df817e70f56e01ee85000822e05e7444
+
+1638101118 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/NetherLianaBlock.h
+	"Platform.h"
+
+1638101118 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/NetherWartBlock.h
+	"Platform.h"
+
+1638101118 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/NetherLianaBlock.cpp
+	"../include/NetherLianaBlock.h"
+
+1638101118 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/NetherWartBlock.cpp
+	"../include/NetherWartBlock.h"
 

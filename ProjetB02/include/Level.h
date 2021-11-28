@@ -23,6 +23,8 @@
 #include "SandBlock.h"
 #include "SmoothSandBlock.h"
 #include "SugarCaneBlock.h"
+#include "NetherLianaBlock.h"
+#include "NetherWartBlock.h"
 
 using namespace std;
 

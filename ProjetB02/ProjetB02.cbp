@@ -54,6 +54,7 @@
 			<Add library="sfml-system" />
 			<Add library="sfml-audio" />
 		</Linker>
+		<Unit filename="include/CactusBlock.h" />
 		<Unit filename="include/Checkpoint.h" />
 		<Unit filename="include/Entity.h" />
 		<Unit filename="include/FireBlock.h" />
@@ -63,6 +64,8 @@
 		<Unit filename="include/LavaBlock.h" />
 		<Unit filename="include/LeafBlock.h" />
 		<Unit filename="include/Level.h" />
+		<Unit filename="include/Level1.h" />
+		<Unit filename="include/Level2.h" />
 		<Unit filename="include/Menu.h" />
 		<Unit filename="include/NetherBlock.h" />
 		<Unit filename="include/NetherFence.h" />
@@ -71,9 +74,17 @@
 		<Unit filename="include/Platform.h" />
 		<Unit filename="include/Player.h" />
 		<Unit filename="include/PortalBlock.h" />
+		<Unit filename="include/QuicksandBlock.h" />
+		<Unit filename="include/RedQuicksandBlock.h" />
+		<Unit filename="include/RedSandBlock.h" />
+		<Unit filename="include/RedSmoothSandBlock.h" />
+		<Unit filename="include/SandBlock.h" />
+		<Unit filename="include/SmoothSandBlock.h" />
 		<Unit filename="include/SpiderWebBlock.h" />
+		<Unit filename="include/SugarCaneBlock.h" />
 		<Unit filename="include/Zombie.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/CactusBlock.cpp" />
 		<Unit filename="src/Checkpoint.cpp" />
 		<Unit filename="src/Entity.cpp" />
 		<Unit filename="src/FireBlock.cpp" />
@@ -83,6 +94,8 @@
 		<Unit filename="src/LavaBlock.cpp" />
 		<Unit filename="src/LeafBlock.cpp" />
 		<Unit filename="src/Level.cpp" />
+		<Unit filename="src/Level1.cpp" />
+		<Unit filename="src/Level2.cpp" />
 		<Unit filename="src/Menu.cpp" />
 		<Unit filename="src/NetherBlock.cpp" />
 		<Unit filename="src/NetherFence.cpp" />
@@ -91,7 +104,14 @@
 		<Unit filename="src/Platform.cpp" />
 		<Unit filename="src/Player.cpp" />
 		<Unit filename="src/PortalBlock.cpp" />
+		<Unit filename="src/QuicksandBlock.cpp" />
+		<Unit filename="src/RedQuicksandBlock.cpp" />
+		<Unit filename="src/RedSandBlock.cpp" />
+		<Unit filename="src/RedSmoothSandBlock.cpp" />
+		<Unit filename="src/SandBlock.cpp" />
+		<Unit filename="src/SmoothSandBlock.cpp" />
 		<Unit filename="src/SpiderWebBlock.cpp" />
+		<Unit filename="src/SugarCaneBlock.cpp" />
 		<Unit filename="src/Zombie.cpp" />
 		<Extensions />
 	</Project>
