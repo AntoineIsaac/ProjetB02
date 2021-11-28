@@ -27,6 +27,7 @@ class Player : public Entity
 
         Vector2f respawnPosition;
 
+        int HP;
         float jumpHeight = 175.;
         int jumpBlock;
         bool alreadyTouched = false;
@@ -57,6 +58,9 @@ class Player : public Entity
 
         Vector2f getRespawnPosition()const;
         void setRespawnPosition(float x, float y);
+
+        void setHP(int hp);
+        int getHP()const;
 };
 
 #endif // PLAYER_H

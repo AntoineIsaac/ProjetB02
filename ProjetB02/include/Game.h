@@ -44,12 +44,10 @@ class Game
         Game(const Game& other);
         Game& operator=(const Game& other);
 
-        void initWindow();
-
-        void startLevel1(Menu* menu);
-        void startLevel2(Menu* menu);
+        void startLevel(Menu* menu);
 
         void setEndLevel(bool endLevel);
+        void setCurrentLevel(int currentLevel);
 
 
     protected:

@@ -269,6 +269,11 @@ bool Player::collision(int &newXPosition, int &newYPosition, vector<Platform*> l
     if(getYPosition() > 1000 || dead == true)
     {
         setPosition(getRespawnPosition().x, getRespawnPosition().y);
+        HP--;
+        if(HP == 0)
+        {
+            game->setEndLevel(true);
+        }
     }
     return colTop;
 
@@ -321,5 +326,15 @@ void Player::setRespawnPosition(float x, float y)
 {
     this->respawnPosition.x = x;
     this->respawnPosition.y = y;
+}
+
+void Player::setHP(int hp)
+{
+    this->HP = hp;
+}
+
+int Player::getHP() const
+{
+    return HP;
 }
 

@@ -199,7 +199,8 @@ void Menu::startMenu()
                     int x = MenuPressed();
                     if(x == 0)
                     {
-                        game.startLevel1(this);
+                        game.setCurrentLevel(1);
+                        game.startLevel(this);
                     }
                     if(x == 1)
                     {
