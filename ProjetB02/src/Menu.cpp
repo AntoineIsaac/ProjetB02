@@ -191,74 +191,75 @@ void Menu::startMenu()
 
                     Game game;
 
-                    RenderWindow Options(VideoMode(width, height), "options");
-                    Options.setPosition(Vector2i(300,0));
-                    RenderWindow about(VideoMode(width, height), "about");
-                    about.setPosition(Vector2i(300,0));
+//                    RenderWindow Options(VideoMode(width, height), "options");
+//                    Options.setPosition(Vector2i(300,0));
+//                    RenderWindow about(VideoMode(width, height), "about");
+//                    about.setPosition(Vector2i(300,0));
 
                     int x = MenuPressed();
                     if(x == 0)
                     {
-                        game.setCurrentLevel(1);
+                    // REMETTRE A 1 POUR COMMENCER LVL 1
+                        game.setCurrentLevel(2);
                         game.startLevel(this);
                     }
-                    if(x == 1)
-                    {
-                        while(Options.isOpen())
-                        {
-                            Event aevent;
-                            while(Options.pollEvent(aevent))
-                            {
-                                if(aevent.type == Event::Closed)
-                                {
-                                    Options.close();
-                                }
-
-                                if(aevent.type == Event::KeyPressed)
-                                {
-                                    if(aevent.key.code == Keyboard::Escape)
-                                    {
-                                        Options.close();
-                                    }
-                                }
-                            }
-
-                            Options.clear();
-                            Options.draw(Optionsbackground);
-                            about.close();
-
-                            Options.display();
-
-                        }
-                    }
-                     if(x == 2)
-                    {
-                        while(about.isOpen())
-                        {
-                            Event aevent;
-                            while(about.pollEvent(aevent))
-                            {
-                                if(aevent.type == Event::Closed)
-                                {
-                                    about.close();
-                                }
-
-                                if(aevent.type == Event::KeyPressed)
-                                {
-                                    if(aevent.key.code == Keyboard::Escape)
-                                    {
-                                        about.close();
-                                    }
-                                }
-                            }
-
-                            Options.clear();
-                            about.clear();
-                            about.draw(Aboutbackground);
-
-                            about.display();
-                }
-            }
+//                    if(x == 1)
+//                    {
+//                        while(Options.isOpen())
+//                        {
+//                            Event aevent;
+//                            while(Options.pollEvent(aevent))
+//                            {
+//                                if(aevent.type == Event::Closed)
+//                                {
+//                                    Options.close();
+//                                }
+//
+//                                if(aevent.type == Event::KeyPressed)
+//                                {
+//                                    if(aevent.key.code == Keyboard::Escape)
+//                                    {
+//                                        Options.close();
+//                                    }
+//                                }
+//                            }
+//
+//                            Options.clear();
+//                            Options.draw(Optionsbackground);
+//                            about.close();
+//
+//                            Options.display();
+//
+//                        }
+//                    }
+//                     if(x == 2)
+//                    {
+//                        while(about.isOpen())
+//                        {
+//                            Event aevent;
+//                            while(about.pollEvent(aevent))
+//                            {
+//                                if(aevent.type == Event::Closed)
+//                                {
+//                                    about.close();
+//                                }
+//
+//                                if(aevent.type == Event::KeyPressed)
+//                                {
+//                                    if(aevent.key.code == Keyboard::Escape)
+//                                    {
+//                                        about.close();
+//                                    }
+//                                }
+//                            }
+//
+//                            Options.clear();
+//                            about.clear();
+//                            about.draw(Aboutbackground);
+//
+//                            about.display();
+//                }
+//            }
             if(x == 3)
                 menu.close();
             break;

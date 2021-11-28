@@ -15,6 +15,8 @@
 #include "FireBlock.h"
 #include "SandBlock.h"
 #include "NetherFence.h"
+#include "NetherLianaBlock.h"
+#include "NetherWartBlock.h"
 
 using namespace std;
 
