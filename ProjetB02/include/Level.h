@@ -32,6 +32,8 @@
 #include "Dirt.h"
 #include "WheatBlock.h"
 #include "WoodPlank.h"
+#include "Water.h"
+#include "TntBlock.h"
 
 
 using namespace std;
