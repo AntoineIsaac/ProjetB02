@@ -2,7 +2,10 @@
 
 Game::Game()
 {
-    //ctor
+    if (!font.loadFromFile("Fonts/CottonButter.ttf"))
+	{
+		cout <<"No font is here";
+	}
 }
 
 Game::~Game()
@@ -45,6 +48,12 @@ void Game::startLevel(Menu* menu)
     Level* lvl;
     Color color;
 
+    //Init text with font
+    Text textLifePoints;
+    Text textLevel;
+    textLevel.setFont(font);
+    textLifePoints.setFont(font);
+
 
     switch(currentLevel)
     {
@@ -55,6 +64,7 @@ void Game::startLevel(Menu* menu)
                 zombieLevel = lvl->createZombiesLevel();
                 decorLevel = lvl->createDecorLevel();
                 color = Color(0,191,255);
+                textLevel.setString("Level 1 : Walk in the desert");
                 break;
 
         case 2:
@@ -64,27 +74,38 @@ void Game::startLevel(Menu* menu)
                 zombieLevel = lvl->createZombiesLevel();
                 decorLevel = lvl->createDecorLevel();
                 color = Color::Black;
+                textLevel.setString("Level 2 : A Nether atmosphere");
                 break;
 
     }
+
+    textLevel.setCharacterSize(30);
+
+    textLifePoints.setCharacterSize(30);
+
+
 
 
     Input input;
 
     while (window.isOpen())
     {
+        textLifePoints.setString("Life points : " + to_string(player.getHP()));
+
+
         if(endLevel1 == true && currentLevel == 1)
         {
             currentLevel++;
             startLevel(menu);
             window.close();
+            menu->levelFinish(1);
             break;
 
         }
-        if(endLevel2 == true)
+        if(endLevel2 == true && currentLevel == 2)
         {
             window.close();
-            menu->level1Finish();
+            menu->levelFinish(2);
         }
 
         dt = clock.restart().asSeconds();
@@ -102,6 +123,9 @@ void Game::startLevel(Menu* menu)
         //Set the view on the player
         view.setCenter(player.getXPosition(), player.getYPosition());
         window.setView(view);
+
+        textLevel.setPosition(player.getXPosition() - 100, player.getYPosition() - 390);
+        textLifePoints.setPosition(player.getXPosition() - 390, player.getYPosition() - 390);
 
         window.clear(color);
 
@@ -127,9 +151,11 @@ void Game::startLevel(Menu* menu)
             window.draw(p->getSprite());
         }
 
+        //Draw Text
+        window.draw(textLevel);
+        window.draw(textLifePoints);
+
         window.display();
-
-
     }
 
 }

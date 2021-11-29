@@ -199,7 +199,6 @@ void Menu::startMenu()
                     int x = MenuPressed();
                     if(x == 0)
                     {
-                    // REMETTRE A 1 POUR COMMENCER LVL 1
                         game.setCurrentLevel(1);
                         game.startLevel(this);
                     }
@@ -279,11 +278,24 @@ void Menu::startMenu()
 }
 }
 
-void Menu::level1Finish()
+void Menu::levelFinish(int level)
 {
-    level1Succeed = true;
-    mainMenu[0].setFillColor(Color::Green);
-    mainMenu[0].setString("FINITO");
+    switch(level)
+    {
+        case 1:
+            mainMenu[0].setFillColor(Color::Green);
+            mainMenu[0].setString("FINITO");
+            level1Succeed = true;
+            break;
+
+        case 2:
+            mainMenu[1].setFillColor(Color::Green);
+            mainMenu[1].setString("FINITO");
+            level2Succeed = true;
+            break;
+
+    }
+
 }
 
 

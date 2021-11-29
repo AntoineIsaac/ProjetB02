@@ -286,6 +286,7 @@ void Player::collisionEnemies(int& newXPosition, int& newYposition, vector<Zombi
         if(getGlobalBoundsHitBox().intersects(zombie->getGlobalBoundsHitBox()))
         {
             setPosition(getRespawnPosition().x, getRespawnPosition().y);
+            HP--;
             break;
         }
     }

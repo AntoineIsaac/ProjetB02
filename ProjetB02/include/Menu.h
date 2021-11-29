@@ -25,6 +25,7 @@ class Menu
         int height;
 
         bool level1Succeed = false;
+        bool level2Succeed = false;
 
     public:
         Menu(float width, float height);
@@ -42,7 +43,7 @@ class Menu
         }
 
         void startMenu();
-        void level1Finish();
+        void levelFinish(int level);
 
 
 };

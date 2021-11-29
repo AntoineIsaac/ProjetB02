@@ -38,6 +38,8 @@ class Game
         float multiplier = 60.f;
         float fps;
 
+        Font font;
+
     public:
         Game();
         virtual ~Game();
