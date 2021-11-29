@@ -14,7 +14,8 @@ int main()
 {
 
 
-    Menu menu(800, 800);
+    Menu menu;
+
 
     menu.startMenu();
 

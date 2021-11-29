@@ -1,8 +1,8 @@
-#include "../include/Menu.h"
+#include "MenuLevel.h"
 
-Menu::Menu()
+MenuLevel::MenuLevel()
 {
-	if (!font.loadFromFile("Fonts/CottonButter.ttf"))
+    if (!font.loadFromFile("Fonts/CottonButter.ttf"))
 	{
 		cout <<"No font is here";
 	}
@@ -10,40 +10,51 @@ Menu::Menu()
 
 	mainMenu[0].setFont(font);
 	mainMenu[0].setFillColor(Color::Blue);
-	mainMenu[0].setString("Play");
+	mainMenu[0].setString("Level 1");
 	mainMenu[0].setCharacterSize(85);
 	mainMenu[0].setPosition(350, 200);
 	mainMenu[0].setStyle(1);
 
 	mainMenu[1].setFont(font);
 	mainMenu[1].setFillColor(Color::White);
-	mainMenu[1].setString("About");
+	mainMenu[1].setString("Level 2");
 	mainMenu[1].setCharacterSize(70);
 	mainMenu[1].setPosition(350, 300);
 
 	mainMenu[2].setFont(font);
 	mainMenu[2].setFillColor(Color::White);
-	mainMenu[2].setString("Exit");
+	mainMenu[2].setString("Level 3");
 	mainMenu[2].setCharacterSize(70);
-	mainMenu[2].setPosition(350, 400);
+	mainMenu[2].setPosition(350, 300);
+
+	mainMenu[3].setFont(font);
+	mainMenu[3].setFillColor(Color::White);
+	mainMenu[3].setString("Exit");
+	mainMenu[3].setCharacterSize(70);
+	mainMenu[3].setPosition(350, 400);
 
 	MenuSelected = 0;
 }
 
-
-Menu::~Menu()
+MenuLevel::~MenuLevel()
 {
+    //dtor
 }
 
-void Menu::draw(RenderWindow &window)
+MenuLevel::MenuLevel(const MenuLevel& other)
 {
-	for (int i = 0; i < Max_main_menu; i++)
-	{
-		window.draw(mainMenu[i]);
-	}
+    //copy ctor
 }
 
-void Menu::MoveUp()
+MenuLevel& MenuLevel::operator=(const MenuLevel& rhs)
+{
+    if (this == &rhs) return *this; // handle self assignment
+    //assignment operator
+    return *this;
+}
+
+
+void MenuLevel::MoveUp()
 {
 	if (MenuSelected - 1 >= 0)
 	{
@@ -79,7 +90,7 @@ void Menu::MoveUp()
 	}
 }
 
-void Menu::MoveDown()
+void MenuLevel::MoveDown()
 {
 	if (MenuSelected + 1 <= Max_main_menu)
 	{
@@ -115,19 +126,8 @@ void Menu::MoveDown()
 }
 
 
-Menu::Menu(const Menu& other)
-{
-    //copy ctor
-}
 
-Menu& Menu::operator=(const Menu& rhs)
-{
-    if (this == &rhs) return *this; // handle self assignment
-    //assignment operator
-    return *this;
-}
-
-void Menu::startMenu()
+void MenuLevel::startMenu()
 {
     sf::RenderWindow menu(sf::VideoMode(width, height), "The running dead");
 
@@ -139,13 +139,6 @@ void Menu::startMenu()
 	Texture Maintexture;
 	Maintexture.loadFromFile("Texture/background.jpg");
 	background.setTexture(&Maintexture);
-
-	//about
-	RectangleShape Aboutbackground;
-	Aboutbackground.setSize(Vector2f(width, height));
-	Texture about_texture;
-	about_texture.loadFromFile("Texture/about.jpg");
-	Aboutbackground.setTexture(&about_texture);
 
 
 	while (menu.isOpen())
@@ -173,47 +166,28 @@ void Menu::startMenu()
                 }
                 if(event.key.code == Keyboard::Return)
                 {
+                    Game game;
+
                     int x = MenuPressed();
                     if(x == 0)
                     {
-                        MenuLevel menuLevel;
-                        menuLevel.startMenu();
-
+                        game.setCurrentLevel(1);
+                        game.startLevel(this);
                     }
                      if(x == 1)
                     {
-                        RenderWindow about(VideoMode(width, height), "about");
-                        about.setPosition(Vector2i(300,0));
-
-                        while(about.isOpen())
-                        {
-                            Event aevent;
-                            while(about.pollEvent(aevent))
-                            {
-                                if(aevent.type == Event::Closed)
-                                {
-                                    about.close();
-                                }
-
-                                if(aevent.type == Event::KeyPressed)
-                                {
-                                    if(aevent.key.code == Keyboard::Escape)
-                                    {
-                                        about.close();
-                                    }
-                                }
-                            }
-
-                            about.clear();
-                            about.draw(Aboutbackground);
-
-                            about.display();
-                }
-            }
-            if(x == 2)
-                menu.close();
-            break;
-		}
+                        game.setCurrentLevel(2);
+                        game.startLevel(this);
+                    }
+                    if(x == 2)
+                    {
+                        game.setCurrentLevel(3);
+                        game.startLevel(this);
+                    }
+                    if(x == 3)
+                        menu.close();
+                        break;
+        }
     }
 }
 
@@ -229,7 +203,7 @@ void Menu::startMenu()
 }
 }
 
-void Menu::levelFinish(int level)
+void MenuLevel::levelFinish(int level)
 {
     switch(level)
     {
@@ -253,5 +227,8 @@ void Menu::levelFinish(int level)
     }
 
 }
+
+
+
 
 

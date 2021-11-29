@@ -87,10 +87,14 @@
 		<Unit filename="include/SpiderWebBlock.h" />
 		<Unit filename="include/SugarCaneBlock.h" />
 		<Unit filename="include/WheatBlock.h" />
+		<Unit filename="include/WoodPlank.h" />
 		<Unit filename="include/Zombie.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/AcasiaLeafBlock.cpp" />
+		<Unit filename="src/AcasiaWoodBlock.cpp" />
 		<Unit filename="src/CactusBlock.cpp" />
 		<Unit filename="src/Checkpoint.cpp" />
+		<Unit filename="src/CloudBlock.cpp" />
 		<Unit filename="src/Dirt.cpp" />
 		<Unit filename="src/Entity.cpp" />
 		<Unit filename="src/FireBlock.cpp" />
@@ -103,6 +107,7 @@
 		<Unit filename="src/Level1.cpp" />
 		<Unit filename="src/Level2.cpp" />
 		<Unit filename="src/Level3.cpp" />
+		<Unit filename="src/LianaBlock.cpp" />
 		<Unit filename="src/Menu.cpp" />
 		<Unit filename="src/NetherBlock.cpp" />
 		<Unit filename="src/NetherFence.cpp" />
@@ -122,6 +127,7 @@
 		<Unit filename="src/SpiderWebBlock.cpp" />
 		<Unit filename="src/SugarCaneBlock.cpp" />
 		<Unit filename="src/WheatBlock.cpp" />
+		<Unit filename="src/WoodPlank.cpp" />
 		<Unit filename="src/Zombie.cpp" />
 		<Extensions />
 	</Project>

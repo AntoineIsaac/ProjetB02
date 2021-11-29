@@ -446,7 +446,7 @@
 1638018644 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/NetherWoodBlock.cpp
 	"../include/NetherWoodBlock.h"
 
-1637934388 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/main.cpp
+1638187026 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/main.cpp
 	<SFML/Window.hpp>
 	<SFML/System.hpp>
 	<SFML/Graphics.hpp>
@@ -491,7 +491,7 @@
 	<SFML/System.hpp>
 	<SFML/Graphics.hpp>
 
-1638182671 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/Level.h
+1638183615 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/Level.h
 	"Platform.h"
 	"GrassBlock.h"
 	"LavaBlock.h"
@@ -517,6 +517,10 @@
 	"SugarCaneBlock.h"
 	"NetherLianaBlock.h"
 	"NetherWartBlock.h"
+	"CloudBlock.h"
+	"AcasiaLeafBlock.h"
+	"AcasiaWoodBlock.h"
+	"LianaBlock.h"
 	"Dirt.h"
 	"WheatBlock.h"
 	"WoodPlank.h"
@@ -596,15 +600,15 @@
 1638177337 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/Zombie.cpp
 	"../include/Zombie.h"
 
-1638178384 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/Menu.h
+1638187077 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/Menu.h
 	<SFML/Graphics.hpp>
 	<iostream>
 	"Game.h"
 
-1638178427 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/Menu.cpp
+1638184185 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/Menu.cpp
 	"../include/Menu.h"
 
-1638178473 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/Game.h
+1638183319 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/Game.h
 	<SFML/Window.hpp>
 	<SFML/System.hpp>
 	<SFML/Graphics.hpp>
@@ -621,7 +625,7 @@
 	"Level2.h"
 	"Level3.h"
 
-1638178349 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/Game.cpp
+1638183513 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/Game.cpp
 	"../include/Game.h"
 
 1638174698 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Game.h
@@ -847,7 +851,7 @@
 1638096212 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/SandBlock.cpp
 	"../include/SandBlock.h"
 
-1638096212 D
+1638101118 D
 
 1638101111 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/CactusBlock.h
 	"Platform.h"
@@ -943,7 +947,6 @@
 1638101118 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/NetherWartBlock.cpp
 	"../include/NetherWartBlock.h"
 
-<<<<<<< HEAD
 1638179691 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/CloudBlock.cpp
 	"../include/CloudBlock.h"
 
@@ -967,7 +970,9 @@
 
 1638182665 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/LianaBlock.cpp
 	"../include/LianaBlock.h"
-=======
+
+1638182665 e/LianaBlock.h"
+
 1638177337 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/SandBlock.h
 	"Platform.h"
 
@@ -1010,7 +1015,7 @@
 1638177337 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/CactusBlock.cpp
 	"../include/CactusBlock.h"
 
-1638177337 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/Level1.cpp
+1638183513 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/Level1.cpp
 	"../include/Level1.h"
 
 1638177337 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/Level2.cpp
@@ -1046,28 +1051,53 @@
 1638177337 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/SugarCaneBlock.cpp
 	"../include/SugarCaneBlock.h"
 
-1638178507 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/Level3.h
+1638183319 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/Level3.h
 	"Level.h"
 
-1638182929 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/Level3.cpp
+1638183319 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/Level3.cpp
 	"../include/Level3.h"
 
-1638179630 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/Dirt.h
+1638183319 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/Dirt.h
 	"Platform.h"
 
-1638179661 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/Dirt.cpp
+1638183319 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/Dirt.cpp
 	"../include/Dirt.h"
 
-1638181822 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/WheatBlock.h
+1638183319 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/WheatBlock.h
 	"Platform.h"
 
-1638182671 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/WoodPlank.h
+1638183319 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/WoodPlank.h
 	"Platform.h"
 
-1638182194 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/WheatBlock.cpp
+1638183319 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/WheatBlock.cpp
 	"../include/WheatBlock.h"
 
-1638182671 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/WoodPlank.cpp
+1638183319 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/WoodPlank.cpp
 	"../include/WoodPlank.h"
->>>>>>> d2a823a35ffe5a52ec1f767fe4091b1797eafd6a
+
+1638182671 823a35ffe5a52ec1f767fe4091b1797eafd6a
+
+1638183512 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/CloudBlock.h
+	"Platform.h"
+
+1638183512 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/AcasiaLeafBlock.h
+	"Platform.h"
+
+1638183512 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/AcasiaWoodBlock.h
+	"Platform.h"
+
+1638183512 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/LianaBlock.h
+	"Platform.h"
+
+1638183513 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/AcasiaLeafBlock.cpp
+	"../include/AcasiaLeafBlock.h"
+
+1638183513 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/AcasiaWoodBlock.cpp
+	"../include/AcasiaWoodBlock.h"
+
+1638183513 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/CloudBlock.cpp
+	"../include/CloudBlock.h"
+
+1638183513 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/LianaBlock.cpp
+	"../include/LianaBlock.h"
 

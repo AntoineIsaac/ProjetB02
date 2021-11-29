@@ -11,7 +11,7 @@ using namespace std;
 using namespace sf;
 
 
-#define Max_main_menu 4
+#define Max_main_menu 3
 
 class Menu
 {
@@ -21,15 +21,13 @@ class Menu
         Font font;
         Text mainMenu[Max_main_menu];
 
-        int width;
-        int height;
+        int width = 800;
+        int height = 800;
 
-        bool level1Succeed = false;
-        bool level2Succeed = false;
-        bool level3Succeed = false;
+
 
     public:
-        Menu(float width, float height);
+        Menu();
         virtual ~Menu();
         Menu(const Menu& other);
         Menu& operator=(const Menu& other);
@@ -38,13 +36,13 @@ class Menu
         void draw(RenderWindow &window);
         void MoveUp();
         void MoveDown();
+        void startMenu();
 
         int MenuPressed(){
             return MenuSelected;
         }
 
-        void startMenu();
-        void levelFinish(int level);
+
 
 
 };
