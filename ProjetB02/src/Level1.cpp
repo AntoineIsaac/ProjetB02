@@ -70,6 +70,7 @@ vector<Platform*> Level1::createLevel()const
                 case(9): platform.push_back(new RedSmoothSandBlock(p->size*j, p->size*i)); break;
                 case(10): platform.push_back(new ObsidianBlock(p->size*j, p->size*i)); break;
                 case(11): platform.push_back(new PortalBlock(p->size*j, p->size*i)); break;
+                case(12): platform.push_back(new SpiderWebBlock(p->size*j, p->size*i)); break;
 
 
             }

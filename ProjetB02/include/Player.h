@@ -33,6 +33,7 @@ class Player : public Entity
         bool alreadyTouched = false;
         bool colTop = false;
         bool canJump = false;
+        bool web = false;
 
 
     public:

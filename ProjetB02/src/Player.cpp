@@ -45,6 +45,7 @@ void Player::update(bool left, bool right, bool space, float fps, vector<Platfor
 
 
 
+
     if(left)
     {
 //        if(direction == Direction::droite)
@@ -53,6 +54,9 @@ void Player::update(bool left, bool right, bool space, float fps, vector<Platfor
 //            direction = Direction::gauche;
 //        }
             setXSpeed(-5.0 * fps);
+            if(web == true){
+               setXSpeed(-2.0 * fps);
+            }
             move = true;
     }
     if(right)
@@ -63,6 +67,9 @@ void Player::update(bool left, bool right, bool space, float fps, vector<Platfor
 //            direction = Direction::droite;
 //        }
         setXSpeed(5.0 * fps);
+        if(web == true){
+           setXSpeed(2.0 * fps);
+        }
         move = true;
     }
 
@@ -72,6 +79,7 @@ void Player::update(bool left, bool right, bool space, float fps, vector<Platfor
         jumpBlock = getYPosition();
         setYSpeed(-15.0 * fps);
         canJump = false;
+        web = false;
     }
 
     newXPosition += getXSpeed();
@@ -91,6 +99,8 @@ void Player::update(bool left, bool right, bool space, float fps, vector<Platfor
 
     colTop = collision(newXPosition, newYPosition, level, game);
     collisionEnemies(newXPosition, newYPosition, enemies, game);
+
+
 
 
 
@@ -210,6 +220,20 @@ bool Player::collision(int &newXPosition, int &newYPosition, vector<Platform*> l
                 dead = true;
             }
 
+            //Si toile d'araignée
+            if(platform->getType() == "SpiderWebBlock")
+            {
+                web = true;
+                newXPosition = withoutCollX;
+                newYPosition = withoutCollY;
+
+            }
+
+//            if(platform->getType() != "SpiderWebBlock")
+//            {
+//                web = false;
+//            }
+
 
             //Il active la JackOLantern si il marche dessus et active le checkpoint
             if(platform->getType() == "Checkpoint")
@@ -243,12 +267,6 @@ bool Player::collision(int &newXPosition, int &newYPosition, vector<Platform*> l
                     newXPosition = withoutCollX;
                     newYPosition = withoutCollY;
                 }
-            }
-
-            if(platform->getType() == "SpiderWebBlock")
-            {
-                newXPosition = withoutCollX;
-                newYPosition = withoutCollY;
             }
 
 
