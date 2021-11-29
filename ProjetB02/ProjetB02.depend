@@ -68,7 +68,7 @@
 1637928760 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Platform.cpp
 	"../include/Platform.h"
 
-1638101191 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Level.h
+1638182536 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Level.h
 	"Platform.h"
 	"GrassBlock.h"
 	"LavaBlock.h"
@@ -94,6 +94,10 @@
 	"SugarCaneBlock.h"
 	"NetherLianaBlock.h"
 	"NetherWartBlock.h"
+	"CloudBlock.h"
+	"AcasiaLeafBlock.h"
+	"AcasiaWoodBlock.h"
+	"LianaBlock.h"
 
 1638026262 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Level.cpp
 	"../include/Level.h"
@@ -618,10 +622,10 @@
 	<iostream>
 	"Game.h"
 
-1638174875 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Game.cpp
+1638183141 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Game.cpp
 	"../include/Game.h"
 
-1638174192 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Menu.cpp
+1638177023 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Menu.cpp
 	"../include/Menu.h"
 
 1638008034 source:/home/ugo/Documents/ProjetB02/ProjetB02/main.cpp
@@ -805,7 +809,7 @@
 1638026673 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Level1.h
 	"Level.h"
 
-1638171407 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Level1.cpp
+1638182898 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Level1.cpp
 	"../include/Level1.h"
 
 1638026630 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Level2.h
@@ -843,7 +847,7 @@
 1638101111 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/SugarCaneBlock.h
 	"Platform.h"
 
-1638101111 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/CactusBlock.cpp
+1638179106 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/CactusBlock.cpp
 	"../include/CactusBlock.h"
 
 1638101111 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/QuicksandBlock.cpp
@@ -915,4 +919,28 @@
 
 1638101118 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/NetherWartBlock.cpp
 	"../include/NetherWartBlock.h"
+
+1638179691 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/CloudBlock.cpp
+	"../include/CloudBlock.h"
+
+1638178981 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/CloudBlock.h
+	"Platform.h"
+
+1638181556 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/AcasiaLeafBlock.h
+	"Platform.h"
+
+1638181544 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/AcasiaWoodBlock.h
+	"Platform.h"
+
+1638181789 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/AcasiaLeafBlock.cpp
+	"../include/AcasiaLeafBlock.h"
+
+1638181626 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/AcasiaWoodBlock.cpp
+	"../include/AcasiaWoodBlock.h"
+
+1638182517 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/LianaBlock.h
+	"Platform.h"
+
+1638182665 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/LianaBlock.cpp
+	"../include/LianaBlock.h"
 

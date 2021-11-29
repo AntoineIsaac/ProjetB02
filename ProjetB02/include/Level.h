@@ -25,6 +25,10 @@
 #include "SugarCaneBlock.h"
 #include "NetherLianaBlock.h"
 #include "NetherWartBlock.h"
+#include "CloudBlock.h"
+#include "AcasiaLeafBlock.h"
+#include "AcasiaWoodBlock.h"
+#include "LianaBlock.h"
 
 using namespace std;
 

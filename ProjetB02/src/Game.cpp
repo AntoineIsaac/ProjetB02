@@ -90,7 +90,7 @@ void Game::startLevel(Menu* menu)
 
     while (window.isOpen())
     {
-        textLifePoints.setString("Life points : " + to_string(player.getHP()));
+        textLifePoints.setString("Lifes : " + to_string(player.getHP()));
 
 
         if(endLevel1 == true && currentLevel == 1)
