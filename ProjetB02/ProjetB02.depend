@@ -446,7 +446,7 @@
 1638018644 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/NetherWoodBlock.cpp
 	"../include/NetherWoodBlock.h"
 
-1637930251 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/main.cpp
+1637934388 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/main.cpp
 	<SFML/Window.hpp>
 	<SFML/System.hpp>
 	<SFML/Graphics.hpp>
@@ -457,7 +457,8 @@
 	"include/Level.h"
 	"include/Menu.h"
 
-1637934249 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/Player.h
+1638177337 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/Player.h
+	"Game.h"
 	"Entity.h"
 	<string>
 	<iostream>
@@ -465,22 +466,22 @@
 	"Platform.h"
 	"Checkpoint.h"
 	"Zombie.h"
-	"Game.h"
+	<thread>
 
-1637929149 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/Entity.h
+1638177337 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/Entity.h
 	<SFML/Graphics.hpp>
 	<string>
 
-1637929149 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/Platform.h
+1638177337 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/Platform.h
 	<SFML/Window.hpp>
 	<SFML/System.hpp>
 	<SFML/Graphics.hpp>
 	<string>
 
-1637929149 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/Checkpoint.h
+1638177337 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/Checkpoint.h
 	"Platform.h"
 
-1637929149 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/Zombie.h
+1638177337 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/Zombie.h
 	"Entity.h"
 	<string>
 	<iostream>
@@ -490,7 +491,7 @@
 	<SFML/System.hpp>
 	<SFML/Graphics.hpp>
 
-1637929149 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/Level.h
+1638182671 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/Level.h
 	"Platform.h"
 	"GrassBlock.h"
 	"LavaBlock.h"
@@ -504,91 +505,106 @@
 	"NetherWoodBlock.h"
 	"LeafBlock.h"
 	"FireBlock.h"
+	"SandBlock.h"
+	"NetherFence.h"
+	"CactusBlock.h"
+	"QuicksandBlock.h"
+	"RedQuicksandBlock.h"
+	"RedSandBlock.h"
+	"RedSmoothSandBlock.h"
+	"SandBlock.h"
+	"SmoothSandBlock.h"
+	"SugarCaneBlock.h"
+	"NetherLianaBlock.h"
+	"NetherWartBlock.h"
+	"Dirt.h"
+	"WheatBlock.h"
+	"WoodPlank.h"
 
-1637929149 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/GrassBlock.h
+1638177337 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/GrassBlock.h
 	"Platform.h"
 
-1637929149 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/LavaBlock.h
+1638177337 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/LavaBlock.h
 	"Platform.h"
 
-1637929149 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/NetherBlock.h
+1638177337 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/NetherBlock.h
 	"Platform.h"
 
-1637929149 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/PortalBlock.h
+1638177337 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/PortalBlock.h
 	"Platform.h"
 
-1637929149 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/ObsidianBlock.h
+1638177337 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/ObsidianBlock.h
 	"Platform.h"
 
-1637929149 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/SpiderWebBlock.h
+1638177337 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/SpiderWebBlock.h
 	"Platform.h"
 
-1637929149 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/NetherWoodBlock.h
+1638177337 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/NetherWoodBlock.h
 	"Platform.h"
 
-1637929149 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/LeafBlock.h
+1638177337 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/LeafBlock.h
 	"Platform.h"
 
-1637929149 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/FireBlock.h
+1638177337 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/FireBlock.h
 	"Platform.h"
 
-1637929149 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/Checkpoint.cpp
+1638177337 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/Checkpoint.cpp
 	"../include/Checkpoint.h"
 
 1637929149 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/Entity.cpp
 	"../include/Entity.h"
 
-1637929149 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/FireBlock.cpp
+1638177337 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/FireBlock.cpp
 	"../include/FireBlock.h"
 
-1637929149 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/GrassBlock.cpp
+1638177337 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/GrassBlock.cpp
 	"../include/GrassBlock.h"
 
 1637933981 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/Input.cpp
 	"../include/Input.h"
 
-1637929149 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/LavaBlock.cpp
+1638177337 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/LavaBlock.cpp
 	"../include/LavaBlock.h"
 
-1637929149 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/LeafBlock.cpp
+1638177337 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/LeafBlock.cpp
 	"../include/LeafBlock.h"
 
-1637929149 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/Level.cpp
+1638177337 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/Level.cpp
 	"../include/Level.h"
 
-1637929149 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/NetherBlock.cpp
+1638177337 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/NetherBlock.cpp
 	"../include/NetherBlock.h"
 
-1637929149 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/NetherWoodBlock.cpp
+1638177337 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/NetherWoodBlock.cpp
 	"../include/NetherWoodBlock.h"
 
-1637929149 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/ObsidianBlock.cpp
+1638177337 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/ObsidianBlock.cpp
 	"../include/ObsidianBlock.h"
 
 1637929149 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/Platform.cpp
 	"../include/Platform.h"
 
-1637933467 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/Player.cpp
+1638177337 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/Player.cpp
 	"../include/Player.h"
 
-1637929149 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/PortalBlock.cpp
+1638177337 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/PortalBlock.cpp
 	"../include/PortalBlock.h"
 
-1637929149 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/SpiderWebBlock.cpp
+1638177337 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/SpiderWebBlock.cpp
 	"../include/SpiderWebBlock.h"
 
-1637929149 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/Zombie.cpp
+1638177337 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/Zombie.cpp
 	"../include/Zombie.h"
 
-1637931790 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/Menu.h
+1638178384 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/Menu.h
 	<SFML/Graphics.hpp>
 	<iostream>
 	"Game.h"
 
-1637932138 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/Menu.cpp
+1638178427 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/Menu.cpp
 	"../include/Menu.h"
 
-1637933097 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/Game.h
+1638178473 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/Game.h
 	<SFML/Window.hpp>
 	<SFML/System.hpp>
 	<SFML/Graphics.hpp>
@@ -597,8 +613,15 @@
 	"Input.h"
 	"Platform.h"
 	"Level.h"
+	<string>
+	<chrono>
+	<thread>
+	"Menu.h"
+	"Level1.h"
+	"Level2.h"
+	"Level3.h"
 
-1637934282 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/Game.cpp
+1638178349 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/Game.cpp
 	"../include/Game.h"
 
 1638174698 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Game.h
@@ -920,6 +943,7 @@
 1638101118 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/NetherWartBlock.cpp
 	"../include/NetherWartBlock.h"
 
+<<<<<<< HEAD
 1638179691 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/CloudBlock.cpp
 	"../include/CloudBlock.h"
 
@@ -943,4 +967,107 @@
 
 1638182665 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/LianaBlock.cpp
 	"../include/LianaBlock.h"
+=======
+1638177337 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/SandBlock.h
+	"Platform.h"
+
+1638177337 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/NetherFence.h
+	"Platform.h"
+
+1638177337 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/CactusBlock.h
+	"Platform.h"
+
+1638177337 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/QuicksandBlock.h
+	"Platform.h"
+
+1638177337 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/RedQuicksandBlock.h
+	"Platform.h"
+
+1638177337 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/RedSandBlock.h
+	"Platform.h"
+
+1638177337 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/RedSmoothSandBlock.h
+	"Platform.h"
+
+1638177337 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/SmoothSandBlock.h
+	"Platform.h"
+
+1638177337 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/SugarCaneBlock.h
+	"Platform.h"
+
+1638177337 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/NetherLianaBlock.h
+	"Platform.h"
+
+1638177337 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/NetherWartBlock.h
+	"Platform.h"
+
+1638177337 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/Level1.h
+	"Level.h"
+
+1638177337 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/Level2.h
+	"Level.h"
+
+1638177337 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/CactusBlock.cpp
+	"../include/CactusBlock.h"
+
+1638177337 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/Level1.cpp
+	"../include/Level1.h"
+
+1638177337 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/Level2.cpp
+	"../include/Level2.h"
+
+1638177337 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/NetherFence.cpp
+	"../include/NetherFence.h"
+
+1638177337 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/NetherLianaBlock.cpp
+	"../include/NetherLianaBlock.h"
+
+1638177337 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/NetherWartBlock.cpp
+	"../include/NetherWartBlock.h"
+
+1638177337 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/QuicksandBlock.cpp
+	"../include/QuicksandBlock.h"
+
+1638177337 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/RedQuicksandBlock.cpp
+	"../include/RedQuicksandBlock.h"
+
+1638177337 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/RedSandBlock.cpp
+	"../include/RedSandBlock.h"
+
+1638177337 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/RedSmoothSandBlock.cpp
+	"../include/RedSmoothSandBlock.h"
+
+1638177337 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/SandBlock.cpp
+	"../include/SandBlock.h"
+
+1638177337 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/SmoothSandBlock.cpp
+	"../include/SmoothSandBlock.h"
+
+1638177337 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/SugarCaneBlock.cpp
+	"../include/SugarCaneBlock.h"
+
+1638178507 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/Level3.h
+	"Level.h"
+
+1638182929 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/Level3.cpp
+	"../include/Level3.h"
+
+1638179630 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/Dirt.h
+	"Platform.h"
+
+1638179661 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/Dirt.cpp
+	"../include/Dirt.h"
+
+1638181822 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/WheatBlock.h
+	"Platform.h"
+
+1638182671 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/WoodPlank.h
+	"Platform.h"
+
+1638182194 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/WheatBlock.cpp
+	"../include/WheatBlock.h"
+
+1638182671 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/WoodPlank.cpp
+	"../include/WoodPlank.h"
+>>>>>>> d2a823a35ffe5a52ec1f767fe4091b1797eafd6a
 
