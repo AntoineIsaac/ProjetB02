@@ -12,10 +12,7 @@ using namespace sf;
 
 int main()
 {
-
-
     Menu menu;
-
 
     menu.startMenu();
 

@@ -16,10 +16,10 @@
 #include "Level1.h"
 #include "Level2.h"
 #include "Level3.h"
-
+#include "MenuLevel.h"
 using namespace sf;
 using namespace std;
-class Menu;
+class MenuLevel;
 
 
 class Game
@@ -50,7 +50,7 @@ class Game
         Game(const Game& other);
         Game& operator=(const Game& other);
 
-        void startLevel(Menu* menu);
+        void startLevel(MenuLevel* menu);
 
         void setEndLevel(bool endLevel);
         void setCurrentLevel(int currentLevel);

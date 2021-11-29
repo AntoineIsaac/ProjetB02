@@ -54,8 +54,11 @@
 			<Add library="sfml-system" />
 			<Add library="sfml-audio" />
 		</Linker>
+		<Unit filename="include/AcasiaLeafBlock.h" />
+		<Unit filename="include/AcasiaWoodBlock.h" />
 		<Unit filename="include/CactusBlock.h" />
 		<Unit filename="include/Checkpoint.h" />
+		<Unit filename="include/CloudBlock.h" />
 		<Unit filename="include/Dirt.h" />
 		<Unit filename="include/Entity.h" />
 		<Unit filename="include/FireBlock.h" />
@@ -68,6 +71,7 @@
 		<Unit filename="include/Level1.h" />
 		<Unit filename="include/Level2.h" />
 		<Unit filename="include/Level3.h" />
+		<Unit filename="include/LianaBlock.h" />
 		<Unit filename="include/Menu.h" />
 		<Unit filename="include/NetherBlock.h" />
 		<Unit filename="include/NetherFence.h" />

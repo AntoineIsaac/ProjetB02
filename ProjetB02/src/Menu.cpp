@@ -47,14 +47,7 @@ void Menu::MoveUp()
 {
 	if (MenuSelected - 1 >= 0)
 	{
-	    if(MenuSelected == 0 && level1Succeed == true)
-        {
-            mainMenu[MenuSelected].setFillColor(Color::Green);
-        }
-        else
-        {
-            mainMenu[MenuSelected].setFillColor(Color::White);
-        }
+        mainMenu[MenuSelected].setFillColor(Color::White);
         mainMenu[MenuSelected].setCharacterSize(70);
         mainMenu[MenuSelected].setStyle(0);
 
@@ -65,14 +58,7 @@ void Menu::MoveUp()
             MenuSelected = 2;
         }
 
-        if(MenuSelected == 0 && level1Succeed == true)
-        {
-            mainMenu[MenuSelected].setFillColor(Color::Green);
-        }
-        else
-        {
-            mainMenu[MenuSelected].setFillColor(Color::Blue);
-        }
+        mainMenu[MenuSelected].setFillColor(Color::Blue);
         mainMenu[MenuSelected].setCharacterSize(85);
         mainMenu[MenuSelected].setStyle(1);
 
@@ -83,14 +69,7 @@ void Menu::MoveDown()
 {
 	if (MenuSelected + 1 <= Max_main_menu)
 	{
-		if(MenuSelected == 0 && level1Succeed == true)
-        {
-            mainMenu[MenuSelected].setFillColor(Color::Green);
-        }
-        else
-        {
-            mainMenu[MenuSelected].setFillColor(Color::White);
-        }
+        mainMenu[MenuSelected].setFillColor(Color::White);
         mainMenu[MenuSelected].setCharacterSize(70);
         mainMenu[MenuSelected].setStyle(0);
 
@@ -101,14 +80,7 @@ void Menu::MoveDown()
             MenuSelected = 0;
         }
 
-		if(MenuSelected == 0 && level1Succeed == true)
-        {
-            mainMenu[MenuSelected].setFillColor(Color::Green);
-        }
-        else
-        {
-            mainMenu[MenuSelected].setFillColor(Color::Blue);
-        }
+        mainMenu[MenuSelected].setFillColor(Color::Blue);
         mainMenu[MenuSelected].setCharacterSize(85);
         mainMenu[MenuSelected].setStyle(1);
 	}
@@ -131,35 +103,35 @@ void Menu::startMenu()
 {
     sf::RenderWindow menu(sf::VideoMode(width, height), "The running dead");
 
-	menu.setPosition(Vector2i(300,0));
+    menu.setPosition(Vector2i(300,0));
 
-	//mainmenu
-	RectangleShape background;
-	background.setSize(Vector2f(width, height));
-	Texture Maintexture;
-	Maintexture.loadFromFile("Texture/background.jpg");
-	background.setTexture(&Maintexture);
+    //mainmenu
+    RectangleShape background;
+    background.setSize(Vector2f(width, height));
+    Texture Maintexture;
+    Maintexture.loadFromFile("Texture/background.jpg");
+    background.setTexture(&Maintexture);
 
-	//about
-	RectangleShape Aboutbackground;
-	Aboutbackground.setSize(Vector2f(width, height));
-	Texture about_texture;
-	about_texture.loadFromFile("Texture/about.jpg");
-	Aboutbackground.setTexture(&about_texture);
+    //about
+    RectangleShape Aboutbackground;
+    Aboutbackground.setSize(Vector2f(width, height));
+    Texture about_texture;
+    about_texture.loadFromFile("Texture/about.jpg");
+    Aboutbackground.setTexture(&about_texture);
 
 
-	while (menu.isOpen())
-	{
-		Event event;
+    while (menu.isOpen())
+    {
+        Event event;
 
-		while (menu.pollEvent(event))
-		{
-			if (event.type == Event::Closed)
-			{
+        while (menu.pollEvent(event))
+        {
+            if (event.type == Event::Closed)
+            {
                 menu.close();
-			}
+            }
 
-			if(event.type == Event::KeyReleased)
+            if(event.type == Event::KeyReleased)
             {
                 if(event.key.code == Keyboard::Up)
                 {
@@ -173,12 +145,13 @@ void Menu::startMenu()
                 }
                 if(event.key.code == Keyboard::Return)
                 {
+                    Game game;
+
                     int x = MenuPressed();
                     if(x == 0)
                     {
                         MenuLevel menuLevel;
                         menuLevel.startMenu();
-
                     }
                      if(x == 1)
                     {
@@ -213,45 +186,25 @@ void Menu::startMenu()
             if(x == 2)
                 menu.close();
             break;
-		}
+        }
     }
 }
 
-		menu.clear();
+        menu.clear();
 
-		menu.draw(background);
+        menu.draw(background);
 
-		draw(menu);
+        draw(menu);
 
-		menu.display();
+        menu.display();
 
-		menu.clear();
+        menu.clear();
 }
 }
 
-void Menu::levelFinish(int level)
+int MenuLevel::MenuPressed()
 {
-    switch(level)
-    {
-        case 1:
-            mainMenu[0].setFillColor(Color::Green);
-            mainMenu[0].setString("FINITO");
-            level1Succeed = true;
-            break;
-
-        case 2:
-            mainMenu[1].setFillColor(Color::Green);
-            mainMenu[1].setString("FINITO");
-            level2Succeed = true;
-            break;
-        case 3:
-            mainMenu[2].setFillColor(Color::Green);
-            mainMenu[2].setString("FINITO");
-            level3Succeed = true;
-            break;
-
-    }
-
+    return MenuSelected;
 }
 
 

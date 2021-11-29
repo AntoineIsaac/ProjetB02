@@ -1,4 +1,4 @@
-#include "MenuLevel.h"
+#include "../include/MenuLevel.h"
 
 MenuLevel::MenuLevel()
 {
@@ -25,13 +25,7 @@ MenuLevel::MenuLevel()
 	mainMenu[2].setFillColor(Color::White);
 	mainMenu[2].setString("Level 3");
 	mainMenu[2].setCharacterSize(70);
-	mainMenu[2].setPosition(350, 300);
-
-	mainMenu[3].setFont(font);
-	mainMenu[3].setFillColor(Color::White);
-	mainMenu[3].setString("Exit");
-	mainMenu[3].setCharacterSize(70);
-	mainMenu[3].setPosition(350, 400);
+	mainMenu[2].setPosition(350, 400);
 
 	MenuSelected = 0;
 }
@@ -51,6 +45,14 @@ MenuLevel& MenuLevel::operator=(const MenuLevel& rhs)
     if (this == &rhs) return *this; // handle self assignment
     //assignment operator
     return *this;
+}
+
+void MenuLevel::draw(RenderWindow &window)
+{
+	for (int i = 0; i < Max_main_menu; i++)
+	{
+		window.draw(mainMenu[i]);
+	}
 }
 
 
@@ -228,7 +230,7 @@ void MenuLevel::levelFinish(int level)
 
 }
 
-
-
-
-
+int Menu::MenuPressed()
+{
+    return MenuSelected;
+}

@@ -1,8 +1,5 @@
 #ifndef MENU_H
 #define MENU_H
-
-
-#pragma once
 #include <SFML/Graphics.hpp>
 #include <iostream>
 #include "Game.h"
@@ -38,13 +35,7 @@ class Menu
         void MoveDown();
         void startMenu();
 
-        int MenuPressed(){
-            return MenuSelected;
-        }
-
-
-
-
+        virtual int MenuPressed();
 };
 
 #endif // MENU_H

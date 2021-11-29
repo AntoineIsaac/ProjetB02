@@ -27,7 +27,7 @@ Game& Game::operator=(const Game& rhs)
 
 
 
-void Game::startLevel(Menu* menu)
+void Game::startLevel(MenuLevel* menu)
 {
     RenderWindow window(VideoMode(windowWidht, windowHeight), "The running dead");
     window.setPosition(Vector2i(300,0));
