@@ -60,7 +60,7 @@ void MenuLevel::MoveUp()
 {
 	if (MenuSelected - 1 >= 0)
 	{
-	    if(MenuSelected == 0 && level1Succeed == true || MenuSelected == 1 && level2Succeed || MenuSelected == 2 && level3Succeed)
+	    if((MenuSelected == 0 && level1Succeed == true) || (MenuSelected == 1 && level2Succeed) || (MenuSelected == 2 && level3Succeed))
         {
             mainMenu[MenuSelected].setFillColor(Color::Green);
         }
@@ -78,7 +78,7 @@ void MenuLevel::MoveUp()
             MenuSelected = 2;
         }
 
-        if(MenuSelected == 0 && level1Succeed == true || MenuSelected == 1 && level2Succeed || MenuSelected == 2 && level3Succeed)
+        if((MenuSelected == 0 && level1Succeed == true) || (MenuSelected == 1 && level2Succeed) || (MenuSelected == 2 && level3Succeed))
         {
             mainMenu[MenuSelected].setFillColor(Color::Green);
         }
@@ -96,7 +96,7 @@ void MenuLevel::MoveDown()
 {
 	if (MenuSelected + 1 <= Max_main_menu)
 	{
-		if(MenuSelected == 0 && level1Succeed == true || MenuSelected == 1 && level2Succeed || MenuSelected == 2 && level3Succeed)
+		if((MenuSelected == 0 && level1Succeed == true) || (MenuSelected == 1 && level2Succeed) || (MenuSelected == 2 && level3Succeed))
         {
             mainMenu[MenuSelected].setFillColor(Color::Green);
         }
@@ -114,7 +114,7 @@ void MenuLevel::MoveDown()
             MenuSelected = 0;
         }
 
-		if(MenuSelected == 0 && level1Succeed == true || MenuSelected == 1 && level2Succeed || MenuSelected == 2 && level3Succeed)
+		if((MenuSelected == 0 && level1Succeed == true) || (MenuSelected == 1 && level2Succeed) || (MenuSelected == 2 && level3Succeed))
         {
             mainMenu[MenuSelected].setFillColor(Color::Green);
         }
@@ -186,9 +186,10 @@ void MenuLevel::startMenu()
                         game.setCurrentLevel(3);
                         game.startLevel(this);
                     }
-                    if(x == 3)
+                    if(x == 3){
                         menu.close();
                         break;
+                    }
         }
     }
 }

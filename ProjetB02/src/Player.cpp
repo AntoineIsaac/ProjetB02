@@ -48,11 +48,6 @@ void Player::update(bool left, bool right, bool space, float fps, vector<Platfor
 
     if(left)
     {
-//        if(direction == Direction::droite)
-//        {
-//            sprite.setScale(Vector2f(-0.2, 0.2));
-//            direction = Direction::gauche;
-//        }
             setXSpeed(-5.0 * fps);
             if(web == true){
                setXSpeed(-2.0 * fps);
@@ -61,11 +56,6 @@ void Player::update(bool left, bool right, bool space, float fps, vector<Platfor
     }
     if(right)
     {
-//        if(direction == Direction::gauche)
-//        {
-//            sprite.setScale(Vector2f(0.2, 0.2));
-//            direction = Direction::droite;
-//        }
         setXSpeed(5.0 * fps);
         if(web == true){
            setXSpeed(2.0 * fps);
@@ -96,14 +86,16 @@ void Player::update(bool left, bool right, bool space, float fps, vector<Platfor
         setYSpeed(8 * fps);
     }
 
-
     colTop = collision(newXPosition, newYPosition, level, game);
     collisionEnemies(newXPosition, newYPosition, enemies, game);
 
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> 195ca17ff546f5dbb2a0f4ec412bd927746845a4
     if(move == true)
     {
         if(onGround == false)
@@ -115,16 +107,14 @@ void Player::update(bool left, bool right, bool space, float fps, vector<Platfor
                 animation = 1;
             loadTexture();
         }
-    }else
+    }
+    else
     {
         if(onGround == false)
             loadTextureJump();
         else
             loadTextureIdle();
     }
-
-
-
 }
 
 bool Player::collision(int &newXPosition, int &newYPosition, vector<Platform*> level, Game* game)
@@ -280,8 +270,10 @@ bool Player::collision(int &newXPosition, int &newYPosition, vector<Platform*> l
         onGround = false;
         canJump = false;
     }
-
-    setPosition(newXPosition, newYPosition);
+    if(newXPosition < 0)
+        setPosition(0, newYPosition);
+    else
+        setPosition(newXPosition, newYPosition);
 
     //Respawn si il tombe dans le vide
     if(getYPosition() > 1000 || dead == true)

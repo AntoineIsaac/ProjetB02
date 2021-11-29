@@ -145,11 +145,21 @@ void Game::startLevel(MenuLevel* menu)
         player.update(input.GetButton().left, input.GetButton().right, input.GetButton().space, fps, level, zombieLevel, this);
 
         //Set the view on the player
-        view.setCenter(player.getXPosition(), player.getYPosition());
-        window.setView(view);
+        if(player.getXPosition() > 400)
+        {
+            view.setCenter(player.getXPosition(), player.getYPosition());
+            textLevel.setPosition(player.getXPosition() - 100, player.getYPosition() - 390);
+            textLifePoints.setPosition(player.getXPosition() - 390, player.getYPosition() - 390);
+        }
+        else
+        {
+            view.setCenter(400, player.getYPosition());
+            textLevel.setPosition(400 - 100, player.getYPosition() - 390);
+            textLifePoints.setPosition(400 - 390, player.getYPosition() - 390);
+        }
 
-        textLevel.setPosition(player.getXPosition() - 100, player.getYPosition() - 390);
-        textLifePoints.setPosition(player.getXPosition() - 390, player.getYPosition() - 390);
+            window.setView(view);
+
 
         window.clear(color);
 
