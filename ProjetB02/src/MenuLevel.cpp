@@ -60,7 +60,7 @@ void MenuLevel::MoveUp()
 {
 	if (MenuSelected - 1 >= 0)
 	{
-	    if(MenuSelected == 0 && level1Succeed == true)
+	    if(MenuSelected == 0 && level1Succeed == true || MenuSelected == 1 && level2Succeed || MenuSelected == 2 && level3Succeed)
         {
             mainMenu[MenuSelected].setFillColor(Color::Green);
         }
@@ -78,7 +78,7 @@ void MenuLevel::MoveUp()
             MenuSelected = 2;
         }
 
-        if(MenuSelected == 0 && level1Succeed == true)
+        if(MenuSelected == 0 && level1Succeed == true || MenuSelected == 1 && level2Succeed || MenuSelected == 2 && level3Succeed)
         {
             mainMenu[MenuSelected].setFillColor(Color::Green);
         }
@@ -96,7 +96,7 @@ void MenuLevel::MoveDown()
 {
 	if (MenuSelected + 1 <= Max_main_menu)
 	{
-		if(MenuSelected == 0 && level1Succeed == true)
+		if(MenuSelected == 0 && level1Succeed == true || MenuSelected == 1 && level2Succeed || MenuSelected == 2 && level3Succeed)
         {
             mainMenu[MenuSelected].setFillColor(Color::Green);
         }
@@ -114,7 +114,7 @@ void MenuLevel::MoveDown()
             MenuSelected = 0;
         }
 
-		if(MenuSelected == 0 && level1Succeed == true)
+		if(MenuSelected == 0 && level1Succeed == true || MenuSelected == 1 && level2Succeed || MenuSelected == 2 && level3Succeed)
         {
             mainMenu[MenuSelected].setFillColor(Color::Green);
         }
@@ -211,18 +211,15 @@ void MenuLevel::levelFinish(int level)
     {
         case 1:
             mainMenu[0].setFillColor(Color::Green);
-            mainMenu[0].setString("FINITO");
             level1Succeed = true;
             break;
 
         case 2:
             mainMenu[1].setFillColor(Color::Green);
-            mainMenu[1].setString("FINITO");
             level2Succeed = true;
             break;
         case 3:
             mainMenu[2].setFillColor(Color::Green);
-            mainMenu[2].setString("FINITO");
             level3Succeed = true;
             break;
 

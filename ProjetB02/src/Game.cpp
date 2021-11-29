@@ -108,7 +108,7 @@ void Game::startLevel(MenuLevel* menu)
             currentLevel++;
             window.close();
             startLevel(menu);
-            //menu->levelFinish(1);
+            menu->levelFinish(1);
             break;
 
         }
@@ -117,13 +117,13 @@ void Game::startLevel(MenuLevel* menu)
             currentLevel++;
             window.close();
             startLevel(menu);
-            //menu->levelFinish(2);
+            menu->levelFinish(2);
         }
         if(endLevel3 == true && currentLevel == 3)
         {
 
             window.close();
-           // menu->levelFinish(3);
+            menu->levelFinish(3);
         }
 
         if(levelFailed == true)

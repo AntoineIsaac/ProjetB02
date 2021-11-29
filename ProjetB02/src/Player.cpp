@@ -78,7 +78,7 @@ void Player::update(bool left, bool right, bool space, float fps, vector<Platfor
     newYPosition += getYSpeed();
 
     if(alreadyTouched == false){
-        setYSpeed(8 * fps);
+        setYSpeed(90 * fps);
         alreadyTouched = true;
     }
 
