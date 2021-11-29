@@ -199,7 +199,7 @@ void Menu::startMenu()
                     int x = MenuPressed();
                     if(x == 0)
                     {
-                        game.setCurrentLevel(1);
+                        game.setCurrentLevel(3);
                         game.startLevel(this);
                     }
 //                    if(x == 1)
@@ -292,6 +292,11 @@ void Menu::levelFinish(int level)
             mainMenu[1].setFillColor(Color::Green);
             mainMenu[1].setString("FINITO");
             level2Succeed = true;
+            break;
+        case 3:
+            mainMenu[2].setFillColor(Color::Green);
+            mainMenu[2].setString("FINITO");
+            level3Succeed = true;
             break;
 
     }

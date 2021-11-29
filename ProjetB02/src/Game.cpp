@@ -77,6 +77,16 @@ void Game::startLevel(Menu* menu)
                 textLevel.setString("Level 2 : A Nether atmosphere");
                 break;
 
+        case 3:
+                player.setHP(16);
+                lvl = new Level3();
+                level = lvl->createLevel();
+                zombieLevel = lvl->createZombiesLevel();
+                decorLevel = lvl->createDecorLevel();
+                color = Color(0,191,255);
+                textLevel.setString("Level 3 : The little meadow");
+                break;
+
     }
 
     textLevel.setCharacterSize(30);
@@ -104,8 +114,16 @@ void Game::startLevel(Menu* menu)
         }
         if(endLevel2 == true && currentLevel == 2)
         {
+            currentLevel++;
             window.close();
+            startLevel(menu);
             menu->levelFinish(2);
+        }
+        if(endLevel3 == true && currentLevel == 3)
+        {
+
+            window.close();
+            menu->levelFinish(3);
         }
 
         if(levelFailed == true)
@@ -176,6 +194,9 @@ void Game::setEndLevel(bool endLevel)
             break;
         case 2:
             endLevel2 = true;
+            break;
+        case 3:
+            endLevel3 = true;
             break;
     }
 }

@@ -25,6 +25,9 @@
 #include "SugarCaneBlock.h"
 #include "NetherLianaBlock.h"
 #include "NetherWartBlock.h"
+#include "Dirt.h"
+#include "WheatBlock.h"
+#include "WoodPlank.h"
 
 using namespace std;
 

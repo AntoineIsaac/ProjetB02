@@ -15,6 +15,7 @@
 #include "Menu.h"
 #include "Level1.h"
 #include "Level2.h"
+#include "Level3.h"
 
 using namespace sf;
 using namespace std;
@@ -27,6 +28,7 @@ class Game
     private:
         bool endLevel1 = false;
         bool endLevel2 = false;
+        bool endLevel3 = false;
 
         bool levelFailed = false;
 

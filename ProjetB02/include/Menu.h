@@ -26,6 +26,7 @@ class Menu
 
         bool level1Succeed = false;
         bool level2Succeed = false;
+        bool level3Succeed = false;
 
     public:
         Menu(float width, float height);
