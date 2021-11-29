@@ -90,7 +90,7 @@ void Player::update(bool left, bool right, bool space, float fps, vector<Platfor
 
 
     colTop = collision(newXPosition, newYPosition, level, game);
-    collisionEnemies(newXPosition, newYPosition, enemies);
+    collisionEnemies(newXPosition, newYPosition, enemies, game);
 
 
 
@@ -272,14 +272,14 @@ bool Player::collision(int &newXPosition, int &newYPosition, vector<Platform*> l
         HP--;
         if(HP == 0)
         {
-            game->setEndLevel(true);
+            game->setLevelFailed(true);
         }
     }
     return colTop;
 
 }
 
-void Player::collisionEnemies(int& newXPosition, int& newYposition, vector<Zombie*>enemies)
+void Player::collisionEnemies(int& newXPosition, int& newYposition, vector<Zombie*>enemies, Game* game)
 {
     for(Zombie* zombie : enemies)
     {
@@ -287,6 +287,11 @@ void Player::collisionEnemies(int& newXPosition, int& newYposition, vector<Zombi
         {
             setPosition(getRespawnPosition().x, getRespawnPosition().y);
             HP--;
+            if(HP == 0)
+            {
+                game->setLevelFailed(true);
+            }
+
             break;
         }
     }

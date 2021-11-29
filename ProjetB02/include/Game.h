@@ -28,6 +28,8 @@ class Game
         bool endLevel1 = false;
         bool endLevel2 = false;
 
+        bool levelFailed = false;
+
         int currentLevel = 0;
 
         int windowWidht = 800;
@@ -50,6 +52,8 @@ class Game
 
         void setEndLevel(bool endLevel);
         void setCurrentLevel(int currentLevel);
+
+        void setLevelFailed(bool failed);
 
 
     protected:

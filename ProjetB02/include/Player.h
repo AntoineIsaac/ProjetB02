@@ -50,7 +50,7 @@ class Player : public Entity
         FloatRect getGlobalBoundsHitBox();
         void update(bool left, bool right, bool space, float fps, vector<Platform*> level, vector<Zombie*> enemies, Game* game);
         bool collision(int &newXPosition, int &newYposition, vector<Platform*> level, Game* game);
-        void collisionEnemies(int &newXPosition, int &newYposition, vector<Zombie*> enemies);
+        void collisionEnemies(int &newXPosition, int &newYposition, vector<Zombie*> enemies, Game* game);
 
         void loadTexture();
         void loadTextureIdle();

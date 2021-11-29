@@ -96,8 +96,8 @@ void Game::startLevel(Menu* menu)
         if(endLevel1 == true && currentLevel == 1)
         {
             currentLevel++;
-            startLevel(menu);
             window.close();
+            startLevel(menu);
             menu->levelFinish(1);
             break;
 
@@ -106,6 +106,12 @@ void Game::startLevel(Menu* menu)
         {
             window.close();
             menu->levelFinish(2);
+        }
+
+        if(levelFailed == true)
+        {
+            window.close();
+            levelFailed = false;
         }
 
         dt = clock.restart().asSeconds();
@@ -177,5 +183,10 @@ void Game::setEndLevel(bool endLevel)
 void Game::setCurrentLevel(int currentLevel)
 {
     this->currentLevel = currentLevel;
+}
+
+void Game::setLevelFailed(bool failed)
+{
+    levelFailed = failed;
 }
 

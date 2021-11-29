@@ -17,10 +17,10 @@
 	<SFML/Graphics.hpp>
 	<string>
 
-1638173125 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Player.cpp
+1638174750 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Player.cpp
 	"../include/Player.h"
 
-1638090076 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Player.h
+1638174756 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Player.h
 	"Game.h"
 	"Entity.h"
 	<string>
@@ -597,7 +597,7 @@
 1637934282 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/Game.cpp
 	"../include/Game.h"
 
-1638171759 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Game.h
+1638174698 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Game.h
 	<SFML/Window.hpp>
 	<SFML/System.hpp>
 	<SFML/Graphics.hpp>
@@ -618,7 +618,7 @@
 	<iostream>
 	"Game.h"
 
-1638174302 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Game.cpp
+1638174875 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Game.cpp
 	"../include/Game.h"
 
 1638174192 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Menu.cpp
