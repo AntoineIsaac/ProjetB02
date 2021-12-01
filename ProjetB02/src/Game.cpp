@@ -78,7 +78,7 @@ void Game::startLevel(MenuLevel* menu)
                 break;
 
         case 3:
-                player.setHP(16);
+                player.setHP(30);
                 lvl = new Level3();
                 level = lvl->createLevel();
                 zombieLevel = lvl->createZombiesLevel();

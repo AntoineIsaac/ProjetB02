@@ -2,7 +2,7 @@
 
 Water::Water(float xPosition, float yPosition):Platform(xPosition, yPosition)
 {
-    setSprite("Images/blocks.png", IntRect(16 * 10, 16 * 18, 16, 16));
+    setSprite("Images/blocks.png", IntRect(16 * 22, 16 * 3, 16, 16));
 }
 
 Water::~Water()

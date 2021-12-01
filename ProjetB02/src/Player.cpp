@@ -198,13 +198,13 @@ bool Player::collision(int &newXPosition, int &newYPosition, vector<Platform*> l
         if(coll == true)
         {
             //Respawn si il touche un bloc de lave
-            if(platform->getType() == "LavaBlock" || platform->getType() == "CactusBlock")
+            if(platform->getType() == "LavaBlock" || platform->getType() == "CactusBlock" || platform->getType() == "TntBlock")
             {
                 dead = true;
             }
 
             //Si toile d'araignée
-            if(platform->getType() == "SpiderWebBlock")
+            if(platform->getType() == "SpiderWebBlock" || platform->getType() == "Water")
             {
                 web = true;
                 newXPosition = withoutCollX;
