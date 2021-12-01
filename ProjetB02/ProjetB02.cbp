@@ -73,6 +73,7 @@
 		<Unit filename="include/Level3.h" />
 		<Unit filename="include/LianaBlock.h" />
 		<Unit filename="include/Menu.h" />
+		<Unit filename="include/MenuLevel.h" />
 		<Unit filename="include/NetherBlock.h" />
 		<Unit filename="include/NetherFence.h" />
 		<Unit filename="include/NetherLianaBlock.h" />
@@ -90,6 +91,8 @@
 		<Unit filename="include/SmoothSandBlock.h" />
 		<Unit filename="include/SpiderWebBlock.h" />
 		<Unit filename="include/SugarCaneBlock.h" />
+		<Unit filename="include/TntBlock.h" />
+		<Unit filename="include/Water.h" />
 		<Unit filename="include/WheatBlock.h" />
 		<Unit filename="include/WoodPlank.h" />
 		<Unit filename="include/Zombie.h" />
@@ -113,6 +116,7 @@
 		<Unit filename="src/Level3.cpp" />
 		<Unit filename="src/LianaBlock.cpp" />
 		<Unit filename="src/Menu.cpp" />
+		<Unit filename="src/MenuLevel.cpp" />
 		<Unit filename="src/NetherBlock.cpp" />
 		<Unit filename="src/NetherFence.cpp" />
 		<Unit filename="src/NetherLianaBlock.cpp" />
@@ -130,6 +134,8 @@
 		<Unit filename="src/SmoothSandBlock.cpp" />
 		<Unit filename="src/SpiderWebBlock.cpp" />
 		<Unit filename="src/SugarCaneBlock.cpp" />
+		<Unit filename="src/TntBlock.cpp" />
+		<Unit filename="src/Water.cpp" />
 		<Unit filename="src/WheatBlock.cpp" />
 		<Unit filename="src/WoodPlank.cpp" />
 		<Unit filename="src/Zombie.cpp" />

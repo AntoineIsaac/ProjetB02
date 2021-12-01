@@ -17,10 +17,10 @@
 	<SFML/Graphics.hpp>
 	<string>
 
-1638174750 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Player.cpp
+1638200956 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Player.cpp
 	"../include/Player.h"
 
-1638174756 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Player.h
+1638200724 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Player.h
 	"Game.h"
 	"Entity.h"
 	<string>
@@ -68,7 +68,7 @@
 1637928760 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Platform.cpp
 	"../include/Platform.h"
 
-1638187276 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Level.h
+1638200724 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Level.h
 	"Platform.h"
 	"GrassBlock.h"
 	"LavaBlock.h"
@@ -101,6 +101,8 @@
 	"Dirt.h"
 	"WheatBlock.h"
 	"WoodPlank.h"
+	"Water.h"
+	"TntBlock.h"
 
 1638026262 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Level.cpp
 	"../include/Level.h"
@@ -684,7 +686,7 @@
 	<iostream>
 	"Game.h"
 
-1638190462 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Game.cpp
+1638200725 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Game.cpp
 	"../include/Game.h"
 
 1638189297 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Menu.cpp
@@ -888,7 +890,7 @@
 1638026673 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Level1.h
 	"Level.h"
 
-1638183375 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Level1.cpp
+1638200725 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Level1.cpp
 	"../include/Level1.h"
 
 1638026630 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Level2.h
@@ -903,7 +905,7 @@
 1638096212 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/SandBlock.cpp
 	"../include/SandBlock.h"
 
-1638195586 D
+1638190535 D
 
 1638101111 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/CactusBlock.h
 	"Platform.h"
@@ -1168,7 +1170,7 @@
 1638183406 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Dirt.cpp
 	"../include/Dirt.h"
 
-1638183406 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Level3.cpp
+1638200725 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Level3.cpp
 	"../include/Level3.h"
 
 1638183406 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/WheatBlock.cpp
@@ -1182,10 +1184,9 @@
 	<iostream>
 	"Game.h"
 
-1638190535 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/MenuLevel.cpp
+1638200725 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/MenuLevel.cpp
 	"../include/MenuLevel.h"
 
-<<<<<<< HEAD
 1638195293 /home/declercq/Documents/Projet/ProjetB02/ProjetB02/include/Game.h
 	<SFML/Window.hpp>
 	<SFML/System.hpp>
@@ -1391,7 +1392,8 @@
 1638195293 source:/home/declercq/Documents/Projet/ProjetB02/ProjetB02/src/MenuLevel.cpp
 	"../include/MenuLevel.h"
 
-=======
+1638195293 e/MenuLevel.h"
+
 1638191630 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/MenuLevel.h
 
 1638195586 /home/ugo/Documents/ProjetB02/ProjetB02/include/CactusBlock.h
@@ -1511,4 +1513,17 @@
 1638195586 source:/home/ugo/Documents/ProjetB02/ProjetB02/src/WoodPlank.cpp
 	"../include/WoodPlank.h"
 
->>>>>>> 195ca17ff546f5dbb2a0f4ec412bd927746845a4
+1638195586 ca17ff546f5dbb2a0f4ec412bd927746845a4
+
+1638200724 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Water.h
+	"Platform.h"
+
+1638200724 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/TntBlock.h
+	"Platform.h"
+
+1638200725 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/TntBlock.cpp
+	"../include/TntBlock.h"
+
+1638200725 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/Water.cpp
+	"../include/Water.h"
+

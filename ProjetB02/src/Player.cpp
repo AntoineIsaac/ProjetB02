@@ -89,13 +89,6 @@ void Player::update(bool left, bool right, bool space, float fps, vector<Platfor
     colTop = collision(newXPosition, newYPosition, level, game);
     collisionEnemies(newXPosition, newYPosition, enemies, game);
 
-<<<<<<< HEAD
-
-
-
-
-=======
->>>>>>> 195ca17ff546f5dbb2a0f4ec412bd927746845a4
     if(move == true)
     {
         if(onGround == false)
