@@ -53,7 +53,7 @@ class Player : public Entity
         //Permet de récupérer les dimensions du personnage
         FloatRect getGlobalBoundsHitBox();
         //Récupère les inputs entrés par le joueur et bouge le personnage en fonction
-        void update(bool left, bool right, bool space, float fps, vector<Platform*> level, vector<Zombie*> enemies, Game* game);
+        void updatePlayer(bool left, bool right, bool space, float fps, vector<Platform*> level, vector<Zombie*> enemies, Game* game);
         //Permet de savoir si le personnage entre en collision avec un block
         bool collision(int &newXPosition, int &newYposition, vector<Platform*> level, Game* game);
         //Permet de savoir si le personnage entre en collision avec un Zombie

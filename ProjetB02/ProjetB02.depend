@@ -1541,7 +1541,7 @@
 	"include/Level.h"
 	"include/Menu.h"
 
-1638433344 /home/antoine/Documents/ProjetB02/ProjetB02/include/Player.h
+1638437783 /home/antoine/Documents/ProjetB02/ProjetB02/include/Player.h
 	"Game.h"
 	"Entity.h"
 	<string>
@@ -1731,7 +1731,7 @@
 1638430794 /home/antoine/Documents/ProjetB02/ProjetB02/include/Level3.h
 	"Level.h"
 
-1638432115 /home/antoine/Documents/ProjetB02/ProjetB02/include/MenuLevel.h
+1638438995 /home/antoine/Documents/ProjetB02/ProjetB02/include/MenuLevel.h
 	<SFML/Graphics.hpp>
 	<iostream>
 	"Game.h"
@@ -1760,7 +1760,7 @@
 1638430794 source:/home/antoine/Documents/ProjetB02/ProjetB02/src/FireBlock.cpp
 	"../include/FireBlock.h"
 
-1638430794 source:/home/antoine/Documents/ProjetB02/ProjetB02/src/Game.cpp
+1638437824 source:/home/antoine/Documents/ProjetB02/ProjetB02/src/Game.cpp
 	"../include/Game.h"
 
 1638430794 source:/home/antoine/Documents/ProjetB02/ProjetB02/src/GrassBlock.cpp
@@ -1778,13 +1778,13 @@
 1638430794 source:/home/antoine/Documents/ProjetB02/ProjetB02/src/Level.cpp
 	"../include/Level.h"
 
-1638430794 source:/home/antoine/Documents/ProjetB02/ProjetB02/src/Level1.cpp
+1638434116 source:/home/antoine/Documents/ProjetB02/ProjetB02/src/Level1.cpp
 	"../include/Level1.h"
 
-1638430794 source:/home/antoine/Documents/ProjetB02/ProjetB02/src/Level2.cpp
+1638434156 source:/home/antoine/Documents/ProjetB02/ProjetB02/src/Level2.cpp
 	"../include/Level2.h"
 
-1638430794 source:/home/antoine/Documents/ProjetB02/ProjetB02/src/Level3.cpp
+1638434176 source:/home/antoine/Documents/ProjetB02/ProjetB02/src/Level3.cpp
 	"../include/Level3.h"
 
 1638430794 source:/home/antoine/Documents/ProjetB02/ProjetB02/src/LianaBlock.cpp
@@ -1817,7 +1817,7 @@
 1638430794 source:/home/antoine/Documents/ProjetB02/ProjetB02/src/Platform.cpp
 	"../include/Platform.h"
 
-1638430794 source:/home/antoine/Documents/ProjetB02/ProjetB02/src/Player.cpp
+1638437813 source:/home/antoine/Documents/ProjetB02/ProjetB02/src/Player.cpp
 	"../include/Player.h"
 
 1638430794 source:/home/antoine/Documents/ProjetB02/ProjetB02/src/PortalBlock.cpp

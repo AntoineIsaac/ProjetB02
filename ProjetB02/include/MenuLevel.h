@@ -37,7 +37,7 @@ class MenuLevel
         void MoveUp();
         //Action à faire quand on appuie sur la flèche du bas
         void MoveDown();
-        void startMenu();
+        void startMenuLevel();
 
         void levelFinish(int level);
 

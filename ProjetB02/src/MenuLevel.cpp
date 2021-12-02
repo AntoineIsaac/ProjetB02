@@ -130,7 +130,7 @@ void MenuLevel::MoveDown()
 
 
 
-void MenuLevel::startMenu()
+void MenuLevel::startMenuLevel()
 {
     sf::RenderWindow menu(sf::VideoMode(width, height), "The running dead");
 

@@ -151,7 +151,7 @@ void Menu::startMenu()
                     if(x == 0)
                     {
                         MenuLevel menuLevel;
-                        menuLevel.startMenu();
+                        menuLevel.startMenuLevel();
                     }
                      if(x == 1)
                     {

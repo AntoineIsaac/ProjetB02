@@ -146,7 +146,7 @@ void Game::startLevel(MenuLevel* menu)
         }
 
         //On appele la méthode qui fait bouger le personnage, celle-ci va égalment gérer les collisions avec les blocks et les zombies
-        player.update(input.GetButton().left, input.GetButton().right, input.GetButton().space, fps, level, zombieLevel, this);
+        player.updatePlayer(input.GetButton().left, input.GetButton().right, input.GetButton().space, fps, level, zombieLevel, this);
 
         //Set the view on the player
         if(player.getXPosition() > 400)

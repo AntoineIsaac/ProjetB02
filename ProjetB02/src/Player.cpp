@@ -35,7 +35,7 @@ FloatRect Player::getGlobalBoundsHitBox()
 }
 
 
-void Player::update(bool left, bool right, bool space, float fps, vector<Platform*> level, vector<Zombie*> enemies, Game* game)
+void Player::updatePlayer(bool left, bool right, bool space, float fps, vector<Platform*> level, vector<Zombie*> enemies, Game* game)
 {
     int newXPosition = getXPosition();
     int newYPosition = getYPosition();
