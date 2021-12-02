@@ -51,9 +51,15 @@ void Game::startLevel(MenuLevel* menu)
     Color color;
 
     //Init text with font
+    RectangleShape rectangle(sf::Vector2f(100., 20.));
+    rectangle.setFillColor(sf::Color::White);
+    rectangle.setOutlineThickness(2);
+    rectangle.setOutlineColor(sf::Color::Black);
+
     Text textLifePoints;
     Text textLevel;
     Text textCommands;
+
     textLevel.setFont(font);
     textLifePoints.setFont(font);
     textCommands.setFont(font);
@@ -63,7 +69,8 @@ void Game::startLevel(MenuLevel* menu)
     {
         //Level 1
         case 1:
-                textCommands.setPosition(200, 400);
+                rectangle.setPosition(235, 400);
+                textCommands.setPosition(200, 415);
                 player.setHP(16);
                 lvl = new Level1();
                 level = lvl->createLevel();
@@ -74,6 +81,8 @@ void Game::startLevel(MenuLevel* menu)
                 break;
         //Level 2
         case 2:
+                rectangle.setPosition(185, 250);
+                textCommands.setPosition(150, 265);
                 player.setHP(16);
                 lvl = new Level2();
                 level = lvl->createLevel();
@@ -84,6 +93,8 @@ void Game::startLevel(MenuLevel* menu)
                 break;
         //Level 3
         case 3:
+                rectangle.setPosition(185, 650);
+                textCommands.setPosition(150, 665);
                 player.setHP(16);
                 lvl = new Level3();
                 level = lvl->createLevel();
@@ -98,8 +109,6 @@ void Game::startLevel(MenuLevel* menu)
     textLevel.setCharacterSize(30);
 
     textLifePoints.setCharacterSize(30);
-
-
 
     Input input;
 
@@ -199,6 +208,7 @@ void Game::startLevel(MenuLevel* menu)
         window.draw(textLevel);
         window.draw(textLifePoints);
         window.draw(textCommands);
+        window.draw(rectangle);
 
         window.display();
     }
