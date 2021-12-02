@@ -59,7 +59,8 @@ vector<Platform*> Level1::createLevel()const
         {
             switch(level[i][j])
             {
-                case(1): platform.push_back(new SmoothSandBlock(p->size*j, p->size*i)); break;
+                case(1): platform.push_back(p->platformFactory("SmoothSandBlock", p->size *j, p->size * i)); break;
+                //case(1): platform.push_back(new SmoothSandBlock(p->size*j, p->size*i)); break;
                 case(2): platform.push_back(new CactusBlock(p->size*j, p->size*i)); break;
                 case(3): platform.push_back(new Checkpoint(p->size*j, p->size*i)); break;
                 case(4): platform.push_back(new SandBlock(p->size*j, p->size*i)); break;
