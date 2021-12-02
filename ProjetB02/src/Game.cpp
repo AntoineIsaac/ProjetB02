@@ -53,14 +53,17 @@ void Game::startLevel(MenuLevel* menu)
     //Init text with font
     Text textLifePoints;
     Text textLevel;
+    Text textCommands;
     textLevel.setFont(font);
     textLifePoints.setFont(font);
+    textCommands.setFont(font);
 
 
     switch(currentLevel)
     {
         //Level 1
         case 1:
+                textCommands.setPosition(200, 400);
                 player.setHP(16);
                 lvl = new Level1();
                 level = lvl->createLevel();
@@ -96,10 +99,13 @@ void Game::startLevel(MenuLevel* menu)
 
     textLifePoints.setCharacterSize(30);
 
+
+
     Input input;
 
     while (window.isOpen())
     {
+        textCommands.setString("         Jump\n<- Left        Right ->");
         textLifePoints.setString("Lifes : " + to_string(player.getHP()));
 
         //Si le level 1 se fini, on passe au suivant
@@ -192,6 +198,7 @@ void Game::startLevel(MenuLevel* menu)
         //Draw Text
         window.draw(textLevel);
         window.draw(textLifePoints);
+        window.draw(textCommands);
 
         window.display();
     }
