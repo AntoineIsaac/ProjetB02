@@ -38,6 +38,9 @@ class Player : public Entity
         //Permet de savoir si le personnage est dans une toile d'araignée ou dans l'eau
         bool web = false;
 
+        SoundBuffer zombieBuffer;
+        Sound zombieSound;
+
 
     public:
         bool onGround;

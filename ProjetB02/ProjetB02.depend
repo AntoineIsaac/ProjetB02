@@ -489,31 +489,33 @@
 	"include/Level.h"
 	"include/Menu.h"
 
-1638355111 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/Player.h
+1638444651 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/Player.h
 	"Game.h"
 	"Entity.h"
 	<string>
 	<iostream>
 	<cmath>
+	"Player.h"
 	"Platform.h"
 	"Checkpoint.h"
 	"Zombie.h"
 	<thread>
 
-1638355111 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/Entity.h
+1638444731 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/Entity.h
 	<SFML/Graphics.hpp>
+	<SFML/Audio.hpp>
 	<string>
 
-1638355111 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/Platform.h
+1638436053 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/Platform.h
 	<SFML/Window.hpp>
 	<SFML/System.hpp>
 	<SFML/Graphics.hpp>
 	<string>
 
-1638355111 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/Checkpoint.h
+1638436053 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/Checkpoint.h
 	"Platform.h"
 
-1638355111 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/Zombie.h
+1638436053 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/Zombie.h
 	"Entity.h"
 	<string>
 	<iostream>
@@ -523,7 +525,7 @@
 	<SFML/System.hpp>
 	<SFML/Graphics.hpp>
 
-1638355111 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/Level.h
+1638436053 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/Level.h
 	"Platform.h"
 	"GrassBlock.h"
 	"LavaBlock.h"
@@ -586,7 +588,7 @@
 1638355111 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/FireBlock.h
 	"Platform.h"
 
-1638355111 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/Checkpoint.cpp
+1638436053 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/Checkpoint.cpp
 	"../include/Checkpoint.h"
 
 1638355111 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/Entity.cpp
@@ -622,7 +624,7 @@
 1638355111 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/Platform.cpp
 	"../include/Platform.h"
 
-1638359947 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/Player.cpp
+1638445085 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/Player.cpp
 	"../include/Player.h"
 
 1638355111 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/PortalBlock.cpp
@@ -634,15 +636,16 @@
 1638355111 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/Zombie.cpp
 	"../include/Zombie.h"
 
-1638355111 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/Menu.h
+1638444134 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/Menu.h
 	<SFML/Graphics.hpp>
+	<SFML/Audio.hpp>
 	<iostream>
 	"Game.h"
 
-1638355111 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/Menu.cpp
+1638444408 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/Menu.cpp
 	"../include/Menu.h"
 
-1638355111 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/Game.h
+1638436053 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/Game.h
 	<SFML/Window.hpp>
 	<SFML/System.hpp>
 	<SFML/Graphics.hpp>
@@ -660,7 +663,7 @@
 	"Level3.h"
 	"MenuLevel.h"
 
-1638361131 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/Game.cpp
+1638439550 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/Game.cpp
 	"../include/Game.h"
 
 1638189327 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Game.h
@@ -1069,10 +1072,10 @@
 1638355111 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/CactusBlock.cpp
 	"../include/CactusBlock.h"
 
-1638355111 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/Level1.cpp
+1638436053 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/Level1.cpp
 	"../include/Level1.h"
 
-1638355111 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/Level2.cpp
+1638436053 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/Level2.cpp
 	"../include/Level2.h"
 
 1638355111 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/NetherFence.cpp
@@ -1108,7 +1111,7 @@
 1638355111 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/Level3.h
 	"Level.h"
 
-1638360659 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/Level3.cpp
+1638436053 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/Level3.cpp
 	"../include/Level3.h"
 
 1638355111 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/Dirt.h
@@ -1394,7 +1397,7 @@
 
 1638195293 e/MenuLevel.h"
 
-1638355111 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/MenuLevel.h
+1638439550 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/MenuLevel.h
 	<SFML/Graphics.hpp>
 	<iostream>
 	"Game.h"
@@ -1451,13 +1454,13 @@
 	<iostream>
 	"Game.h"
 
-1638355111 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/MenuLevel.cpp
+1638439550 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/MenuLevel.cpp
 	"../include/MenuLevel.h"
 
 1638355111 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/Water.h
 	"Platform.h"
 
-1638357787 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/Water.cpp
+1638363423 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/Water.cpp
 	"../include/Water.h"
 
 1638355111 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/TntBlock.h

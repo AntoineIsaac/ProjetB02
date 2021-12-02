@@ -7,6 +7,13 @@ Menu::Menu()
 		cout <<"No font is here";
 	}
 
+	if (!buffer.loadFromFile("sounds/select_option.wav"))
+	{
+		cout <<"No sound is here";
+	}
+
+	sound.setBuffer(buffer);
+
 
 	mainMenu[0].setFont(font);
 	mainMenu[0].setFillColor(Color::Blue);
@@ -135,11 +142,13 @@ void Menu::startMenu()
             {
                 if(event.key.code == Keyboard::Up)
                 {
+                    sound.play();
                     MoveUp();
                     break;
                 }
                 if(event.key.code == Keyboard::Down)
                 {
+                    sound.play();
                     MoveDown();
                     break;
                 }

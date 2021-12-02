@@ -3,6 +3,13 @@
 Player::Player(float xPosition, float yPosition, string textureString):Entity(xPosition, yPosition, textureString)
 {
     setScale(scale);
+
+    	if (!zombieBuffer.loadFromFile("sounds/zombie.wav"))
+	{
+		cout <<"No sound is here";
+	}
+
+	zombieSound.setBuffer(zombieBuffer);
 }
 
 Player::~Player()
@@ -287,6 +294,7 @@ void Player::collisionEnemies(int& newXPosition, int& newYposition, vector<Zombi
         //Meurt si il rentre en collision avec un Zombie
         if(getGlobalBoundsHitBox().intersects(zombie->getGlobalBoundsHitBox()))
         {
+            zombieSound.play();
             setPosition(getRespawnPosition().x, getRespawnPosition().y);
             HP--;
             if(HP == 0)

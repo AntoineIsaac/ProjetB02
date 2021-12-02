@@ -1,6 +1,7 @@
 #ifndef MENU_H
 #define MENU_H
 #include <SFML/Graphics.hpp>
+#include <SFML/Audio.hpp>
 #include <iostream>
 #include "Game.h"
 
@@ -17,6 +18,9 @@ class Menu
         int MenuSelected;
         Font font;
         Text mainMenu[Max_main_menu];
+
+        SoundBuffer buffer;
+        Sound sound;
 
         int width = 800;
         int height = 800;
