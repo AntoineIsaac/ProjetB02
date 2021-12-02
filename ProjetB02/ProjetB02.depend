@@ -1552,7 +1552,7 @@
 	"include/Level.h"
 	"include/Menu.h"
 
-1638437783 /home/antoine/Documents/ProjetB02/ProjetB02/include/Player.h
+1638445596 /home/antoine/Documents/ProjetB02/ProjetB02/include/Player.h
 	"Game.h"
 	"Entity.h"
 	<string>
@@ -1587,8 +1587,9 @@
 	<string>
 	<iostream>
 
-1638431824 /home/antoine/Documents/ProjetB02/ProjetB02/include/Entity.h
+1638445596 /home/antoine/Documents/ProjetB02/ProjetB02/include/Entity.h
 	<SFML/Graphics.hpp>
+	<SFML/Audio.hpp>
 	<string>
 
 1638430794 /home/antoine/Documents/ProjetB02/ProjetB02/include/Input.h
@@ -1596,13 +1597,41 @@
 	<SFML/System.hpp>
 	<SFML/Graphics.hpp>
 
-1638432175 /home/antoine/Documents/ProjetB02/ProjetB02/include/Platform.h
+1638448947 /home/antoine/Documents/ProjetB02/ProjetB02/include/Platform.h
 	<SFML/Window.hpp>
 	<SFML/System.hpp>
 	<SFML/Graphics.hpp>
 	<string>
+	"NetherBlock.h"
+	"PortalBlock.h"
+	"ObsidianBlock.h"
+	"SpiderWebBlock.h"
+	"NetherWoodBlock.h"
+	"LeafBlock.h"
+	"FireBlock.h"
+	"SandBlock.h"
+	"NetherFence.h"
+	"CactusBlock.h"
+	"QuicksandBlock.h"
+	"RedQuicksandBlock.h"
+	"RedSandBlock.h"
+	"RedSmoothSandBlock.h"
+	"SandBlock.h"
+	"SmoothSandBlock.h"
+	"SugarCaneBlock.h"
+	"NetherLianaBlock.h"
+	"NetherWartBlock.h"
+	"CloudBlock.h"
+	"AcasiaLeafBlock.h"
+	"AcasiaWoodBlock.h"
+	"LianaBlock.h"
+	"Dirt.h"
+	"WheatBlock.h"
+	"WoodPlank.h"
+	"Water.h"
+	"TntBlock.h"
 
-1638432024 /home/antoine/Documents/ProjetB02/ProjetB02/include/Level.h
+1638448289 /home/antoine/Documents/ProjetB02/ProjetB02/include/Level.h
 	"Platform.h"
 	"GrassBlock.h"
 	"LavaBlock.h"
@@ -1728,8 +1757,9 @@
 1638430794 /home/antoine/Documents/ProjetB02/ProjetB02/include/TntBlock.h
 	"Platform.h"
 
-1638432073 /home/antoine/Documents/ProjetB02/ProjetB02/include/Menu.h
+1638445596 /home/antoine/Documents/ProjetB02/ProjetB02/include/Menu.h
 	<SFML/Graphics.hpp>
+	<SFML/Audio.hpp>
 	<iostream>
 	"Game.h"
 
@@ -1786,10 +1816,10 @@
 1638430794 source:/home/antoine/Documents/ProjetB02/ProjetB02/src/LeafBlock.cpp
 	"../include/LeafBlock.h"
 
-1638430794 source:/home/antoine/Documents/ProjetB02/ProjetB02/src/Level.cpp
+1638448285 source:/home/antoine/Documents/ProjetB02/ProjetB02/src/Level.cpp
 	"../include/Level.h"
 
-1638434116 source:/home/antoine/Documents/ProjetB02/ProjetB02/src/Level1.cpp
+1638448524 source:/home/antoine/Documents/ProjetB02/ProjetB02/src/Level1.cpp
 	"../include/Level1.h"
 
 1638434156 source:/home/antoine/Documents/ProjetB02/ProjetB02/src/Level2.cpp
@@ -1801,10 +1831,10 @@
 1638430794 source:/home/antoine/Documents/ProjetB02/ProjetB02/src/LianaBlock.cpp
 	"../include/LianaBlock.h"
 
-1638430794 source:/home/antoine/Documents/ProjetB02/ProjetB02/src/Menu.cpp
+1638445596 source:/home/antoine/Documents/ProjetB02/ProjetB02/src/Menu.cpp
 	"../include/Menu.h"
 
-1638430794 source:/home/antoine/Documents/ProjetB02/ProjetB02/src/MenuLevel.cpp
+1638438986 source:/home/antoine/Documents/ProjetB02/ProjetB02/src/MenuLevel.cpp
 	"../include/MenuLevel.h"
 
 1638430794 source:/home/antoine/Documents/ProjetB02/ProjetB02/src/NetherBlock.cpp
@@ -1828,7 +1858,7 @@
 1638430794 source:/home/antoine/Documents/ProjetB02/ProjetB02/src/Platform.cpp
 	"../include/Platform.h"
 
-1638437813 source:/home/antoine/Documents/ProjetB02/ProjetB02/src/Player.cpp
+1638445596 source:/home/antoine/Documents/ProjetB02/ProjetB02/src/Player.cpp
 	"../include/Player.h"
 
 1638430794 source:/home/antoine/Documents/ProjetB02/ProjetB02/src/PortalBlock.cpp
