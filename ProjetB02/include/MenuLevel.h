@@ -20,6 +20,7 @@ class MenuLevel
         int width = 800;
         int height = 800;
 
+        //Permet de savoir si un niveau à été fini par un joueur
         bool level1Succeed = false;
         bool level2Succeed = false;
         bool level3Succeed = false;
@@ -32,7 +33,9 @@ class MenuLevel
 
 
         void draw(RenderWindow &window);
+        //Action à faire quand on appuie sur la flèche du haut
         void MoveUp();
+        //Action à faire quand on appuie sur la flèche du bas
         void MoveDown();
         void startMenu();
 

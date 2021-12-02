@@ -22,7 +22,7 @@ Level1& Level1::operator=(const Level1& rhs)
     return *this;
 }
 
-
+//Chaque chiffre correspond à un bloc à placer dans le niveau en fonction des coordonnées dans la matrice
 vector<Platform*> Level1::createLevel()const
 {
     int level[21][99] ={{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
@@ -80,7 +80,8 @@ vector<Platform*> Level1::createLevel()const
     return platform;
 }
 
-
+//Chaque chiffre correspond à un bloc à placer dans le niveau en fonction des coordonnées dans la matrice, les blocks de de décors sont différents
+// car ils sont dessinés avant le personnage donc celui-ci passe devant ces blocks
 vector<Platform*> Level1::createDecorLevel()const
 {
     int level[21][99] ={{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},

@@ -31,11 +31,13 @@ class Menu
 
 
         void draw(RenderWindow &window);
+        //Action à faire quand on appuie sur la flèche du haut
         void MoveUp();
+        //Action à faire quand on appuie sur la flèche du bas
         void MoveDown();
         void startMenu();
 
-        virtual int MenuPressed();
+        int MenuPressed();
 };
 
 #endif // MENU_H

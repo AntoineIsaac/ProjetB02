@@ -13,6 +13,7 @@ class Checkpoint : public Platform
         Checkpoint(const Checkpoint& other);
         Checkpoint& operator=(const Checkpoint& other);
 
+        //Permet d'activer le checkpoint en mettant activated à true et en changeant la texture du block
         void switchCheckpoint();
         bool isActivated()const;
 

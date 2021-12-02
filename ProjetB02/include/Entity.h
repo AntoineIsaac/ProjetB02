@@ -17,8 +17,6 @@ class Entity
         string textureString;
         Texture texture;
         Sprite sprite;
-//        enum Direction{gauche, droite};
-//        Direction direction = Direction::droite;
 
     public:
         Entity(float xPosition, float yPosition, string textureString);
@@ -37,15 +35,18 @@ class Entity
         virtual void setXPosition(float x);
         virtual void setYPosition(float y);
 
+        virtual float getXSpeed()const;
+        virtual float getYSpeed()const;
+        virtual void setXSpeed(float xSpeed);
+        virtual void setYSpeed(float ySpeed);
+
+        //Redéfinitions des méthode SFML
         virtual void setPosition(float x, float y);
         virtual void move(float x, float y);
         virtual void setScale(float x);
         virtual FloatRect getGlobalBounds();
 
-        virtual float getXSpeed()const;
-        virtual float getYSpeed()const;
-        virtual void setXSpeed(float xSpeed);
-        virtual void setYSpeed(float ySpeed);
+
 
 };
 

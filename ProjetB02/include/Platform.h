@@ -17,10 +17,6 @@ class Platform
         Texture texture;
         Sprite sprite;
 
-
-
-
-
     public:
         static inline float scale = 3.5;
         static inline float size = 16*scale;
@@ -36,6 +32,7 @@ class Platform
 
         virtual float getYPosition()const;
         virtual void setYPosition(float y);
+        //Permet de récupérer les dimensions d'un block
         virtual FloatRect getGlobalBounds();
         virtual float getSize();
 
@@ -44,6 +41,7 @@ class Platform
 
         virtual void setScale(float x);
 
+        //Renvoi le type du block
         virtual string getType()const = 0;
 
 };

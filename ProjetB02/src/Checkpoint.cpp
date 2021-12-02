@@ -29,6 +29,7 @@ void Checkpoint::switchCheckpoint()
     activated = !activated;
     if(activated == true)
     {
+        //Block illuminé pour montrer que le Checkpoint est activé
         setSprite("Images/blocks.png", IntRect(16 * 8, 16 * 7, 16, 16));
     }
 }

@@ -30,7 +30,6 @@ FloatRect Player::getGlobalBoundsHitBox()
     rect.left += hitBoxWidth[0];
     rect.top += hitBoxHeight[0];
     rect.height = hitBoxHeight[1] - hitBoxHeight[0];
-    // +125 pour que ce soit sa tête qui soit en collision avec le zombie et non ses pieds
     rect.width = hitBoxWidth[1] - hitBoxWidth[0] + (125*scale);
     return rect;
 }
@@ -42,9 +41,6 @@ void Player::update(bool left, bool right, bool space, float fps, vector<Platfor
     int newYPosition = getYPosition();
     bool move = false;
     setXSpeed(0);
-
-
-
 
     if(left)
     {
@@ -72,14 +68,17 @@ void Player::update(bool left, bool right, bool space, float fps, vector<Platfor
         web = false;
     }
 
+    //On ajoute la vitesse à la position pour qu'il avance
     newXPosition += getXSpeed();
     newYPosition += getYSpeed();
+
 
     if(alreadyTouched == false){
         setYSpeed(90 * fps);
         alreadyTouched = true;
     }
 
+    //On applique la gravité lorsqu'il ne touche plus le sol, qu'il touche un block avec la tête ou qu'il a atteint la limite maximal du saut
     if (onGround == false && ((newYPosition < (jumpBlock - jumpHeight) || colTop == true)))
     {
         space = false;
@@ -88,6 +87,7 @@ void Player::update(bool left, bool right, bool space, float fps, vector<Platfor
 
     colTop = collision(newXPosition, newYPosition, level, game);
     collisionEnemies(newXPosition, newYPosition, enemies, game);
+
 
     if(move == true)
     {
@@ -112,6 +112,7 @@ void Player::update(bool left, bool right, bool space, float fps, vector<Platfor
 
 bool Player::collision(int &newXPosition, int &newYPosition, vector<Platform*> level, Game* game)
 {
+    //Permet d'avoir les positions sans collision pour passer à travers certain block
     float withoutCollX = newXPosition;
     float withoutCollY = newYPosition;
 
@@ -130,6 +131,7 @@ bool Player::collision(int &newXPosition, int &newYPosition, vector<Platform*> l
             if( newXPosition + hitBoxWidth[0] < platform->getXPosition() + platform->getSize() && getXPosition() + hitBoxWidth[0] >= platform->getXPosition() + platform->getSize()
            && (((getYPosition()  + hitBoxHeight[1] < platform->getYPosition() + platform->getSize() ) && (getYPosition() + hitBoxHeight[1] > platform->getYPosition()) ) || ((getYPosition() + hitBoxHeight[0] + (height/2) < platform->getYPosition() + platform->getSize()) && (getYPosition()  + hitBoxHeight[0] + (height/2) > platform->getYPosition())) || ((getYPosition() + hitBoxHeight[0] < platform->getYPosition() + platform->getSize() ) && (getYPosition()  + hitBoxHeight[0] > platform->getYPosition())) ))
            {
+               //Si il touche un block, on met que sa position est égale à l'endroit du block qu'il touche
                 newXPosition =  platform->getXPosition() + platform->getSize() - hitBoxWidth[0];
                 coll = true;
            }
@@ -197,13 +199,13 @@ bool Player::collision(int &newXPosition, int &newYPosition, vector<Platform*> l
 
         if(coll == true)
         {
-            //Respawn si il touche un bloc de lave
+            //Respawn si il touche un bloc de lave, de cactus, ...
             if(platform->getType() == "LavaBlock" || platform->getType() == "CactusBlock" || platform->getType() == "TntBlock")
             {
                 dead = true;
             }
 
-            //Si toile d'araignée
+            //Si il touche une toile d'araignée ou de l'eau, il est ralenti
             if(platform->getType() == "SpiderWebBlock" || platform->getType() == "Water")
             {
                 web = true;
@@ -211,12 +213,6 @@ bool Player::collision(int &newXPosition, int &newYPosition, vector<Platform*> l
                 newYPosition = withoutCollY;
 
             }
-
-//            if(platform->getType() != "SpiderWebBlock")
-//            {
-//                web = false;
-//            }
-
 
             //Il active la JackOLantern si il marche dessus et active le checkpoint
             if(platform->getType() == "Checkpoint")
@@ -231,7 +227,7 @@ bool Player::collision(int &newXPosition, int &newYPosition, vector<Platform*> l
                 }
             }
 
-            //Passe au travers des bloc d'obsidian pour pouvoir rentrer dans le portail
+            //Passe au travers des bloc d'obsidian pour pouvoir rentrer dans le portail et des sables mouvant
             if(platform->getType() == "ObsidianBlock" || platform->getType() == "NetherWoodBlock" || platform->getType() == "QuicksandBlock" || platform->getType() == "RedQuicksandBlock")
             {
                 newXPosition = withoutCollX;
@@ -239,6 +235,8 @@ bool Player::collision(int &newXPosition, int &newYPosition, vector<Platform*> l
                 onGround = false;
             }
 
+
+            //Si il touche un portail, le niveau est fini
             if(platform->getType() == "PortalBlock")
             {
                 if(onGround == true)
@@ -257,7 +255,7 @@ bool Player::collision(int &newXPosition, int &newYPosition, vector<Platform*> l
 
     }
 
-    //Lorsqu"il tombe dans le vide, onGround = false
+    //Lorsqu"il tombe dans le vide/ne touche plus de block avec ses pieds, onGround = false
     if(colGround == false)
     {
         onGround = false;
@@ -286,6 +284,7 @@ void Player::collisionEnemies(int& newXPosition, int& newYposition, vector<Zombi
 {
     for(Zombie* zombie : enemies)
     {
+        //Meurt si il rentre en collision avec un Zombie
         if(getGlobalBoundsHitBox().intersects(zombie->getGlobalBoundsHitBox()))
         {
             setPosition(getRespawnPosition().x, getRespawnPosition().y);

@@ -60,6 +60,7 @@ void MenuLevel::MoveUp()
 {
 	if (MenuSelected - 1 >= 0)
 	{
+	    //Lorsque le niveau a été fini, il s'affiche en vert
 	    if((MenuSelected == 0 && level1Succeed == true) || (MenuSelected == 1 && level2Succeed) || (MenuSelected == 2 && level3Succeed))
         {
             mainMenu[MenuSelected].setFillColor(Color::Green);

@@ -50,8 +50,11 @@ class Level
         Level(const Level& other);
         Level& operator=(const Level& other);
 
+        //Renvoi un vecteur de Platform et surtout de sous-classes de platform qui sont les blocks à mettre dans le niveau
         virtual vector<Platform*> createLevel()const = 0;
+        //Renvoi un vecteur de Platform et surtout de sous-classes de platform qui sont les blocks de décoration à mettre dans le niveau
         virtual vector<Platform*> createDecorLevel()const = 0;
+        //Renvoi un vecteur de Zombie à placer dans le niveau
         virtual vector<Zombie*> createZombiesLevel()const = 0;
 };
 

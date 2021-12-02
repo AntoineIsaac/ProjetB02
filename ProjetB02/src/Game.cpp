@@ -29,10 +29,12 @@ Game& Game::operator=(const Game& rhs)
 
 void Game::startLevel(MenuLevel* menu)
 {
+    //Set the window
     RenderWindow window(VideoMode(windowWidht, windowHeight), "The running dead");
     window.setPosition(Vector2i(300,0));
 
     //Set framerate of the window
+    //Permet de limiter les images par secondes afin de rendre le jeu jouable de la même façon sur tous les ordinateurs
     window.setFramerateLimit(60);
 
     //Initiation of the view
@@ -41,7 +43,7 @@ void Game::startLevel(MenuLevel* menu)
     //Creation of a player
     Player player(80.0, 1000, "./Images/jackfree/png/Run (1).png");
 
-    //Creation of the level, the decoration and the zombie in this level
+    //Creation of the level, the decoration and the zombie for the current level
     vector<Platform*> level;
     vector<Zombie*> zombieLevel;
     vector<Platform*> decorLevel;
@@ -57,6 +59,7 @@ void Game::startLevel(MenuLevel* menu)
 
     switch(currentLevel)
     {
+        //Level 1
         case 1:
                 player.setHP(16);
                 lvl = new Level1();
@@ -66,7 +69,7 @@ void Game::startLevel(MenuLevel* menu)
                 color = Color(0,191,255);
                 textLevel.setString("Level 1 : Walk in the desert");
                 break;
-
+        //Level 2
         case 2:
                 player.setHP(16);
                 lvl = new Level2();
@@ -76,9 +79,9 @@ void Game::startLevel(MenuLevel* menu)
                 color = Color::Black;
                 textLevel.setString("Level 2 : A Nether atmosphere");
                 break;
-
+        //Level 3
         case 3:
-                player.setHP(30);
+                player.setHP(16);
                 lvl = new Level3();
                 level = lvl->createLevel();
                 zombieLevel = lvl->createZombiesLevel();
@@ -93,16 +96,13 @@ void Game::startLevel(MenuLevel* menu)
 
     textLifePoints.setCharacterSize(30);
 
-
-
-
     Input input;
 
     while (window.isOpen())
     {
         textLifePoints.setString("Lifes : " + to_string(player.getHP()));
 
-
+        //Si le level 1 se fini, on passe au suivant
         if(endLevel1 == true && currentLevel == 1)
         {
             currentLevel++;
@@ -112,6 +112,7 @@ void Game::startLevel(MenuLevel* menu)
             break;
 
         }
+        //Si le level 2 se fini, on passe au suivant
         if(endLevel2 == true && currentLevel == 2)
         {
             currentLevel++;
@@ -119,13 +120,15 @@ void Game::startLevel(MenuLevel* menu)
             startLevel(menu);
             menu->levelFinish(2);
         }
+
+        //Si le level 3 se fini, on revient au menu
         if(endLevel3 == true && currentLevel == 3)
         {
-
             window.close();
             menu->levelFinish(3);
         }
 
+        //Si le joueur perd toute ses vies, on revient au menu
         if(levelFailed == true)
         {
             window.close();
@@ -142,6 +145,7 @@ void Game::startLevel(MenuLevel* menu)
             input.InputHandler(event, window);
         }
 
+        //On appele la méthode qui fait bouger le personnage, celle-ci va égalment gérer les collisions avec les blocks et les zombies
         player.update(input.GetButton().left, input.GetButton().right, input.GetButton().space, fps, level, zombieLevel, this);
 
         //Set the view on the player
