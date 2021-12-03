@@ -142,18 +142,17 @@ void Menu::startMenu()
             {
                 if(event.key.code == Keyboard::Up)
                 {
-                    sound.play();
                     MoveUp();
                     break;
                 }
                 if(event.key.code == Keyboard::Down)
                 {
-                    sound.play();
                     MoveDown();
                     break;
                 }
                 if(event.key.code == Keyboard::Return)
                 {
+                    sound.play();
                     Game game;
 
                     int x = MenuPressed();

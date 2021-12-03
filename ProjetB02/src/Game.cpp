@@ -11,7 +11,7 @@ Game::Game()
 		cout <<"No sound is here";
 	}
 
-	music.setVolume(30.f);
+	music.setVolume(10.f);
 	music.setLoop(true);
 }
 

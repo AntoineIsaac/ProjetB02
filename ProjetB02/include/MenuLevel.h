@@ -25,6 +25,9 @@ class MenuLevel
         bool level2Succeed = false;
         bool level3Succeed = false;
 
+        SoundBuffer buffer;
+        Sound sound;
+
     public:
         MenuLevel();
         virtual ~MenuLevel();

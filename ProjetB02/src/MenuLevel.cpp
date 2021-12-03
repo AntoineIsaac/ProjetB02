@@ -6,6 +6,12 @@ MenuLevel::MenuLevel()
 	{
 		cout <<"No font is here";
 	}
+	if (!buffer.loadFromFile("sounds/select_option.wav"))
+	{
+		cout <<"No sound is here";
+	}
+
+	sound.setBuffer(buffer);
 
 
 	mainMenu[0].setFont(font);
@@ -169,6 +175,7 @@ void MenuLevel::startMenuLevel()
                 }
                 if(event.key.code == Keyboard::Return)
                 {
+                    sound.play();
                     Game game;
 
                     int x = MenuPressed();
