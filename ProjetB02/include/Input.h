@@ -10,7 +10,7 @@ using namespace sf;
 class Input
 {
     struct Button {
-		bool left, right, space, escape;
+		bool left, right, space, escape, m;
 	};
 
     private:

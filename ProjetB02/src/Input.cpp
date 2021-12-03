@@ -2,7 +2,7 @@
 
 Input::Input()
 {
-	button.left = button.right = button.space = button.escape = false;
+	button.left = button.right = button.space = button.escape = button.m = false;
 }
 
 Input::~Input()
@@ -34,7 +34,6 @@ void Input::InputHandler(Event event, RenderWindow& window)
 	{
 		window.close();
 	}
-
 	//Gestion des inputs (appuyés)
 	if (event.type == Event::KeyPressed)
 	{
@@ -51,6 +50,9 @@ void Input::InputHandler(Event event, RenderWindow& window)
 			break;
         case Keyboard::Space:
 			button.space = true;
+			break;
+        case Keyboard::M:
+			button.m = true;
 			break;
 		default:
 			break;
@@ -73,6 +75,9 @@ void Input::InputHandler(Event event, RenderWindow& window)
 			break;
 		case Keyboard::Space:
 			button.space = false;
+			break;
+        case Keyboard::M:
+			button.m = false;
 			break;
 		default:
 			break;
