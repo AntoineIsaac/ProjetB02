@@ -4,12 +4,27 @@ Player::Player(float xPosition, float yPosition, string textureString):Entity(xP
 {
     setScale(scale);
 
-    	if (!zombieBuffer.loadFromFile("sounds/zombie.wav"))
+    if (!zombieBuffer.loadFromFile("sounds/zombie.wav"))
+	{
+		cout <<"No sound is here";
+	}
+	if (!jumpBuffer.loadFromFile("sounds/yahoo.wav"))
+	{
+		cout <<"No sound is here";
+	}
+	if (!painBuffer.loadFromFile("sounds/pain.wav"))
+	{
+		cout <<"No sound is here";
+	}
+	if (!teleportBuffer.loadFromFile("sounds/teleport.wav"))
 	{
 		cout <<"No sound is here";
 	}
 
 	zombieSound.setBuffer(zombieBuffer);
+	jumpSound.setBuffer(jumpBuffer);
+	painSound.setBuffer(painBuffer);
+	teleportSound.setBuffer(teleportBuffer);
 }
 
 Player::~Player()
@@ -73,6 +88,7 @@ void Player::updatePlayer(bool left, bool right, bool space, float fps, vector<P
         setYSpeed(-15.0 * fps);
         canJump = false;
         web = false;
+        jumpSound.play();
     }
 
     //On ajoute la vitesse à la position pour qu'il avance
@@ -248,6 +264,7 @@ bool Player::collision(int &newXPosition, int &newYPosition, vector<Platform*> l
             {
                 if(onGround == true)
                 {
+                    teleportSound.play();
                     game->setEndLevel(true);
                 }
                 else
@@ -278,6 +295,7 @@ bool Player::collision(int &newXPosition, int &newYPosition, vector<Platform*> l
     {
         setPosition(getRespawnPosition().x, getRespawnPosition().y);
         HP--;
+        painSound.play();
         if(HP == 0)
         {
             game->setLevelFailed(true);

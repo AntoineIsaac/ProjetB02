@@ -39,7 +39,13 @@ class Player : public Entity
         bool web = false;
 
         SoundBuffer zombieBuffer;
+        SoundBuffer painBuffer;
+        SoundBuffer teleportBuffer;
+        SoundBuffer jumpBuffer;
         Sound zombieSound;
+        Sound painSound;
+        Sound jumpSound;
+        Sound teleportSound;
 
 
     public:

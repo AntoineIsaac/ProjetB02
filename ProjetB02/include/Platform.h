@@ -4,34 +4,6 @@
 #include <SFML/System.hpp>
 #include <SFML/Graphics.hpp>
 #include <string>
-#include "NetherBlock.h"
-#include "PortalBlock.h"
-#include "ObsidianBlock.h"
-#include "SpiderWebBlock.h"
-#include "NetherWoodBlock.h"
-#include "LeafBlock.h"
-#include "FireBlock.h"
-#include "SandBlock.h"
-#include "NetherFence.h"
-#include "CactusBlock.h"
-#include "QuicksandBlock.h"
-#include "RedQuicksandBlock.h"
-#include "RedSandBlock.h"
-#include "RedSmoothSandBlock.h"
-#include "SandBlock.h"
-#include "SmoothSandBlock.h"
-#include "SugarCaneBlock.h"
-#include "NetherLianaBlock.h"
-#include "NetherWartBlock.h"
-#include "CloudBlock.h"
-#include "AcasiaLeafBlock.h"
-#include "AcasiaWoodBlock.h"
-#include "LianaBlock.h"
-#include "Dirt.h"
-#include "WheatBlock.h"
-#include "WoodPlank.h"
-#include "Water.h"
-#include "TntBlock.h"
 
 using namespace sf;
 using namespace std;
@@ -71,8 +43,6 @@ class Platform
 
         //Renvoi le type du block
         virtual string getType()const = 0;
-
-        Platform* platformFactory(string type, int i, int j);
 
 };
 
