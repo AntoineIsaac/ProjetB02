@@ -123,6 +123,8 @@ void Game::startLevel(MenuLevel* menu)
 
     while (window.isOpen())
     {
+
+
         textCommands.setString("         Jump\n<- Left        Right ->");
         textLifePoints.setString("Lifes : " + to_string(player.getHP()));
 
@@ -171,6 +173,20 @@ void Game::startLevel(MenuLevel* menu)
         while (window.pollEvent(event))
         {
             input.InputHandler(event, window);
+        }
+
+        if (input.GetButton().m)
+        {
+
+            if(music.getStatus() == SoundSource::Status::Playing)
+            {
+                music.pause();
+            }
+            else if(music.getStatus() == SoundSource::Status::Paused){
+                music.play();
+            }
+
+
         }
 
         //On appele la méthode qui fait bouger le personnage, celle-ci va égalment gérer les collisions avec les blocks et les zombies
