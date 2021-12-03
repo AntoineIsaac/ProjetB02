@@ -29,6 +29,9 @@ void State::setSlow(float fps)
 void State::setNormal(float fps)
 {}
 
+void State::setSpeed(float fps)
+{}
+
 void State::setPlayer(Player* player)
 {
     this->player = player;

@@ -25,6 +25,9 @@ StateNormal& StateNormal::operator=(const StateNormal& rhs)
 void StateNormal::setSlow(float fps)
 {}
 
+void StateNormal::setSpeed(float fps)
+{}
+
 void StateNormal::setNormal(float fps)
 {
     player->setXSpeed(5 * fps);

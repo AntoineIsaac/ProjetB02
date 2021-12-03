@@ -16,6 +16,8 @@ class StateSlow: public State
 
         void setNormal(float fps) override;
 
+        void setSpeed(float fps) override;
+
     protected:
 
     private:

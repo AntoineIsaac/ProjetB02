@@ -29,3 +29,6 @@ void StateSlow::setSlow(float fps)
 
 void StateSlow::setNormal(float fps)
 {}
+
+void StateSlow::setSpeed(float fps)
+{}

@@ -65,12 +65,14 @@ void Player::updatePlayer(bool left, bool right, bool space, float fps, vector<P
     {
         this->state->setNormal(-fps);
         this->state->setSlow(-fps);
+        this->state->setSpeed(-fps);
         move = true;
     }
     if(right)
     {
         this->state->setNormal(fps);
         this->state->setSlow(fps);
+        this->state->setSpeed(fps);
         move = true;
     }
 
@@ -170,8 +172,6 @@ bool Player::collision(int &newXPosition, int &newYPosition, vector<Platform*> l
                 newXPosition =  platform->getXPosition() - width - hitBoxWidth[0];
                 coll = true;
             }
-
-
         }
         else
         {
@@ -229,6 +229,13 @@ bool Player::collision(int &newXPosition, int &newYPosition, vector<Platform*> l
                 newXPosition = withoutCollX;
                 newYPosition = withoutCollY;
 
+            }
+
+            //Si il touche un block de speed, il court plus vite
+            if(platform->getType() == "speedBlock")
+            {
+                delete state;
+                setState(new StateSpeed(this));
             }
 
             //Il active la JackOLantern si il marche dessus et active le checkpoint

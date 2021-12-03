@@ -13,6 +13,7 @@
 #include "State.h"
 #include "StateNormal.h"
 #include "StateSlow.h"
+#include "StateSpeed.h"
 class Game;
 
 class Player : public Entity

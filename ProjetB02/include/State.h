@@ -15,6 +15,7 @@ class State
         // Méthodes qui vont implémenter le DP
         virtual void setSlow(float fps) = 0;
         virtual void setNormal(float fps) = 0;
+        virtual void setSpeed(float fps) = 0;
 
         virtual void setPlayer(Player* player);
     protected:
