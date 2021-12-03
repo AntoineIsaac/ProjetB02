@@ -48,6 +48,8 @@ class Game
 
         Font font;
 
+        Music music;
+
     public:
         Game();
         virtual ~Game();

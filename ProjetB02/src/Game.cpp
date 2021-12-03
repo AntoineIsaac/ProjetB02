@@ -6,6 +6,10 @@ Game::Game()
 	{
 		cout <<"No font is here";
 	}
+	if (!music.openFromFile("sounds/music.wav"))
+	{
+		cout <<"No sound is here";
+	}
 }
 
 Game::~Game()
@@ -63,6 +67,8 @@ void Game::startLevel(MenuLevel* menu)
     textLevel.setFont(font);
     textLifePoints.setFont(font);
     textCommands.setFont(font);
+
+    music.play();
 
 
     switch(currentLevel)
@@ -122,6 +128,7 @@ void Game::startLevel(MenuLevel* menu)
         {
             currentLevel++;
             window.close();
+            music.stop();
             startLevel(menu);
             menu->levelFinish(1);
             break;
@@ -132,6 +139,7 @@ void Game::startLevel(MenuLevel* menu)
         {
             currentLevel++;
             window.close();
+            music.stop();
             startLevel(menu);
             menu->levelFinish(2);
         }
@@ -140,6 +148,7 @@ void Game::startLevel(MenuLevel* menu)
         if(endLevel3 == true && currentLevel == 3)
         {
             window.close();
+            music.stop();
             menu->levelFinish(3);
         }
 
@@ -148,6 +157,7 @@ void Game::startLevel(MenuLevel* menu)
         {
             window.close();
             levelFailed = false;
+            music.stop();
         }
 
         dt = clock.restart().asSeconds();

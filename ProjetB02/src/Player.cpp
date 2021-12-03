@@ -295,7 +295,10 @@ bool Player::collision(int &newXPosition, int &newYPosition, vector<Platform*> l
     {
         setPosition(getRespawnPosition().x, getRespawnPosition().y);
         HP--;
-        painSound.play();
+        if(HP < 15)
+        {
+            painSound.play();
+        }
         if(HP == 0)
         {
             game->setLevelFailed(true);
