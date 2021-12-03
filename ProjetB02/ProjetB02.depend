@@ -1597,13 +1597,13 @@
 	<SFML/System.hpp>
 	<SFML/Graphics.hpp>
 
-1638519327 /home/antoine/Documents/ProjetB02/ProjetB02/include/Platform.h
+1638526898 /home/antoine/Documents/ProjetB02/ProjetB02/include/Platform.h
 	<SFML/Window.hpp>
 	<SFML/System.hpp>
 	<SFML/Graphics.hpp>
 	<string>
 
-1638519175 /home/antoine/Documents/ProjetB02/ProjetB02/include/Level.h
+1638524964 /home/antoine/Documents/ProjetB02/ProjetB02/include/Level.h
 	"Platform.h"
 	"GrassBlock.h"
 	"LavaBlock.h"
@@ -1638,6 +1638,7 @@
 	"WoodPlank.h"
 	"Water.h"
 	"TntBlock.h"
+	"speedBlock.h"
 
 1638519175 /home/antoine/Documents/ProjetB02/ProjetB02/include/GrassBlock.h
 	"Platform.h"
@@ -1773,7 +1774,7 @@
 1638519175 source:/home/antoine/Documents/ProjetB02/ProjetB02/src/FireBlock.cpp
 	"../include/FireBlock.h"
 
-1638519175 source:/home/antoine/Documents/ProjetB02/ProjetB02/src/Game.cpp
+1638523092 source:/home/antoine/Documents/ProjetB02/ProjetB02/src/Game.cpp
 	"../include/Game.h"
 
 1638519175 source:/home/antoine/Documents/ProjetB02/ProjetB02/src/GrassBlock.cpp
@@ -1791,10 +1792,10 @@
 1638519175 source:/home/antoine/Documents/ProjetB02/ProjetB02/src/Level.cpp
 	"../include/Level.h"
 
-1638519364 source:/home/antoine/Documents/ProjetB02/ProjetB02/src/Level1.cpp
+1638526402 source:/home/antoine/Documents/ProjetB02/ProjetB02/src/Level1.cpp
 	"../include/Level1.h"
 
-1638519175 source:/home/antoine/Documents/ProjetB02/ProjetB02/src/Level2.cpp
+1638526431 source:/home/antoine/Documents/ProjetB02/ProjetB02/src/Level2.cpp
 	"../include/Level2.h"
 
 1638519175 source:/home/antoine/Documents/ProjetB02/ProjetB02/src/Level3.cpp
@@ -1803,10 +1804,10 @@
 1638519175 source:/home/antoine/Documents/ProjetB02/ProjetB02/src/LianaBlock.cpp
 	"../include/LianaBlock.h"
 
-1638519175 source:/home/antoine/Documents/ProjetB02/ProjetB02/src/Menu.cpp
+1638523144 source:/home/antoine/Documents/ProjetB02/ProjetB02/src/Menu.cpp
 	"../include/Menu.h"
 
-1638519175 source:/home/antoine/Documents/ProjetB02/ProjetB02/src/MenuLevel.cpp
+1638523190 source:/home/antoine/Documents/ProjetB02/ProjetB02/src/MenuLevel.cpp
 	"../include/MenuLevel.h"
 
 1638519175 source:/home/antoine/Documents/ProjetB02/ProjetB02/src/NetherBlock.cpp
@@ -1827,7 +1828,7 @@
 1638519175 source:/home/antoine/Documents/ProjetB02/ProjetB02/src/ObsidianBlock.cpp
 	"../include/ObsidianBlock.h"
 
-1638519314 source:/home/antoine/Documents/ProjetB02/ProjetB02/src/Platform.cpp
+1638525191 source:/home/antoine/Documents/ProjetB02/ProjetB02/src/Platform.cpp
 	"../include/Platform.h"
 
 1638521871 source:/home/antoine/Documents/ProjetB02/ProjetB02/src/Player.cpp
@@ -1886,4 +1887,10 @@
 
 1638447818 source:/home/ugo/Documents/ProjetB02/ProjetB02/src/Water.cpp
 	"../include/Water.h"
+
+1638526828 source:/home/antoine/Documents/ProjetB02/ProjetB02/src/speedBlock.cpp
+	"../include/speedBlock.h"
+
+1638524536 /home/antoine/Documents/ProjetB02/ProjetB02/include/speedBlock.h
+	"Platform.h"
 

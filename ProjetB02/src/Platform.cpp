@@ -74,3 +74,4 @@ void Platform::setScale(float x)
 {
     sprite.scale(x, x);
 }
+

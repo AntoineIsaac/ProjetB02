@@ -34,6 +34,7 @@
 #include "WoodPlank.h"
 #include "Water.h"
 #include "TntBlock.h"
+#include "speedBlock.h"
 
 
 using namespace std;
