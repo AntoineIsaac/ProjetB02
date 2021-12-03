@@ -8,10 +8,6 @@ Player::Player(float xPosition, float yPosition, string textureString):Entity(xP
 	{
 		cout <<"No sound is here";
 	}
-	if (!jumpBuffer.loadFromFile("sounds/yahoo.wav"))
-	{
-		cout <<"No sound is here";
-	}
 	if (!painBuffer.loadFromFile("sounds/pain.wav"))
 	{
 		cout <<"No sound is here";
@@ -22,7 +18,6 @@ Player::Player(float xPosition, float yPosition, string textureString):Entity(xP
 	}
 
 	zombieSound.setBuffer(zombieBuffer);
-	jumpSound.setBuffer(jumpBuffer);
 	painSound.setBuffer(painBuffer);
 	teleportSound.setBuffer(teleportBuffer);
 }
@@ -88,7 +83,6 @@ void Player::updatePlayer(bool left, bool right, bool space, float fps, vector<P
         setYSpeed(-15.0 * fps);
         canJump = false;
         web = false;
-        jumpSound.play();
     }
 
     //On ajoute la vitesse à la position pour qu'il avance

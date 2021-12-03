@@ -1552,7 +1552,7 @@
 	"include/Level.h"
 	"include/Menu.h"
 
-1638521324 /home/antoine/Documents/ProjetB02/ProjetB02/include/Player.h
+1638521843 /home/antoine/Documents/ProjetB02/ProjetB02/include/Player.h
 	"Game.h"
 	"Entity.h"
 	<string>
@@ -1830,7 +1830,7 @@
 1638519314 source:/home/antoine/Documents/ProjetB02/ProjetB02/src/Platform.cpp
 	"../include/Platform.h"
 
-1638520746 source:/home/antoine/Documents/ProjetB02/ProjetB02/src/Player.cpp
+1638521871 source:/home/antoine/Documents/ProjetB02/ProjetB02/src/Player.cpp
 	"../include/Player.h"
 
 1638519175 source:/home/antoine/Documents/ProjetB02/ProjetB02/src/PortalBlock.cpp

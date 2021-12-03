@@ -41,10 +41,8 @@ class Player : public Entity
         SoundBuffer zombieBuffer;
         SoundBuffer painBuffer;
         SoundBuffer teleportBuffer;
-        SoundBuffer jumpBuffer;
         Sound zombieSound;
         Sound painSound;
-        Sound jumpSound;
         Sound teleportSound;
 
 
