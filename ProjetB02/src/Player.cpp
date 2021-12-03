@@ -285,6 +285,8 @@ bool Player::collision(int &newXPosition, int &newYPosition, vector<Platform*> l
     {
         onGround = false;
         canJump = false;
+        delete state;
+        setState(new StateNormal(this));
     }
     if(newXPosition < 0)
         setPosition(0, newYPosition);
@@ -296,6 +298,8 @@ bool Player::collision(int &newXPosition, int &newYPosition, vector<Platform*> l
     {
         setPosition(getRespawnPosition().x, getRespawnPosition().y);
         HP--;
+        delete state;
+        setState(new StateNormal(this));
         if(HP < 15)
         {
             painSound.play();

@@ -918,7 +918,7 @@
 1638096212 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/SandBlock.cpp
 	"../include/SandBlock.h"
 
-1638524111 D
+1638524536 D
 
 1638101111 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/CactusBlock.h
 	"Platform.h"
@@ -1899,7 +1899,6 @@
 1638524536 /home/antoine/Documents/ProjetB02/ProjetB02/include/speedBlock.h
 	"Platform.h"
 
-<<<<<<< HEAD
 1638524536 h"
 
 1638530823 /home/ugo/Documents/ProjetB02/ProjetB02/include/State.h
@@ -1935,7 +1934,9 @@
 
 1638533282 source:/home/ugo/Documents/ProjetB02/ProjetB02/src/StateSpeed.cpp
 	"../include/StateSpeed.h"
-=======
+
+1638533282 e/StateSpeed.h"
+
 1638200593 source:/home/declercq/Documents/ProjetB02/ProjetB02/main.cpp
 	<SFML/Window.hpp>
 	<SFML/System.hpp>
@@ -1947,7 +1948,7 @@
 	"include/Level.h"
 	"include/Menu.h"
 
-1638532821 /home/declercq/Documents/ProjetB02/ProjetB02/include/Player.h
+1638534724 /home/declercq/Documents/ProjetB02/ProjetB02/include/Player.h
 	"Game.h"
 	"Entity.h"
 	<string>
@@ -1958,6 +1959,10 @@
 	"Checkpoint.h"
 	"Zombie.h"
 	<thread>
+	"State.h"
+	"StateNormal.h"
+	"StateSlow.h"
+	"StateSpeed.h"
 
 1638532821 /home/declercq/Documents/ProjetB02/ProjetB02/include/Game.h
 	<SFML/Window.hpp>
@@ -2190,13 +2195,13 @@
 1638532821 source:/home/declercq/Documents/ProjetB02/ProjetB02/src/Level.cpp
 	"../include/Level.h"
 
-1638533877 source:/home/declercq/Documents/ProjetB02/ProjetB02/src/Level1.cpp
+1638534738 source:/home/declercq/Documents/ProjetB02/ProjetB02/src/Level1.cpp
 	"../include/Level1.h"
 
-1638532821 source:/home/declercq/Documents/ProjetB02/ProjetB02/src/Level2.cpp
+1638534738 source:/home/declercq/Documents/ProjetB02/ProjetB02/src/Level2.cpp
 	"../include/Level2.h"
 
-1638532821 source:/home/declercq/Documents/ProjetB02/ProjetB02/src/Level3.cpp
+1638534724 source:/home/declercq/Documents/ProjetB02/ProjetB02/src/Level3.cpp
 	"../include/Level3.h"
 
 1638200593 source:/home/declercq/Documents/ProjetB02/ProjetB02/src/LianaBlock.cpp
@@ -2229,7 +2234,7 @@
 1638532821 source:/home/declercq/Documents/ProjetB02/ProjetB02/src/Platform.cpp
 	"../include/Platform.h"
 
-1638532821 source:/home/declercq/Documents/ProjetB02/ProjetB02/src/Player.cpp
+1638534724 source:/home/declercq/Documents/ProjetB02/ProjetB02/src/Player.cpp
 	"../include/Player.h"
 
 1638200593 source:/home/declercq/Documents/ProjetB02/ProjetB02/src/PortalBlock.cpp
@@ -2276,5 +2281,32 @@
 
 1638532821 source:/home/declercq/Documents/ProjetB02/ProjetB02/src/speedBlock.cpp
 	"../include/speedBlock.h"
->>>>>>> SpiderWeb
+
+1638532821 derWeb
+
+1638534724 /home/declercq/Documents/ProjetB02/ProjetB02/include/State.h
+
+1638534724 /home/declercq/Documents/ProjetB02/ProjetB02/include/StateNormal.h
+	"State.h"
+	"Player.h"
+
+1638534724 /home/declercq/Documents/ProjetB02/ProjetB02/include/StateSlow.h
+	"State.h"
+	"Player.h"
+
+1638534724 /home/declercq/Documents/ProjetB02/ProjetB02/include/StateSpeed.h
+	"State.h"
+	"Player.h"
+
+1638534724 source:/home/declercq/Documents/ProjetB02/ProjetB02/src/State.cpp
+	"../include/State.h"
+
+1638534724 source:/home/declercq/Documents/ProjetB02/ProjetB02/src/StateNormal.cpp
+	"../include/StateNormal.h"
+
+1638534724 source:/home/declercq/Documents/ProjetB02/ProjetB02/src/StateSlow.cpp
+	"../include/StateSlow.h"
+
+1638534724 source:/home/declercq/Documents/ProjetB02/ProjetB02/src/StateSpeed.cpp
+	"../include/StateSpeed.h"
 
