@@ -20,11 +20,13 @@ Player::Player(float xPosition, float yPosition, string textureString):Entity(xP
 	zombieSound.setBuffer(zombieBuffer);
 	painSound.setBuffer(painBuffer);
 	teleportSound.setBuffer(teleportBuffer);
+
+	state = new StateNormal(this);
 }
 
 Player::~Player()
 {
-
+    delete state;
 }
 
 Player::Player(const Player& other):Entity(other)
@@ -61,18 +63,14 @@ void Player::updatePlayer(bool left, bool right, bool space, float fps, vector<P
 
     if(left)
     {
-            setXSpeed(-5.0 * fps);
-            if(web == true){
-               setXSpeed(-2.0 * fps);
-            }
-            move = true;
+        this->state->setNormal(-fps);
+        this->state->setSlow(-fps);
+        move = true;
     }
     if(right)
     {
-        setXSpeed(5.0 * fps);
-        if(web == true){
-           setXSpeed(2.0 * fps);
-        }
+        this->state->setNormal(fps);
+        this->state->setSlow(fps);
         move = true;
     }
 
@@ -82,7 +80,8 @@ void Player::updatePlayer(bool left, bool right, bool space, float fps, vector<P
         jumpBlock = getYPosition();
         setYSpeed(-15.0 * fps);
         canJump = false;
-        web = false;
+        delete state;
+        setState(new StateNormal(this));
     }
 
     //On ajoute la vitesse à la position pour qu'il avance
@@ -225,7 +224,8 @@ bool Player::collision(int &newXPosition, int &newYPosition, vector<Platform*> l
             //Si il touche une toile d'araignée ou de l'eau, il est ralenti
             if(platform->getType() == "SpiderWebBlock" || platform->getType() == "Water")
             {
-                web = true;
+                delete state;
+                setState(new StateSlow(this));
                 newXPosition = withoutCollX;
                 newYPosition = withoutCollY;
 
@@ -367,5 +367,15 @@ void Player::setHP(int hp)
 int Player::getHP() const
 {
     return HP;
+}
+
+void Player::setState(State* state)
+{
+    this->state = state;
+}
+
+State* Player::getState() const
+{
+    return state;
 }
 

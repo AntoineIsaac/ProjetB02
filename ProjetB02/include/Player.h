@@ -10,12 +10,16 @@
 #include "Checkpoint.h"
 #include "Zombie.h"
 #include <thread>
+#include "State.h"
+#include "StateNormal.h"
+#include "StateSlow.h"
 class Game;
-
 
 class Player : public Entity
 {
     private :
+        // Etat pour DP State
+        State* state;
         float scale = 0.1;
         //Une hitbox qui permet de délimiter les dimensions du personnage
         float hitBoxWidth[2] = {50*scale, 365*scale};
@@ -45,7 +49,6 @@ class Player : public Entity
         Sound painSound;
         Sound teleportSound;
 
-
     public:
         bool onGround;
 
@@ -53,9 +56,6 @@ class Player : public Entity
         virtual ~Player();
         Player(const Player& other);
         Player& operator=(const Player& other);
-
-
-
 
         //Permet de récupérer les dimensions du personnage
         FloatRect getGlobalBoundsHitBox();
@@ -76,6 +76,9 @@ class Player : public Entity
 
         void setHP(int hp);
         int getHP()const;
+
+        void setState(State* state);
+        State* getState()const;
 };
 
 #endif // PLAYER_H
