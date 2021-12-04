@@ -125,7 +125,7 @@ void Game::startLevel(MenuLevel* menu)
     {
 
 
-        textCommands.setString("         Jump\n<- Left        Right ->");
+        textCommands.setString("         Jump\n<- Left        Right ->\n\t  M => Mute");
         textLifePoints.setString("Lifes : " + to_string(player.getHP()));
 
         //Si le level 1 se fini, on passe au suivant

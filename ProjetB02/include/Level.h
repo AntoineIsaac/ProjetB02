@@ -35,6 +35,9 @@
 #include "Water.h"
 #include "TntBlock.h"
 #include "speedBlock.h"
+#include "oakWoodBlock.h"
+#include "BrickBlock.h"
+#include "DoorBlock.h"
 
 
 using namespace std;

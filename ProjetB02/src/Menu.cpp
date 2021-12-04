@@ -122,9 +122,7 @@ void Menu::startMenu()
     //about
     RectangleShape Aboutbackground;
     Aboutbackground.setSize(Vector2f(width, height));
-    Texture about_texture;
-    about_texture.loadFromFile("Texture/about.jpg");
-    Aboutbackground.setTexture(&about_texture);
+    Aboutbackground.setFillColor(Color(168,227,238));
 
 
     while (menu.isOpen())

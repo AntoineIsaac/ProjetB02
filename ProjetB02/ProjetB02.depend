@@ -478,7 +478,7 @@
 1638018644 source:/home/antoine/Documents/Projet/ProjetB02/ProjetB02/src/NetherWoodBlock.cpp
 	"../include/NetherWoodBlock.h"
 
-1638355111 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/main.cpp
+1638616924 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/main.cpp
 	<SFML/Window.hpp>
 	<SFML/System.hpp>
 	<SFML/Graphics.hpp>
@@ -489,7 +489,7 @@
 	"include/Level.h"
 	"include/Menu.h"
 
-1638522038 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/Player.h
+1638534878 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/Player.h
 	"Game.h"
 	"Entity.h"
 	<string>
@@ -500,6 +500,10 @@
 	"Checkpoint.h"
 	"Zombie.h"
 	<thread>
+	"State.h"
+	"StateNormal.h"
+	"StateSlow.h"
+	"StateSpeed.h"
 
 1638445451 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/Entity.h
 	<SFML/Graphics.hpp>
@@ -520,12 +524,12 @@
 	<string>
 	<iostream>
 
-1638524945 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/Input.h
+1638528370 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/Input.h
 	<SFML/Window.hpp>
 	<SFML/System.hpp>
 	<SFML/Graphics.hpp>
 
-1638436053 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/Level.h
+1638623968 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/Level.h
 	"Platform.h"
 	"GrassBlock.h"
 	"LavaBlock.h"
@@ -560,6 +564,10 @@
 	"WoodPlank.h"
 	"Water.h"
 	"TntBlock.h"
+	"speedBlock.h"
+	"oakWoodBlock.h"
+	"BrickBlock.h"
+	"DoorBlock.h"
 
 1638355111 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/GrassBlock.h
 	"Platform.h"
@@ -600,7 +608,7 @@
 1638355111 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/GrassBlock.cpp
 	"../include/GrassBlock.h"
 
-1638524945 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/Input.cpp
+1638528370 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/Input.cpp
 	"../include/Input.h"
 
 1638355111 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/LavaBlock.cpp
@@ -621,10 +629,10 @@
 1638355111 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/ObsidianBlock.cpp
 	"../include/ObsidianBlock.h"
 
-1638521568 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/Platform.cpp
+1638528354 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/Platform.cpp
 	"../include/Platform.h"
 
-1638522038 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/Player.cpp
+1638535423 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/Player.cpp
 	"../include/Player.h"
 
 1638355111 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/PortalBlock.cpp
@@ -642,7 +650,7 @@
 	<iostream>
 	"Game.h"
 
-1638523381 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/Menu.cpp
+1638617680 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/Menu.cpp
 	"../include/Menu.h"
 
 1638525496 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/Game.h
@@ -663,7 +671,7 @@
 	"Level3.h"
 	"MenuLevel.h"
 
-1638526952 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/Game.cpp
+1638618494 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/Game.cpp
 	"../include/Game.h"
 
 1638189327 /home/antoine/Documents/Projet/ProjetB02/ProjetB02/include/Game.h
@@ -1082,10 +1090,10 @@
 1638355111 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/CactusBlock.cpp
 	"../include/CactusBlock.h"
 
-1638521568 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/Level1.cpp
+1638534878 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/Level1.cpp
 	"../include/Level1.h"
 
-1638436053 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/Level2.cpp
+1638534878 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/Level2.cpp
 	"../include/Level2.h"
 
 1638355111 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/NetherFence.cpp
@@ -1121,7 +1129,7 @@
 1638355111 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/Level3.h
 	"Level.h"
 
-1638436053 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/Level3.cpp
+1638622993 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/Level3.cpp
 	"../include/Level3.h"
 
 1638355111 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/Dirt.h
@@ -2309,4 +2317,54 @@
 
 1638534724 source:/home/declercq/Documents/ProjetB02/ProjetB02/src/StateSpeed.cpp
 	"../include/StateSpeed.h"
+
+1638528354 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/speedBlock.h
+	"Platform.h"
+
+1638534878 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/State.h
+
+1638534878 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/StateNormal.h
+	"State.h"
+	"Player.h"
+
+1638534878 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/StateSlow.h
+	"State.h"
+	"Player.h"
+
+1638534878 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/StateSpeed.h
+	"State.h"
+	"Player.h"
+
+1638534878 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/State.cpp
+	"../include/State.h"
+
+1638534878 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/StateNormal.cpp
+	"../include/StateNormal.h"
+
+1638534878 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/StateSlow.cpp
+	"../include/StateSlow.h"
+
+1638534878 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/StateSpeed.cpp
+	"../include/StateSpeed.h"
+
+1638528354 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/speedBlock.cpp
+	"../include/speedBlock.h"
+
+1638621615 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/oakWoodBlock.h
+	"Platform.h"
+
+1638621648 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/oakWoodBlock.cpp
+	"../include/oakWoodBlock.h"
+
+1638622993 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/BrickBlock.h
+	"Platform.h"
+
+1638623099 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/BrickBlock.cpp
+	"../include/BrickBlock.h"
+
+1638623968 /home/deliam/Bureau/Projet/ProjetB02/ProjetB02/include/DoorBlock.h
+	"Platform.h"
+
+1638623968 source:/home/deliam/Bureau/Projet/ProjetB02/ProjetB02/src/DoorBlock.cpp
+	"../include/DoorBlock.h"
 
