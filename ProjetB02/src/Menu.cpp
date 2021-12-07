@@ -182,9 +182,26 @@ void Menu::startMenu()
                                     }
                                 }
                             }
+                            Text titleAbout;
+                            titleAbout.setFont(font);
+                            titleAbout.setString("About");
+                            titleAbout.setPosition(400, 10);
+                            titleAbout.setCharacterSize(48);
+                            titleAbout.setStyle(1 << 2);
+
+
+                            Text textAbout;
+                            textAbout.setFont(font);
+                            textAbout.setCharacterSize(20);
+                            textAbout.setString("The game was created by 3rd year students in management computing.\nOur game is a platform video game based on the game 'New Super Mario Bros'. \nIn this one, you have just one goal : arrive at the end of all the levels that we created. \nWe have tree levels with their specificities. It's your job to find which blocks can kill you and which blocks belong to the decor. \nIf you run on a death block, you will die immediately. If you run on a decor block, you will cross the platform and fall into the void .\nOn the first level, be careful not to sting yourself, and don't get dragged into quicksand . \nAbout the second level, don't forget that lava can burn you ! \nAnd for the last level, be careful not to explode. \nDuring all the gameplay, you will meet zombies, and you have to avoid it, and avoid the death in the same time. \nFinally, for finish a level, you have to cross the end portal, it will teleport you in an other dimension ! \n\n                                                              Enjoy yourself, and keep running :)");
+                            textAbout.setPosition(10, 70);
 
                             about.clear();
                             about.draw(Aboutbackground);
+                            about.draw(textAbout);
+                            about.draw(titleAbout);
+
+
 
                             about.display();
                 }

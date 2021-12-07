@@ -17,10 +17,6 @@ class StateNormal: public State
         void setNormal(float fps) override;
 
         void setSpeed(float fps) override;
-
-    protected:
-
-    private:
 };
 
 #endif // STATENORMAL_H

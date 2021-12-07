@@ -19,7 +19,11 @@ class Game;
 class Player : public Entity
 {
     private :
-        // Etat pour DP State
+        //Etat pour DP State
+        //Nous avons une agrégation interne car un Player possède un état (state). De plus, un état ne peut
+        //exister en dehors d'un Player donc celui-ci est créé à l'interieur du constructeur de Player.
+        //Nous avons un State pour introduire notre DP State qui gère l'état de la vitesse de
+        //notre Player (Normal, accéléré, ralenti).
         State* state;
         float scale = 0.1;
         //Une hitbox qui permet de délimiter les dimensions du personnage
