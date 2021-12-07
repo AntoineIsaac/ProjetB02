@@ -187,7 +187,7 @@ void Menu::startMenu()
                             titleAbout.setString("About");
                             titleAbout.setPosition(400, 10);
                             titleAbout.setCharacterSize(48);
-                            titleAbout.setStyle(1 << 2);
+                            titleAbout.setStyle(2);
 
 
                             Text textAbout;
